@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
    private float y;
 
    protected float ySpeed = 5.0f;
-    protected float xSpeed = 5.5f;
+   protected float xSpeed = 5.5f;
 
    
 

@@ -14,11 +14,11 @@ public class NPCTextPerson : Collidable
     lastShout = - cooldown;
    }
 
-  // protected override void OnCollide(Collider2D coll) {
+   protected override void OnCollide(Collider2D coll) {
 
-    //if (Time.time - lastShout > cooldown) {
-       // lastShout = Time.time;
-       // GameManager.instance.ShowText(message, 15 , Color.white, transform.position + new Vector3(0, 0.16f, 0) ,Vector3.zero, cooldown);
-    //}
-  // }
+    if (Time.time - lastShout > cooldown) {
+        lastShout = Time.time;
+        GameManager.instance.ShowText(message, 35 , Color.black, transform.position ,Vector3.zero, cooldown);
+    }
+   }
 }
