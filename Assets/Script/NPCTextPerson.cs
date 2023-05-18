@@ -6,8 +6,11 @@ public class NPCTextPerson : Collidable
 {
    public string message;
 
-   private float cooldown = 1.0f;
+   private float cooldown = 0.4f;
    private float lastShout;
+
+   [SerializeField]
+    private AudioSource voiceSoundEffect;
 
    protected override void Start() {
     base.Start();
@@ -18,6 +21,7 @@ public class NPCTextPerson : Collidable
 
     if (Time.time - lastShout > cooldown) {
         lastShout = Time.time;
+        voiceSoundEffect.Play();
         GameManager.instance.ShowText(message, 35 , Color.black, transform.position ,Vector3.zero, cooldown);
     }
    }

@@ -6,8 +6,12 @@ public class NPCTextPerson2 : Collidable
 {
    public string message;
 
-   private float cooldown = 1.0f;
+   private float cooldown = 0.4f;
+   private float cooldown2 = 1.5f;
    private float lastShout;
+
+   [SerializeField]
+    private AudioSource voiceSoundEffect;
 
    protected override void Start() {
     base.Start();
@@ -16,9 +20,13 @@ public class NPCTextPerson2 : Collidable
 
    protected override void OnCollide(Collider2D coll) {
 
-    if (Time.time - lastShout > cooldown) {
-        lastShout = Time.time;
-        GameManager.instance.ShowText(message, 25 , new Color(0.1f, 0f, 0.6f), transform.position + new Vector3(0, 0.50f, 0) ,Vector3.zero, cooldown);
-    }
+        if (Time.time - lastShout > cooldown2) {
+                voiceSoundEffect.Play();
+            }
+
+        if (Time.time - lastShout > cooldown) {
+            lastShout = Time.time;
+            GameManager.instance.ShowText(message, 30 , new Color(0.1f, 0f, 0.6f), transform.position + new Vector3(0, 0.60f, 0) ,Vector3.zero, cooldown);
+        }
    }
 }

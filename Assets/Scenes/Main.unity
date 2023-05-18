@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &53067191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4565185635510176703, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+  m_PrefabInstance: {fileID: 1303680725497918714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &664075081 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1303680724834406323, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
@@ -301,6 +306,38 @@ PrefabInstance:
     - target: {fileID: 1303680723887423165, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303680724834406323, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+      propertyPath: textPrefab
+      value: 
+      objectReference: {fileID: 53067191}
+    - target: {fileID: 5392627356994807381, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392627356994807381, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 85ad91c436c51be4a8f44a857fec3e48, type: 3}
+    - target: {fileID: 5392627356994807381, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392627356994807381, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392627356994807381, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373510378172642417, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373510378172642417, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 651e00366842fbd4d934e9a88bb7378e, type: 3}
