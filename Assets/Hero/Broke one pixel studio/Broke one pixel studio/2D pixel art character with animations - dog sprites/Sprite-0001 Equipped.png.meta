@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 320b9a8a707e2d64fa23b940ef40c0e4
+guid: 2f8a43cacee62014f9bdc09ffcc91e01
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,85 +117,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pink_Monster_Idle_4_0
+      name: Sprite-0001 Equipped_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 16
         y: 0
-        width: 17
-        height: 28
+        width: 84
+        height: 124
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7527d650fcb34e408dd16bf60309bdb
-      internalID: -533806211
+      spriteID: b076fbee6955a3041a007f8d55ec4548
+      internalID: 122627521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Idle_4_1
+      name: Sprite-0001 Equipped_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 0
-        width: 17
-        height: 28
+        x: 148
+        y: 8
+        width: 80
+        height: 116
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79f28d05ad43b344e97f26c381f9c2a5
-      internalID: -1590124449
+      spriteID: bc8cfaf86cc9e3f4a93745effd88beeb
+      internalID: -656956164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Idle_4_2
+      name: Sprite-0001 Equipped_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 0
-        width: 18
-        height: 29
+        x: 276
+        y: 20
+        width: 92
+        height: 108
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfaaa331d1f840c40903d18760af7a6e
-      internalID: -1734564060
+      spriteID: ee34e718508dfbb4ba851bf766dbf7f1
+      internalID: -525178038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink_Monster_Idle_4_3
+      name: Sprite-0001 Equipped_3
       rect:
         serializedVersion: 2
-        x: 101
-        y: 0
-        width: 20
-        height: 29
+        x: 400
+        y: 8
+        width: 84
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f83a1c4ebd494084ebfcb20175f3ab4c
-      internalID: 666984089
+      spriteID: 214848f6688cb914280e088d1869bbe6
+      internalID: 1681921383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-0001 Equipped_4
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 84
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe321aca874bf81489c3ca5c5b111cd0
+      internalID: 170548078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-0001 Equipped_5
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 8
+        width: 88
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7097b5d60abb249b8247b317c9aa56
+      internalID: 848063924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-0001 Equipped_6
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 12
+        width: 92
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e7f1d2bf84d404b8d6ccac38d198ca
+      internalID: 866955941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-0001 Equipped_7
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 4
+        width: 88
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661a88ff26c6fa045bdb757d8ba8ee03
+      internalID: 1361871213
       vertices: []
       indices: 
       edges: []
@@ -211,10 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pink_Monster_Idle_4_0: -533806211
-      Pink_Monster_Idle_4_1: -1590124449
-      Pink_Monster_Idle_4_2: -1734564060
-      Pink_Monster_Idle_4_3: 666984089
+      Sprite-0001 Equipped_0: 122627521
+      Sprite-0001 Equipped_1: -656956164
+      Sprite-0001 Equipped_2: -525178038
+      Sprite-0001 Equipped_3: 1681921383
+      Sprite-0001 Equipped_4: 170548078
+      Sprite-0001 Equipped_5: 848063924
+      Sprite-0001 Equipped_6: 866955941
+      Sprite-0001 Equipped_7: 1361871213
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
