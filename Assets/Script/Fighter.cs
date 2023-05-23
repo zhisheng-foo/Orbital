@@ -24,7 +24,7 @@ public class Fighter : MonoBehaviour
 
     protected virtual void ReceiveDamage(Damage dmg) {
 
-        Debug.Log("hello word");
+        
 
     }
 
