@@ -9,8 +9,10 @@ public class EnemyHitbox : Collidable
     public int damage = 1;
     public float pushForce = 4.0f;
 
+    public bool isColliding = false;
+
     protected override void OnCollide(Collider2D coll)
-    {
+    {   
         if (coll.name == "Player" & coll.tag == "Fighter")
         {
                 Damage dmg = new Damage()
@@ -20,7 +22,9 @@ public class EnemyHitbox : Collidable
                 pushForce = pushForce
 
            };
+                   
            coll.SendMessage("ReceiveDamage", dmg);
+           
         }
     }
 }

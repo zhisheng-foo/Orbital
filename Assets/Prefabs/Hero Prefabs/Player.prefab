@@ -126,6 +126,8 @@ MonoBehaviour:
   pushRecoverySpeed: 0.2
   knockTime: 0
   pushDirection: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
+  weapon: {fileID: 0}
 --- !u!61 &1930132557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,6 +166,7 @@ GameObject:
   - component: {fileID: 2007996010565377132}
   - component: {fileID: 322718349}
   - component: {fileID: 322718350}
+  - component: {fileID: 893477774}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -179,7 +182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7440758186760258206}
   m_LocalRotation: {x: 0.00017216803, y: -0.0011482217, z: 0.007843817, w: 0.9999686}
-  m_LocalPosition: {x: 0.0007, y: 0.0019, z: 0}
+  m_LocalPosition: {x: 1.053, y: 0.0019, z: 0}
   m_LocalScale: {x: 1.3755308, y: 1.1328657, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -293,3 +296,26 @@ MonoBehaviour:
   damagePoint: 1
   pushForce: 2
   weaponLevel: 0
+  swinging: 1
+  player: {fileID: 4595735991405964110}
+--- !u!95 &893477774
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7440758186760258206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
