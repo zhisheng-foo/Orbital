@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     //public FloatingTextManager FloatingTextManager;
 
     //Logic 
-    public int dollar = 10;
+    public int dollar = 0;
     public int experience;
 
     //Save State
