@@ -63,11 +63,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755227109322074732, guid: 9a8a43c52b93e7b4bb4af707bb990128, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.24
+      value: 4.38
       objectReference: {fileID: 0}
     - target: {fileID: 6755227109322074732, guid: 9a8a43c52b93e7b4bb4af707bb990128, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: 6755227109322074732, guid: 9a8a43c52b93e7b4bb4af707bb990128, type: 3}
       propertyPath: m_LocalPosition.z
@@ -253,7 +253,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  message: I use these vegetable to fuck your Mom
+  message: I use these vegetable to touch your Mom
   voiceSoundEffect: {fileID: 2066945290}
 --- !u!1001 &8342670321684214579
 PrefabInstance:
@@ -580,11 +580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1137778052361849830, guid: 11dfca5d7b0d9724a9575940fb07c51b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.52
+      value: -3.18
       objectReference: {fileID: 0}
     - target: {fileID: 1137778052361849830, guid: 11dfca5d7b0d9724a9575940fb07c51b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.16
+      value: 3.05
       objectReference: {fileID: 0}
     - target: {fileID: 1137778052361849830, guid: 11dfca5d7b0d9724a9575940fb07c51b, type: 3}
       propertyPath: m_LocalPosition.z
