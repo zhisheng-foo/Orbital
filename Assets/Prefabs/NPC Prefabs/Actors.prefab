@@ -51,7 +51,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755227109322074723, guid: 9a8a43c52b93e7b4bb4af707bb990128, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6755227109322074732, guid: 9a8a43c52b93e7b4bb4af707bb990128, type: 3}
       propertyPath: m_RootOrder
@@ -63,11 +63,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755227109322074732, guid: 9a8a43c52b93e7b4bb4af707bb990128, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.24
+      value: -4.64
       objectReference: {fileID: 0}
     - target: {fileID: 6755227109322074732, guid: 9a8a43c52b93e7b4bb4af707bb990128, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 6755227109322074732, guid: 9a8a43c52b93e7b4bb4af707bb990128, type: 3}
       propertyPath: m_LocalPosition.z
@@ -253,7 +253,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  message: I use these vegetable to fuck your Mom
+  message: a hole... reminds me of joe mama
   voiceSoundEffect: {fileID: 2066945290}
 --- !u!1001 &8342670321684214579
 PrefabInstance:
@@ -284,11 +284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4892631152238520312, guid: b0f901c2f7684a44c9f48db5181ea9bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.21
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4892631152238520312, guid: b0f901c2f7684a44c9f48db5181ea9bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.26
+      value: 10.43
       objectReference: {fileID: 0}
     - target: {fileID: 4892631152238520312, guid: b0f901c2f7684a44c9f48db5181ea9bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -532,7 +532,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  message: Hey I am your sperm
+  message: where joe mama
   voiceSoundEffect: {fileID: 1895507556}
 --- !u!4 &3468053637345940683 stripped
 Transform:
@@ -580,11 +580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1137778052361849830, guid: 11dfca5d7b0d9724a9575940fb07c51b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.52
+      value: -4.31
       objectReference: {fileID: 0}
     - target: {fileID: 1137778052361849830, guid: 11dfca5d7b0d9724a9575940fb07c51b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.16
+      value: 2.89
       objectReference: {fileID: 0}
     - target: {fileID: 1137778052361849830, guid: 11dfca5d7b0d9724a9575940fb07c51b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -755,7 +755,7 @@ MonoBehaviour:
     maxDepth: 1000
     minNormalAngle: 0
     maxNormalAngle: 360
-  message: Your Mom Gay
+  message: Mama Joe has left us
   voiceSoundEffect: {fileID: 1896139921}
 --- !u!4 &8342670320524673241 stripped
 Transform:

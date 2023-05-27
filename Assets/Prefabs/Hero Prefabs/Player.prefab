@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4595735991405964110}
   - component: {fileID: 1930132557}
   - component: {fileID: 2187629236703913303}
+  - component: {fileID: 1930132566}
+  - component: {fileID: 1930132559}
   m_Layer: 9
   m_Name: Player
   m_TagString: Fighter
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1528366423
-  m_SortingLayer: 4
+  m_SortingLayer: 16
   m_SortingOrder: 1
   m_Sprite: {fileID: 1980367447, guid: bbf6904c907b25d4a9e7d1e979aaa831, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -127,7 +129,7 @@ MonoBehaviour:
   pushRecoverySpeed: 0.2
   knockTime: 0
   pushDirection: {x: 0, y: 0, z: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 4595735991405964108}
   weapon: {fileID: 0}
 --- !u!61 &1930132557
 BoxCollider2D:
@@ -180,8 +182,43 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fullHeart: {fileID: 1104524366, guid: 7d52ac3518484704a9330bb6e3f4a040, type: 3}
-  emptyHeart: {fileID: -160928655, guid: 7d52ac3518484704a9330bb6e3f4a040, type: 3}
+  fullHeart: {fileID: -676559249, guid: f33eef04be66c884e9c736adbdb09bd7, type: 3}
+  emptyHeart: {fileID: -1008602628, guid: f33eef04be66c884e9c736adbdb09bd7, type: 3}
+--- !u!50 &1930132566
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595735991405964097}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.5
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &1930132559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595735991405964097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f546a1c9600a349b0c87af8a55a6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instance: {fileID: 0}
+  MyscoreText: {fileID: 0}
 --- !u!1 &7440758186760258206
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7440758186760258206}
   m_LocalRotation: {x: 0.00017216803, y: -0.0011482217, z: 0.007843817, w: 0.9999686}
-  m_LocalPosition: {x: 1.053, y: 0.0019, z: 0}
+  m_LocalPosition: {x: 0.04, y: 0.01, z: 0}
   m_LocalScale: {x: 1.3755308, y: 1.1328657, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -322,7 +359,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoint: 1
+  damagePoint: 2
   pushForce: 2
   weaponLevel: 0
   swinging: 1
