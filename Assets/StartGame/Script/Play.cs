@@ -61,7 +61,7 @@ public class Play : MonoBehaviour
     IEnumerator Load(){
 
         
-        yield return new WaitForSeconds(1.6f);
+        yield return new WaitForSeconds(1.68f);
         SceneManager.LoadScene("Main");
         
 
