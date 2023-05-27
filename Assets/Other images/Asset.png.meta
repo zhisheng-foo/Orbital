@@ -113,6 +113,54 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1020,13 +1068,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset_43
+      name: red_carrot_0
       rect:
         serializedVersion: 2
         x: 115
-        y: 672
+        y: 706
         width: 10
-        height: 48
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1041,13 +1089,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset_44
+      name: red_carrot_1
       rect:
         serializedVersion: 2
         x: 131
-        y: 672
+        y: 706
         width: 10
-        height: 48
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1062,13 +1110,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset_45
+      name: red_carrot_2
       rect:
         serializedVersion: 2
         x: 147
-        y: 672
+        y: 706
         width: 10
-        height: 48
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1083,13 +1131,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset_46
+      name: red_carrot_3
       rect:
         serializedVersion: 2
         x: 163
-        y: 672
+        y: 706
         width: 10
-        height: 48
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1104,13 +1152,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset_47
+      name: red_carrot_4
       rect:
         serializedVersion: 2
         x: 179
-        y: 704
+        y: 706
         width: 10
-        height: 13
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1188,13 +1236,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset_51
+      name: green_carrot_4
       rect:
         serializedVersion: 2
         x: 179
-        y: 688
+        y: 690
         width: 10
-        height: 13
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1272,13 +1320,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset_55
+      name: yellow_carrot_4
       rect:
         serializedVersion: 2
         x: 179
-        y: 672
+        y: 674
         width: 10
-        height: 13
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7823,6 +7871,174 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: green_carrot_0
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 690
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676c6e5074f4a9043be7f8d1a00d0660
+      internalID: 1344236628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_carrot_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 690
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6933053336578c4dafe1558c91563b2
+      internalID: -1073629888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_carrot_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 690
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a3b1cc9db213043b208a49988c056e
+      internalID: -222686637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_carrot_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 690
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5443f014e27e84c4784537a73d824c50
+      internalID: -1084151865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_carrot_0
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 674
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef5ae2daa7656c44a1703f564d6cdc7
+      internalID: -1350172371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_carrot_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 674
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb105dc7c2ef044cb551b318788ef57
+      internalID: 1885605545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_carrot_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 674
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301f0b85c26397a469e0097773f54463
+      internalID: 694779378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow_carrot_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 674
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96f1a398527e76449a058ec038e2628
+      internalID: 272206528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -8084,10 +8300,6 @@ TextureImporter:
       Asset_322: -724801920
       Asset_323: 1347131046
       Asset_324: -1762788949
-      Asset_325: 364929236
-      Asset_326: -1085702683
-      Asset_327: -824749133
-      Asset_328: 808808236
       Asset_329: -1801848348
       Asset_33: 1610903985
       Asset_330: -1900630132
@@ -8138,20 +8350,13 @@ TextureImporter:
       Asset_4: -1357411045
       Asset_40: 432287605
       Asset_41: 373062864
-      Asset_43: 709689972
-      Asset_44: 46871736
-      Asset_45: 607354649
-      Asset_46: 1695515570
-      Asset_47: 2005973071
       Asset_48: -1544057894
       Asset_49: -1495288711
       Asset_5: 1802033081
       Asset_50: -1457797583
-      Asset_51: -1662030511
       Asset_52: 783136538
       Asset_53: -779969156
       Asset_54: 61095644
-      Asset_55: 1168427619
       Asset_56: 737973530
       Asset_57: -719942504
       Asset_58: -867948837
@@ -8204,7 +8409,22 @@ TextureImporter:
       cake_whole: -420221475
       carrots: -1099072620
       green_carrot: 307444846
+      green_carrot_0: 1344236628
+      green_carrot_1: -1073629888
+      green_carrot_2: -222686637
+      green_carrot_3: 364929236
+      green_carrot_4: -1662030511
+      red_carrot_0: 709689972
+      red_carrot_1: 46871736
+      red_carrot_2: 607354649
+      red_carrot_3: 1695515570
+      red_carrot_4: 2005973071
       yellow_carrot: 910052941
+      yellow_carrot_0: -1085702683
+      yellow_carrot_1: -824749133
+      yellow_carrot_2: 808808236
+      yellow_carrot_3: 272206528
+      yellow_carrot_4: 1168427619
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

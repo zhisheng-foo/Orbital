@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class CameraMotor : MonoBehaviour
 {
-
     public Transform lookAt;
-
     public float boundX = 0.15f;
     public float boundY = 0.05f;
 
-    public void Start()
+    private void Start()
     {
         lookAt = GameObject.Find("Player").transform;
+      
     }
 
-
-
-    // Update is called once per frame
     private void LateUpdate()
     {
         Vector3 delta = Vector3.zero;
@@ -50,7 +46,6 @@ public class CameraMotor : MonoBehaviour
         }
 
         transform.position += new Vector3(delta.x, delta.y, 0);
-
-
     }
 }
+

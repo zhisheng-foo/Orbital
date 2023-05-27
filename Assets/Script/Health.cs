@@ -14,6 +14,11 @@ public class Health : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
          
     void Update()
     {    

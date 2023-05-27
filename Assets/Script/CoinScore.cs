@@ -4,25 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CoinScore : MonoBehaviour
-{   
-
+{
     public GameManager instance;
     public Text MyscoreText;
     private int treatNum;
-    
-    void Start()
+
+    private void Awake()
     {
-
-        treatNum = instance.dollar;
-     
-        MyscoreText.text = ": " + treatNum;
-
+        DontDestroyOnLoad(gameObject);
     }
 
-    void Update()
+    private void Start()
     {
         treatNum = instance.dollar;
         MyscoreText.text = ": " + treatNum;
     }
 
+    private void Update()
+    {
+        treatNum = instance.dollar;
+        MyscoreText.text = ": " + treatNum;
+    }
 }
+

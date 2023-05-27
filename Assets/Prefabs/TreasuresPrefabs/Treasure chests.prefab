@@ -42,6 +42,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 748311512504476001}
     m_Modifications:
+    - target: {fileID: 8101148094197716070, guid: 027d6189a1da0c34cb22cd366d36e85d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 870382e682a4f5a44b2196eff2567a00, type: 3}
     - target: {fileID: 8101148094197716071, guid: 027d6189a1da0c34cb22cd366d36e85d, type: 3}
       propertyPath: m_Name
       value: treasure_chest_back
@@ -52,11 +56,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8101148094197716089, guid: 027d6189a1da0c34cb22cd366d36e85d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.870822
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 8101148094197716089, guid: 027d6189a1da0c34cb22cd366d36e85d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9015441
+      value: 3.07
       objectReference: {fileID: 0}
     - target: {fileID: 8101148094197716089, guid: 027d6189a1da0c34cb22cd366d36e85d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -108,6 +112,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 748311512504476001}
     m_Modifications:
+    - target: {fileID: 2208994134600491143, guid: 14f04f8258a8d8549ba878e4346467f8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 870382e682a4f5a44b2196eff2567a00, type: 3}
     - target: {fileID: 2208994134600491192, guid: 14f04f8258a8d8549ba878e4346467f8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -126,11 +134,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2208994134600491192, guid: 14f04f8258a8d8549ba878e4346467f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8908219
+      value: 4.56
       objectReference: {fileID: 0}
     - target: {fileID: 2208994134600491192, guid: 14f04f8258a8d8549ba878e4346467f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.261544
+      value: 5.43
       objectReference: {fileID: 0}
     - target: {fileID: 2208994134600491192, guid: 14f04f8258a8d8549ba878e4346467f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -205,11 +213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1316552640302708356, guid: 3c86a0232deb8984b839f8a493b26706, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.570822
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 1316552640302708356, guid: 3c86a0232deb8984b839f8a493b26706, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.991544
+      value: 5.44
       objectReference: {fileID: 0}
     - target: {fileID: 1316552640302708356, guid: 3c86a0232deb8984b839f8a493b26706, type: 3}
       propertyPath: m_LocalPosition.z
@@ -251,6 +259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: treasure_chest_right
       objectReference: {fileID: 0}
+    - target: {fileID: 1316552640302708411, guid: 3c86a0232deb8984b839f8a493b26706, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 870382e682a4f5a44b2196eff2567a00, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c86a0232deb8984b839f8a493b26706, type: 3}
 --- !u!4 &6610536247129954638 stripped
@@ -275,11 +287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4276878544929598323, guid: 14f5c91c20b1243439d29b716c54a29f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.540822
+      value: 4.58
       objectReference: {fileID: 0}
     - target: {fileID: 4276878544929598323, guid: 14f5c91c20b1243439d29b716c54a29f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.241544
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 4276878544929598323, guid: 14f5c91c20b1243439d29b716c54a29f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -313,6 +325,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4276878544929598324, guid: 14f5c91c20b1243439d29b716c54a29f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 870382e682a4f5a44b2196eff2567a00, type: 3}
     - target: {fileID: 4276878544929598326, guid: 14f5c91c20b1243439d29b716c54a29f, type: 3}
       propertyPath: m_Name
       value: treasure_chest_left

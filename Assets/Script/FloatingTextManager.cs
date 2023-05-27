@@ -54,3 +54,4 @@ public class FloatingTextManager : MonoBehaviour
         return txt;
     }
 }
+
