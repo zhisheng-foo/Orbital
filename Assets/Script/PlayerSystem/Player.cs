@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Player : Mover 
 {
     private SpriteRenderer spriteRenderer;
-
     private int buffer;
 
     private string WALK_ANIMATION = "Walk";
@@ -26,20 +25,14 @@ public class Player : Mover
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb2D = GetComponent<Rigidbody2D>();
+        
+        // Enable the Player object in all scenes except "Start Game"
+        if (SceneManager.GetActiveScene().name != "Start Game")
+            gameObject.SetActive(true);
     }
 
     private void Update() 
     {
-        // Check if the current scene is the main scene
-        if (SceneManager.GetActiveScene().name != "Main")
-        {
-            // Disable Rigidbody2D component
-            if (rb2D != null)
-                rb2D.simulated = false;
-
-            return;
-        }
-
         // Enable Rigidbody2D component
         if (rb2D != null)
             rb2D.simulated = true;
@@ -119,10 +112,10 @@ public class Player : Mover
 
         anim.SetBool(DODGE_ANIMATION, false);
     }
-
-
 }
-       
+
+
+   
 
 
 

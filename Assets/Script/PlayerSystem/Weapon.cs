@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Weapon : Collidable
 {
@@ -41,7 +42,7 @@ public class Weapon : Collidable
 {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name != "Start Game")
         {   
             StartCoroutine(Swing());
             lastswing = Time.time;      

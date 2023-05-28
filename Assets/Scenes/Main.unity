@@ -351,13 +351,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1756418646, guid: 589156efbc528b14996d2718377c44fe, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1990210746, guid: 589156efbc528b14996d2718377c44fe, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1745498236}
     - target: {fileID: 1990210746, guid: 589156efbc528b14996d2718377c44fe, type: 3}
       propertyPath: intensity
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1210399868084464537, guid: 589156efbc528b14996d2718377c44fe, type: 3}
       propertyPath: m_RootOrder
@@ -832,6 +836,14 @@ PrefabInstance:
     - target: {fileID: 2858006801965909507, guid: ffaa8c4181881e948a6c9da0896eb41a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858006801965909509, guid: ffaa8c4181881e948a6c9da0896eb41a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858006801965909509, guid: ffaa8c4181881e948a6c9da0896eb41a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffaa8c4181881e948a6c9da0896eb41a, type: 3}

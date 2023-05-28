@@ -2360,6 +2360,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6747984244074868870, guid: ad4a7daa0cf2bbb418b1f660d8752b64, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747984244074868870, guid: ad4a7daa0cf2bbb418b1f660d8752b64, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6747984244074868920, guid: ad4a7daa0cf2bbb418b1f660d8752b64, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2464,6 +2472,10 @@ PrefabInstance:
     - target: {fileID: 8219814470103748248, guid: 7915787d6e9d435418c24780b1f583f2, type: 3}
       propertyPath: m_Name
       value: StartGameButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219814470336648401, guid: 7915787d6e9d435418c24780b1f583f2, type: 3}
+      propertyPath: m_text
+      value: Press Any Key to Start!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7915787d6e9d435418c24780b1f583f2, type: 3}

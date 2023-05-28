@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Play : MonoBehaviour
 {   
-
     public TransitManager instance;
     public Button playButton;
     public AudioClip clickSound;
@@ -22,6 +21,7 @@ public class Play : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(HideObjectForFixedTime());
+        StartCoroutine(StartWithAnyKey());
     }
 
     public void LobbyTransit() 
@@ -58,13 +58,24 @@ public class Play : MonoBehaviour
         objectToHide.SetActive(true);
     }
 
-    IEnumerator Load(){
+    private IEnumerator StartWithAnyKey()
+    {
+        yield return new WaitForSeconds(1.0f);
+        while (true)
+        {
+            if (Input.anyKeyDown)
+            {
+                LobbyTransit();
+                yield break;
+            }
+            yield return null;
+        }
+    }
 
-        
+    IEnumerator Load()
+    {
         yield return new WaitForSeconds(1.68f);
         SceneManager.LoadScene("Main");
-        
-
     }
 }
 
