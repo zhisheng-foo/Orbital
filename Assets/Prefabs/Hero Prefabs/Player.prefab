@@ -129,8 +129,9 @@ MonoBehaviour:
   pushRecoverySpeed: 0.2
   knockTime: 0
   pushDirection: {x: 0, y: 0, z: 0}
+  desiredPosition: {x: -3.5, y: 0.7, z: 0}
   anim: {fileID: 4595735991405964108}
-  weapon: {fileID: 0}
+  weapon: {fileID: 322718350}
 --- !u!61 &1930132557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &1930132559
 MonoBehaviour:

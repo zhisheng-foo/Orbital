@@ -8,6 +8,8 @@ public class Player : Mover
     private SpriteRenderer spriteRenderer;
     private int buffer;
 
+    public Vector3 desiredPosition;
+
     private string WALK_ANIMATION = "Walk";
     private string DODGE_ANIMATION = "Dodge";
     private string ATTACK_ANIMATION = "Attack";
@@ -19,46 +21,87 @@ public class Player : Mover
 
     private Rigidbody2D rb2D;
 
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+    rb2D.velocity = Vector2.zero;
+    rb2D.angularVelocity = 0f;
+
+
+    if (scene.name == "Level 1 - 0")
+    {   
+        transform.position = desiredPosition;
+        rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+}
+
+
+
     protected override void Start() 
     {
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb2D = GetComponent<Rigidbody2D>();
+
+
+        rb2D.freezeRotation = true; // Prevent rotation
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
         
-        // Enable the Player object in all scenes except "Start Game"
-        if (SceneManager.GetActiveScene().name != "Start Game")
-            gameObject.SetActive(true);
+      
     }
+  
 
-    private void Update() 
+      private void OnDestroy()
     {
-        // Enable Rigidbody2D component
-        if (rb2D != null)
-            rb2D.simulated = true;
-
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        anim.SetBool(WALK_ANIMATION, true);
-
-        if (x > 0 || y > 0) 
-        {
-            anim.SetBool(WALK_ANIMATION, true);
-        }
-        else if (x < 0 || y < 0) 
-        {
-            anim.SetBool(WALK_ANIMATION, true);
-        }
-        else 
-        {
-            anim.SetBool(WALK_ANIMATION, false);
-        }
-
-        dodge = false;
-
-        UpdateMotor(new Vector3(x, y, 0));  
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name != "Start Game")
+        {
+            // Enable Rigidbody2D component
+            if (rb2D != null)
+                rb2D.simulated = true;
+
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
+
+            anim.SetBool(WALK_ANIMATION, true);
+
+            if (x > 0 || y > 0)
+            {
+                anim.SetBool(WALK_ANIMATION, true);
+            }
+            else if (x < 0 || y < 0)
+            {
+                anim.SetBool(WALK_ANIMATION, true);
+            }
+            else
+            {
+                anim.SetBool(WALK_ANIMATION, false);
+            }
+
+            dodge = false;
+
+            UpdateMotor(new Vector3(x, y, 0));
+        }
+    }
+
 
     public void OnLevelUp() 
     {

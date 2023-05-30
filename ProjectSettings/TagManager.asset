@@ -93,3 +93,9 @@ TagManager:
   - name: Actor
     uniqueID: 2766600873
     locked: 0
+  - name: lightbulb
+    uniqueID: 976048351
+    locked: 0
+  - name: Design_10
+    uniqueID: 3697136355
+    locked: 0
