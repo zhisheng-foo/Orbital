@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4276878544929598323}
   - component: {fileID: 4276878544929598322}
   - component: {fileID: 4276878544929598325}
-  - component: {fileID: 4276878544929598324}
   - component: {fileID: 4276878544929598327}
+  - component: {fileID: 4276878544929598324}
   - component: {fileID: 4276878544929598320}
   m_Layer: 0
   m_Name: treasure_chest_left
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -367504995
-  m_SortingLayer: 3
+  m_SortingLayer: 15
   m_SortingOrder: 1
   m_Sprite: {fileID: -1832710599, guid: 535c6da7ba2966148acb3cd042c9ac7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -109,6 +109,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4276878544929598327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4276878544929598326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e9315daf7fb734bb36847a5d2f02a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  dollarAmount: 10
+  scaredSoundEffect: {fileID: 0}
 --- !u!82 &4276878544929598324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -119,7 +147,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4145e3adb8e1f45d093ae81e39499a59, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9d80879d30379eb4b90db67bd9c899e2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -205,34 +233,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4276878544929598327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4276878544929598326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e9315daf7fb734bb36847a5d2f02a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  dollarAmount: 15
-  scaredSoundEffect: {fileID: 0}
 --- !u!61 &4276878544929598320
 BoxCollider2D:
   m_ObjectHideFlags: 0
