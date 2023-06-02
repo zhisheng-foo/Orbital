@@ -155,6 +155,20 @@ public class Player : Mover
 
         anim.SetBool(DODGE_ANIMATION, false);
     }
+
+
+     public void Heal (int healingAmount) {
+        if(hitpoint == maxHitpoint) {
+            return;
+        }
+        hitpoint += healingAmount;
+        if (hitpoint > maxHitpoint) {
+            hitpoint = maxHitpoint;
+        } 
+        GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, new Color(0.8f, 0.7f, 0.15f), transform.position, Vector3.up * 30, 1.0f);
+
+        
+    }
 }
 
 
