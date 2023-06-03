@@ -15,6 +15,8 @@ public class DoughnutHealth : Collidable
     public AudioClip healAudioClip;
     public AudioClip notEnoughDollarAudioClip;
 
+    private Player player; // Reference to the Player component in the current scene
+
     public float healAudioVolume = 1.0f;
     public float notEnoughDollarAudioVolume = 1.0f;
 
@@ -31,6 +33,9 @@ public class DoughnutHealth : Collidable
 
         // Set the initial volume
         audioSource.volume = healAudioVolume;
+
+        // Find the Player object in the current scene
+        player = FindObjectOfType<Player>();
     }
 
     protected override void OnCollide(Collider2D coll)
@@ -40,7 +45,6 @@ public class DoughnutHealth : Collidable
             return;
         }
 
-        Player player = GameManager.instance.player;
         int maxHealth = player.maxHitpoint;
         int currentHealth = player.hitpoint;
 

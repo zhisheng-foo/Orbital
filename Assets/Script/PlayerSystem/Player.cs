@@ -19,8 +19,9 @@ public class Player : Mover
 
     public Weapon weapon;
 
-    private Rigidbody2D rb2D;
+    public bool isInvulnerable = false;
 
+    private Rigidbody2D rb2D;
 
     private void OnEnable()
     {
@@ -35,18 +36,12 @@ public class Player : Mover
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-    rb2D.velocity = Vector2.zero;
-    rb2D.angularVelocity = 0f;
-
-
-    if (scene.name == "Level 1 - 0")
-    {   
-        transform.position = desiredPosition;
-        rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
+        if (scene.name == "Level 1 - 0")
+        {   
+            transform.position = desiredPosition;
+            
+        }
     }
-}
-
-
 
     protected override void Start() 
     {
@@ -59,8 +54,7 @@ public class Player : Mover
         rb2D.freezeRotation = true; // Prevent rotation
 
         SceneManager.sceneLoaded += OnSceneLoaded;
-        
-      
+            
     }
   
 
@@ -127,10 +121,20 @@ public class Player : Mover
             pushDirection = Vector3.zero;
 
             if (rnd.Next(2) == 0) 
-            {
-                hitpoint -= dmg.damageAmount;
-                GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, new Color(0.3f, 0f, 0.1f),
-                    transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);
+            {   
+                if (!isInvulnerable) 
+                {
+                    hitpoint -= dmg.damageAmount;
+                    GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, new Color(0.3f, 0f, 0.1f),
+                        transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);
+
+                }
+                else 
+                {
+                    GameManager.instance.ShowText("Plot Armour", 20, new Color(0.1f, 0.1f, 0.1f),
+                        transform.position + new Vector3(1.5f, 0f, 0f), Vector3.up * 25, 0.3f);
+                }
+               
             }
             else 
             {
@@ -166,10 +170,24 @@ public class Player : Mover
             hitpoint = maxHitpoint;
         } 
         GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, new Color(0.8f, 0.7f, 0.15f), transform.position, Vector3.up * 30, 1.0f);
+     
+    }
 
+    public IEnumerator ResetPlayerStats(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+    
+        // Reset player's speed and attack to original values
+        ySpeed = 5.0f;
+        xSpeed = 5.5f;
+        weapon.damagePoint = 2;
+        GameManager.instance.ShowText("Ham Breathing deactivated"
+        , 20,new Color(0f, 0f, 0f), transform.position, Vector3.up * 0.45f, 1.0f);
         
     }
+
 }
+
 
 
    

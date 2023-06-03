@@ -37,7 +37,7 @@ public class BlackHoleScript : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Level 1-0")
+        if (scene.name == "Level 1 - 0")
         {
             Destroy(gameObject);
             

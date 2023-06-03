@@ -129,9 +129,12 @@ MonoBehaviour:
   pushRecoverySpeed: 0.2
   knockTime: 0
   pushDirection: {x: 0, y: 0, z: 0}
+  ySpeed: 5
+  xSpeed: 5.5
   desiredPosition: {x: -3.5, y: 0.7, z: 0}
   anim: {fileID: 4595735991405964108}
   weapon: {fileID: 322718350}
+  isInvulnerable: 0
 --- !u!61 &1930132557
 BoxCollider2D:
   m_ObjectHideFlags: 0
