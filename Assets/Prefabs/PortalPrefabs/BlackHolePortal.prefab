@@ -47,7 +47,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07269716, y: 0.32713693}
+  m_Offset: {x: -0.07269716, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -100,7 +100,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 64fd7395d5d259a41aeece94ff10fcc5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.722
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 1210399868084464539}
   - component: {fileID: 1210399868084464543}
   - component: {fileID: 1210399868084464540}
-  - component: {fileID: 1990210746}
+  - component: {fileID: 2017980171}
   m_Layer: 0
   m_Name: BlackHolePortal
   m_TagString: Untagged
@@ -416,7 +416,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1990210746
+--- !u!114 &2017980171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -429,8 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  influenceRange: 6.5
-  intensity: 4
-  distanceToPlayer: 8
-  suctionSound: {fileID: 8300000, guid: 132f15141c4cc504caf399c9bee2d661, type: 3}
-  volume: 0.3
+  influenceRange: 6
+  distanceToPlayer: 3
+  suctionSound: {fileID: 0}
+  volume: 1

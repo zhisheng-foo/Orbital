@@ -24,7 +24,7 @@ public class Chest : Collectable
             scaredSoundEffect.Play();
             GameManager.instance.dollar += dollarAmount;
             GameManager.instance.ShowText("+" + dollarAmount + " TREATS ", 15,
-            new Color(0.6f, 0.0f, 0.2f), transform.position,Vector3.up * 25, 2.0f);
+            new Color(1f, 0.843f, 0.0f), transform.position,Vector3.up * 25, 2.0f);
         } 
     }
 }

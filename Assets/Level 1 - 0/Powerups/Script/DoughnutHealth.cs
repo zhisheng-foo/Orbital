@@ -10,7 +10,7 @@ public class DoughnutHealth : Collidable
     private float cooldown = 1.5f;
     private float lastShout;
 
-    private int dollarRequired = 10;
+    private int dollarRequired = 20;
 
     public AudioClip healAudioClip;
     public AudioClip notEnoughDollarAudioClip;
@@ -23,6 +23,8 @@ public class DoughnutHealth : Collidable
     private AudioSource audioSource;
 
     private bool isDestroyed = false;
+
+    private bool healMessageShown = false;
 
     private void Start()
     {
@@ -58,7 +60,7 @@ public class DoughnutHealth : Collidable
             if (Time.time - lastHeal > healCooldown)
             {
                 lastHeal = Time.time;
-
+                healMessageShown = true;
                 // Calculate the healing amount based on the player's current health
                 int healingAmount = Mathf.Clamp(maxHealth - currentHealth, 1, 5);
 
@@ -68,12 +70,16 @@ public class DoughnutHealth : Collidable
                 GameManager.instance.dollar -= dollarRequired;
 
                 // Play the heal audio clip and register a callback for when it finishes playing
-                StartCoroutine(PlayAudioAndDestroy(healAudioClip, DestroyDoughnut));
+                StartCoroutine(PlayAudioAndDestroy(healAudioClip, () =>
+                {
+                    DestroyDoughnut();
+                    healMessageShown = true;
+                }));
             }
         }
         else
         {
-            if (Time.time - lastShout > cooldown)
+            if (!healMessageShown && Time.time - lastShout > cooldown)
             {
                 lastShout = Time.time;
 
@@ -82,12 +88,16 @@ public class DoughnutHealth : Collidable
 
                 if (GameManager.instance.dollar < dollarRequired)
                 {
-                    GameManager.instance.ShowText("The chosen demands more", 20, new Color(0.8f, 0.0f, 0.0f), transform.position, Vector3.up * 30, 1.0f);
+                    GameManager.instance.ShowText("The chosen demands more", 20, new Color(0.0f, 0.0f, 0.0f), transform.position, Vector3.up * 30, 1.0f);
                 }
                 else
                 {
                     lastShout = Time.time - cooldown; // Reset the lastShout time to avoid showing the message immediately after buying the doughnut
                 }
+            }
+            else if (healMessageShown)
+            {
+                lastShout = Time.time - cooldown; // Reset the lastShout time to avoid showing the message immediately after buying the doughnut
             }
         }
     }

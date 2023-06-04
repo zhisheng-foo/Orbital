@@ -22,6 +22,7 @@ public class Player : Mover
     public bool isInvulnerable = false;
 
     private Rigidbody2D rb2D;
+    private bool healMessageShown = false;
 
     private void OnEnable()
     {
@@ -160,7 +161,6 @@ public class Player : Mover
         anim.SetBool(DODGE_ANIMATION, false);
     }
 
-
      public void Heal (int healingAmount) {
         if(hitpoint == maxHitpoint) {
             return;
@@ -168,9 +168,13 @@ public class Player : Mover
         hitpoint += healingAmount;
         if (hitpoint > maxHitpoint) {
             hitpoint = maxHitpoint;
+        }
+        if (!healMessageShown) 
+        {
+            GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, new Color(1f, 0.843f, 0.0f), transform.position, Vector3.up * 30, 1.0f);
+            healMessageShown = true;
         } 
-        GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, new Color(0.8f, 0.7f, 0.15f), transform.position, Vector3.up * 30, 1.0f);
-     
+        
     }
 
     public IEnumerator ResetPlayerStats(float duration)
@@ -182,7 +186,7 @@ public class Player : Mover
         xSpeed = 5.5f;
         weapon.damagePoint = 2;
         GameManager.instance.ShowText("Ham Breathing deactivated"
-        , 20,new Color(0.7f, 0.2f, 0f), transform.position, Vector3.up * 0.45f, 1.0f);
+        , 20,new Color(0f, 0f, 0f), transform.position, Vector3.up * 0.45f, 1.0f);
         
     }
 
@@ -193,7 +197,7 @@ public class Player : Mover
 
         weapon.damagePoint = 2;
         GameManager.instance.ShowText("  The curse has been lifted"
-        , 20, new Color(0.3f, 0f, 0.3f), transform.position + Vector3.up * 0.30f, Vector3.up * 0.65f, 1.0f);
+        , 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.30f, Vector3.up * 0.65f, 1.0f);
     }
 
 }

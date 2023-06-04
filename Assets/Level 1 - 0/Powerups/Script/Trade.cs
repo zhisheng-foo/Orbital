@@ -47,8 +47,8 @@ public class Trade : Collidable
             player.hitpoint -= healthRequired;
 
              GameManager.instance.ShowText("The curse has been placed   ",
-                    20, new Color(0.3f, 0f, 0.3f), transform.position + Vector3.up * 0.45f, 
-                    Vector3.up * 30, 1.0f);
+                    20, new Color(0f, 0f, 0f), transform.position, 
+                    Vector3.up * 20, 1.0f);
             weapon.damagePoint = 666;
             powerUpAudioSource.Play();
 
@@ -68,7 +68,7 @@ public class Trade : Collidable
                 if (player.hitpoint <= healthRequired)
                 {
                     GameManager.instance.ShowText("Not enough sacrifice",
-                        20, new Color(0.5f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
+                        20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
 
                     // Play insufficient dollar audio
                     insufficientHealthAudioSource.Play();

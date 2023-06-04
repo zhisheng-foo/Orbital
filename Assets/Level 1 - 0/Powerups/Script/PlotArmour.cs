@@ -44,7 +44,7 @@ public class PlotArmour : Collidable
 
                 GameManager.instance.dollar -= dollarRequired;
                
-                GameManager.instance.ShowText("Plot Armour activated  ", 20, new Color(0.1f, 0.1f, 0.1f), transform.position + Vector3.up * 0.45f, Vector3.up * 30, 1.0f);
+                GameManager.instance.ShowText("Plot Armour activated  ", 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.45f, Vector3.up * 30, 1.0f);
                 player.StartCoroutine(ActivateInvulnerabilityAndDestroyObject(duration));
 
                 // Play power-up audio
@@ -60,7 +60,7 @@ public class PlotArmour : Collidable
                 if (GameManager.instance.dollar < dollarRequired)
                 {
                     GameManager.instance.ShowText("Prove yourself. You are not the protagonist."
-                    , 20, new Color(0.1f, 0.1f, 0.1f), transform.position, Vector3.up * 20, 1.0f);
+                    , 20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
 
                     // Play insufficient funds audio
                     insufficientFundsAudioSource.Play();
@@ -90,7 +90,7 @@ public class PlotArmour : Collidable
         powerUpEndAudioSource.Play();
 
         Vector3 textPosition = player.transform.position + Vector3.up * 0.45f;
-        GameManager.instance.ShowText("   Plot Armour Deactivated", 20, new Color(0.1f, 0.1f, 0.1f), textPosition, Vector3.up * 30, 1.0f);
+        GameManager.instance.ShowText("   Plot Armour Deactivated", 20, new Color(0f, 0f, 0f), textPosition, Vector3.up * 30, 1.0f);
 
         // Destroy the object after the power-up duration
         Destroy(gameObject);

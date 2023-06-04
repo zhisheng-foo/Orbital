@@ -26,7 +26,7 @@ public class NPCTextPerson2 : Collidable
 
         if (Time.time - lastShout > cooldown) {
             lastShout = Time.time;
-            GameManager.instance.ShowText(message, 35 , new Color(0.3f, 0.5f, 1f), transform.position + new Vector3(0, 0.60f, 0) ,Vector3.zero, cooldown);
+            GameManager.instance.ShowText(message, 25 , new Color(0f, 0f, 0f), transform.position + new Vector3(0, 0.40f, 0) ,Vector3.zero, cooldown);
         }
    }
 }

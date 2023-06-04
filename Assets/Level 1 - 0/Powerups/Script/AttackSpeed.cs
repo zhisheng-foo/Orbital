@@ -64,7 +64,7 @@ public class AttackSpeed : Collidable
                 GameManager.instance.dollar -= dollarRequired;
 
                 GameManager.instance.ShowText("Ham Breathing First Form",
-                    20, new Color(0.7f, 0.2f, 0f), transform.position + Vector3.up * 0.45f, Vector3.up * 30, 1.0f);
+                    20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.45f, Vector3.up * 30, 1.0f);
 
                 // Increase player's speed and attack
                 player.ySpeed *= 1.5f;
@@ -92,7 +92,7 @@ public class AttackSpeed : Collidable
                 if (GameManager.instance.dollar < dollarRequired)
                 {
                     GameManager.instance.ShowText("More. You are not fit to learn",
-                        20, new Color(0.7f, 0.2f, 0f), transform.position, Vector3.up * 20, 1.0f);
+                        20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
 
                     // Play insufficient dollar audio
                     insufficientDollarAudioSource.Play();

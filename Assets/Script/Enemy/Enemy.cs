@@ -131,8 +131,9 @@ public class Enemy : Mover
         deathSoundEffect.Play();
         float delay = 0.5f;
         yield return new WaitForSeconds(delay);
-        GameManager.instance.experience++;
-        GameManager.instance.ShowText("+" + xpValue + "xp", 30, Color.green, transform.position, Vector3.up * 40, 1.0f);
+        GameManager.instance.dollar += 4;
+        int temp = 4;
+        GameManager.instance.ShowText("+ " + temp + " TREATS", 15 , new Color(1f, 0.0f, 0f), transform.position, Vector3.up * 40, 1.0f);
         
         Destroy(gameObject);
 
