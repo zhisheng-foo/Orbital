@@ -1085,7 +1085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4595735991405964110, guid: 0e84249190018694587d80155d412af5, type: 3}
       propertyPath: hitpoint
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4595735991405964110, guid: 0e84249190018694587d80155d412af5, type: 3}
       propertyPath: powerDownAudioSource

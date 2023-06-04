@@ -182,8 +182,18 @@ public class Player : Mover
         xSpeed = 5.5f;
         weapon.damagePoint = 2;
         GameManager.instance.ShowText("Ham Breathing deactivated"
-        , 20,new Color(0f, 0f, 0f), transform.position, Vector3.up * 0.45f, 1.0f);
+        , 20,new Color(0.7f, 0.2f, 0f), transform.position, Vector3.up * 0.45f, 1.0f);
         
+    }
+
+
+    public IEnumerator ResetPlayerStatsTrade(float duration)
+    {   
+        yield return new WaitForSeconds(duration);
+
+        weapon.damagePoint = 2;
+        GameManager.instance.ShowText("  The curse has been lifted"
+        , 20, new Color(0.3f, 0f, 0.3f), transform.position + Vector3.up * 0.30f, Vector3.up * 0.65f, 1.0f);
     }
 
 }
