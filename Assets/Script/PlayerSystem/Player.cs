@@ -169,12 +169,9 @@ public class Player : Mover
         if (hitpoint > maxHitpoint) {
             hitpoint = maxHitpoint;
         }
-        if (!healMessageShown) 
-        {
-            GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, new Color(1f, 0.843f, 0.0f), transform.position, Vector3.up * 30, 1.0f);
-            healMessageShown = true;
-        } 
         
+        
+        GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, new Color(1f, 0.843f, 0.0f), transform.position, Vector3.up * 30, 1.0f);    
     }
 
     public IEnumerator ResetPlayerStats(float duration)

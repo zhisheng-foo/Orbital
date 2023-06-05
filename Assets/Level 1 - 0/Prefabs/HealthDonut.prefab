@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 8375007029690502023}
   - component: {fileID: 8375007029690502026}
   - component: {fileID: 8375007029690502025}
+  - component: {fileID: 378898303}
   m_Layer: 0
   m_Name: HealthDonut
   m_TagString: Untagged
@@ -392,7 +393,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  player: {fileID: 0}
   healAudioClip: {fileID: 8300000, guid: 25e41987a5a88cd43a736f053a0e604c, type: 3}
   notEnoughDollarAudioClip: {fileID: 8300000, guid: 18ec1fc16ce6ce8469ee7c500b180d1b, type: 3}
   healAudioVolume: 0.4
@@ -589,3 +589,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &378898303
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8375007029690502018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69e68085a24e2db499a8b428f6c61128, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

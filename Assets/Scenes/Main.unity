@@ -255,6 +255,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1581684135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3468053637345940682, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+  m_PrefabInstance: {fileID: 8342670320811200714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1581684142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581684135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f7f5dfeaef02445ad899c538045df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  message: where joe mama
+  voiceSoundEffect: {fileID: 1581684145}
+--- !u!82 &1581684145 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8342670321426715991, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+  m_PrefabInstance: {fileID: 8342670320811200714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1680618358 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2858006802577149783, guid: ffaa8c4181881e948a6c9da0896eb41a, type: 3}
@@ -820,10 +858,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3311195973993584776, guid: e11069c0ca5acde49a24ba3fdc18c94f, type: 3}
-      propertyPath: lookAt
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3311195973993584820, guid: e11069c0ca5acde49a24ba3fdc18c94f, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -1519,6 +1553,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3468053637345940682, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_Name
+      value: trench_coat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468053637345940684, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 452a43d499c1cfe4392f6a5af5914edc, type: 2}
+    - target: {fileID: 3468053637345940685, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2047534768, guid: 7822d6a61d525dc46b7ccce01881f362, type: 3}
     - target: {fileID: 8342670320524673241, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6
@@ -1574,6 +1620,42 @@ PrefabInstance:
     - target: {fileID: 8342670321084342490, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342670321432608914, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342670321432608914, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342670321432608915, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342670321432608915, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.4782609
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342670321432608924, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5fbed899fc9ebcf42a1a9c023d896faf, type: 2}
+    - target: {fileID: 8342670321432608925, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1084555246, guid: 4a94bfc9c8cee254fa76058dec667ec6, type: 3}
+    - target: {fileID: 8342670321432608927, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_Name
+      value: Iron_chef
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342670321807802556, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.82608694
+      objectReference: {fileID: 0}
+    - target: {fileID: 8342670321807802556, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3913044
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b5e8e9834434c84aa9d040a8e075404, type: 3}
