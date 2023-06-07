@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5742708133999143082}
   - component: {fileID: 5742708133999143083}
   - component: {fileID: 5742708133999143080}
+  - component: {fileID: 260557857}
   m_Layer: 0
   m_Name: Celery
   m_TagString: Untagged
@@ -61,7 +62,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5742708133999143084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.64785033, y: -1.4336143, z: -4.897855}
+  m_LocalPosition: {x: 54.29, y: -16.95, z: -4.897855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -176,6 +177,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7392628, y: 1.1026009}
   m_EdgeRadius: 0
+--- !u!95 &260557857
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742708133999143084}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90dcf1f5562927048be4053bfc854d9e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5742708134686252592
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,5 +50,6 @@ MonoBehaviour:
   weaponPrices: 
   xpTable: 
   player: {fileID: 0}
+  weapon: {fileID: 0}
   dollar: 0
   experience: 0

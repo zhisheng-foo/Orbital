@@ -135,7 +135,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  dollarAmount: 10
+  dollarAmount: 20
   scaredSoundEffect: {fileID: 0}
 --- !u!82 &4276878544929598324
 AudioSource:

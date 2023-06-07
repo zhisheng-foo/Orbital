@@ -26,7 +26,8 @@ public class Portal : Collidable
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "Level 1 - 0")
-        {
+        {   
+            SceneManager.sceneLoaded -= OnSceneLoaded;
             Destroy(gameObject);
         }
     }

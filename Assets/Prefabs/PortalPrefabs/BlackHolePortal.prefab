@@ -333,8 +333,8 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 132f15141c4cc504caf399c9bee2d661, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.103
-  m_Pitch: 0.6
-  Loop: 0
+  m_Pitch: 0.84
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  influenceRange: 6
-  distanceToPlayer: 3
-  suctionSound: {fileID: 0}
-  volume: 1
+  influenceRange: 5
+  minDistanceToPlay: 0
+  suctionSound: {fileID: 8300000, guid: 132f15141c4cc504caf399c9bee2d661, type: 3}
+  volume: 0.4
