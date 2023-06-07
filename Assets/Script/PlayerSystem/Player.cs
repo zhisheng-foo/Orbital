@@ -10,6 +10,8 @@ public class Player : Mover
 
     public Vector3 desiredPosition;
 
+    public Vector3 desiredPositionLobby;
+
     private string WALK_ANIMATION = "Walk";
     private string DODGE_ANIMATION = "Dodge";
     private string ATTACK_ANIMATION = "Attack";
@@ -36,11 +38,27 @@ public class Player : Mover
 
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
+    {   
+
+        if (scene.name == "Start Game")
+        {
+            spriteRenderer.enabled = false;
+        }
+        else
+        {
+            spriteRenderer.enabled = true;
+        }
+
+
         if (scene.name == "Level 1 - 0")
         {   
             transform.position = desiredPosition;
             
+        }
+
+        if (scene.name == "Main")
+        {
+            transform.position = desiredPositionLobby;
         }
     }
 

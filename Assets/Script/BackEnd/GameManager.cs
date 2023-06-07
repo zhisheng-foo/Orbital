@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
         
         instance = this;
+        
         //SceneManager.sceneLoaded += LoadState;   
         DontDestroyOnLoad(gameObject);
     }
@@ -94,6 +95,7 @@ public class GameManager : MonoBehaviour
             player.SetLevel(GetCurrentLevel());
 
         }
+
     }
 
     public int GetCurrentLevel() {
