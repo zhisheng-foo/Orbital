@@ -6,7 +6,7 @@ public class Trade : Collidable
 {
     private float cooldown = 1.5f;
     private float lastShout;
-    public float duration = 15f;
+    public float duration = 10f;
 
     private int healthRequired = 5;
 
