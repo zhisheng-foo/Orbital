@@ -862,9 +862,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 98
-        width: 11
-        height: 43
+        y: 125
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1130,6 +1130,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tilesStuff_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 98
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ebbea77d585044eaf0285cac563218
+      internalID: 34765906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff_5
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 125
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829c56348777d66439702517e7920482
+      internalID: -2075173937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff_6
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 98
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9ab8f949396c5468c78f0b330037ca
+      internalID: -1673719738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1182,8 +1245,11 @@ TextureImporter:
       tilesStuff_37: 1517535967
       tilesStuff_38: 523470963
       tilesStuff_39: 301544730
+      tilesStuff_4: 34765906
       tilesStuff_40: -265186620
       tilesStuff_41: 79202853
+      tilesStuff_5: -2075173937
+      tilesStuff_6: -1673719738
       tilesStuff_7: 621504723
       tilesStuff_8: 1532224822
       tilesStuff_9: -383850535
