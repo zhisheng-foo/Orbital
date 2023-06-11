@@ -16,6 +16,8 @@ public class Player : Mover
     private string DODGE_ANIMATION = "Dodge";
     private string ATTACK_ANIMATION = "Attack";
 
+    public GameObject boss;
+
     public Animator anim;
     private bool dodge;
 
@@ -26,9 +28,11 @@ public class Player : Mover
     private Rigidbody2D rb2D;
     private bool healMessageShown = false;
 
+   
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        
     }
 
     private void OnDisable()
@@ -68,8 +72,7 @@ public class Player : Mover
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb2D = GetComponent<Rigidbody2D>();
-
-
+        
         rb2D.freezeRotation = true; // Prevent rotation
 
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -142,11 +145,11 @@ public class Player : Mover
             if (rnd.Next(2) == 0) 
             {   
                 if (!isInvulnerable) 
-                {
+                {   
                     hitpoint -= dmg.damageAmount;
-                    GameManager.instance.ShowText(dmg.damageAmount.ToString(), 25, new Color(0.3f, 0f, 0.1f),
+                    
+                        GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, new Color(0.3f, 0f, 0.1f),
                         transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);
-
                 }
                 else 
                 {

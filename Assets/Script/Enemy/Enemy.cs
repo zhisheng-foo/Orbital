@@ -16,10 +16,10 @@ public class Enemy : Mover
     private bool chasing;
     private bool collidingWithPlayer;
 
-    private Transform playerTransform;
+    public Transform playerTransform;
     private Vector3 startingPosition;
 
-    private Animator anim;
+    public Animator anim;
     private string DEATH_ANIMATION = "Death";
     private string HURT_ANIMATION = "Hurt";
 
@@ -32,7 +32,7 @@ public class Enemy : Mover
     private AudioClip receiveDamageSound;
 
     [SerializeField] 
-    private float receiveDamageVolume = 1.0f;
+    public float receiveDamageVolume = 1.0f;
 
 
 
@@ -124,7 +124,7 @@ public class Enemy : Mover
      
     }
 
-    private IEnumerator DestroyAfterAnimation()
+    public IEnumerator DestroyAfterAnimation()
     {   
        
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
@@ -135,7 +135,7 @@ public class Enemy : Mover
         int temp = 4;
         GameManager.instance.ShowText("+ " + temp + " TREATS", 15 , new Color(1f, 0.0f, 0f), transform.position, Vector3.up * 40, 1.0f);
         
-        Destroy(gameObject);
+        Destroy(this.gameObject);
 
     }
 
@@ -154,15 +154,26 @@ public class Enemy : Mover
             hitpoint -= dmg.damageAmount;
             pushDirection = new Vector3(0.0f, 0.0f, 0.0f);
 
-            GameManager.instance.ShowText(
+             if (gameObject.name == "Boss")
+            {
+                GameManager.instance.ShowText(
+                    dmg.damageAmount.ToString(),
+                    70, // Increase the font size here
+                    new Color(0f, 0f, 0f),
+                    transform.position + new Vector3(2.5f, 2f, 0f),
+                    Vector3.up * 40,
+                    0.3f);
+            } 
+            else 
+            {
+                GameManager.instance.ShowText(
                 dmg.damageAmount.ToString(),
                 25,
                 new Color(0.8f, 0f, 0.6f),
                 transform.position + new Vector3(2f, 0f, 0f),
-                Vector3.up * 25,
-                0.3f
-            );
-
+                Vector3.up * 20,
+                0.3f);
+            }   
             StartCoroutine(HurtAttackLoop());
             
             if (hitpoint <= 0)
