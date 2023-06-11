@@ -170,7 +170,7 @@ public class Enemy : Mover
                 dmg.damageAmount.ToString(),
                 25,
                 new Color(0.8f, 0f, 0.6f),
-                transform.position + new Vector3(2f, 0f, 0f),
+                transform.position + new Vector3(2.5f, 0f, 0f),
                 Vector3.up * 20,
                 0.3f);
             }   
