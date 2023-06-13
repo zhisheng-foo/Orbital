@@ -154,11 +154,11 @@ public class Enemy : Mover
             hitpoint -= dmg.damageAmount;
             pushDirection = new Vector3(0.0f, 0.0f, 0.0f);
 
-             if (gameObject.name == "Boss")
+            if (gameObject.name == "Boss")
             {
                 GameManager.instance.ShowText(
                     dmg.damageAmount.ToString(),
-                    70, // Increase the font size here
+                    70, 
                     new Color(0f, 0f, 0f),
                     transform.position + new Vector3(2.5f, 2f, 0f),
                     Vector3.up * 40,
@@ -186,11 +186,15 @@ public class Enemy : Mover
     private IEnumerator PlayReceiveDamageSound()
     {
         isPlayingReceiveDamageSound = true;
+        if (Time.time - lastImmune > immuneTime)
+        {
 
-        // Play the receive damage sound
-        hurtSoundEffect.PlayOneShot(receiveDamageSound, receiveDamageVolume);
+            hurtSoundEffect.PlayOneShot(receiveDamageSound, receiveDamageVolume);
 
-        yield return new WaitForSeconds(receiveDamageSound.length);
+            yield return new WaitForSeconds(receiveDamageSound.length);
+
+        }
+        
 
         isPlayingReceiveDamageSound = false;
     }   

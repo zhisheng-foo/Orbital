@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ObjectDestroyer : MonoBehaviour
 {
-    public GameObject bossObject; // Reference to the boss object
+    public GameObject bossObject; 
     private string BURN_ANIMATION = "Burn";
-    private Animator anim; // Reference to the Animator component
+    private Animator anim; 
 
     private void Start()
     {
-        anim = GetComponent<Animator>(); // Get the Animator component
+        anim = GetComponent<Animator>(); 
     }
 
     private void Update()
@@ -24,7 +24,7 @@ public class ObjectDestroyer : MonoBehaviour
 
     private IEnumerator DestroyObjectWithDelay()
     {
-        // Play the burn animation
+ 
         anim.SetBool(BURN_ANIMATION, true);
 
         // Wait for the animation to complete

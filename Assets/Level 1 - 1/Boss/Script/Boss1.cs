@@ -10,21 +10,21 @@ public class Boss1 : Enemy
     public int numFireballs = 2;
 
     public float[] distance;
-    public float minDistance = 10f; // Minimum distance to keep from the player
-    public float moveSpeed = 5f; // Speed at which the boss moves towards/away from the player
+    public float minDistance = 10f; 
+    public float moveSpeed = 5f; 
 
-    public Vector2 bossBoundsMin; // Minimum boundary position
-    public Vector2 bossBoundsMax; // Maximum boundary position
+    public Vector2 bossBoundsMin; 
+    public Vector2 bossBoundsMax; 
 
-    public float chaseYPosition = 20f; // Y position at which boss starts chasing
+    public float chaseYPosition = 20f; 
 
     private string DEATH_ANIMATION = "Death";
 
     private string ATTACK_ANIMATION = "Attack";
     private bool isPlayingDeathSound = false;
 
-    private Vector3 startPosition; // Initial position of the boss
-    private bool shouldChase = false; // Flag to determine if the boss should start chasing
+    private Vector3 startPosition; 
+    private bool shouldChase = false; 
 
     private bool movingBack = false;
 
@@ -40,22 +40,22 @@ public class Boss1 : Enemy
 
         float playerDistance = Vector3.Distance(transform.position, playerTransform.position);
 
-        // Calculate the direction to move towards the player
+        
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
 
-        // Check if the player has crossed the chaseYPosition to trigger the chase
+        
         if (!shouldChase && playerTransform.position.y >= chaseYPosition)
         {
             shouldChase = true;
         }
 
-        // Move away from the player if the distance is less than the minimum distance
+        
         if (shouldChase && playerDistance < minDistance)
         {
-            // Move in the opposite direction of the player
+            
             Vector3 directionAwayFromPlayer = -directionToPlayer;
 
-            // Check if the boss is already moving back
+            
             if (!movingBack)
             {
                 // Start moving back
@@ -67,8 +67,8 @@ public class Boss1 : Enemy
         }
         else if (shouldChase)
         {
-            // Move towards the player if the distance is greater than the minimum distance
-            movingBack = false; // Reset the moving back flag
+            
+            movingBack = false; 
             UpdateMotor(directionToPlayer);
         }
 
@@ -93,7 +93,7 @@ public class Boss1 : Enemy
 
     private IEnumerator MoveBack()
     {
-        // Calculate the direction to move back towards the initial position
+        
         Vector3 directionToInitial = (startPosition - transform.position).normalized;
 
         while (movingBack && transform.position != startPosition)
@@ -119,16 +119,16 @@ public class Boss1 : Enemy
 {
     for (int i = 0; i < numFireballs; i++)
     {
-        int index = i % fireballSpeed.Length; // Use modulo operator to loop through the fireballSpeed array
+        int index = i % fireballSpeed.Length;
 
-        // Calculate the time factor based on fireballSpeed
+        
         float timeFactor = Time.time * fireballSpeed[index];
 
-        // Calculate the circular movement around the boss
-        float angle = timeFactor * Mathf.Rad2Deg; // Convert timeFactor to degrees
+        
+        float angle = timeFactor * Mathf.Rad2Deg; 
         Vector3 offset = Quaternion.Euler(0f, 0f, angle) * Vector3.up * distance[index] * 15f;
 
-        // Set the new position relative to the boss
+        
         fireballs[i].position = transform.position + offset;
     }
 }
@@ -141,11 +141,11 @@ public class Boss1 : Enemy
 
     protected override void Death()
     {
-        // Play death animation here
+        
         base.anim.SetBool(DEATH_ANIMATION, true);
         isPlayingDeathSound = true;
-        // Delayed destruction
-        float delay = 0.4f; // Adjust the delay time as needed
+        
+        float delay = 0.4f; 
 
         StartCoroutine(DestroyWithDelay(delay));
     }
@@ -153,7 +153,7 @@ public class Boss1 : Enemy
     private IEnumerator DestroyWithDelay(float delay)
     {
         deathSoundEffect.Play();
-        // Destroy fireball objects
+        
         foreach (Transform fireball in fireballs)
         {
             Destroy(fireball.gameObject);
@@ -168,7 +168,7 @@ public class Boss1 : Enemy
 
         yield return new WaitForSeconds(delay);
 
-        // Destroy the boss object
+        
         Destroy(gameObject);
     }
 }
