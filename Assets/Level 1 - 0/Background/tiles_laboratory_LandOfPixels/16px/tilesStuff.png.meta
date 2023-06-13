@@ -1160,7 +1160,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1181,7 +1181,7 @@ TextureImporter:
         width: 16
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1189,6 +1189,48 @@ TextureImporter:
       bones: []
       spriteID: bd9ab8f949396c5468c78f0b330037ca
       internalID: -1673719738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrier
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 146
+        width: 86
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74993238d0d34848a0e117bade5fa9a
+      internalID: -1953309253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_barrier
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 50
+        width: 86
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93277470b058b214f8982f7116d8c3bf
+      internalID: -811798620
       vertices: []
       indices: 
       edges: []
@@ -1204,6 +1246,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      barrier: -1953309253
       button_0: -998138915
       button_1: 33597853
       human_0: -1429712326
@@ -1211,6 +1254,7 @@ TextureImporter:
       human_2: 722177056
       portal_0: 644798948
       portal_1: 1146101078
+      red_barrier: -811798620
       stuff_0: 2096894457
       stuff_1: -1884280421
       tilesStuff_0: -996539486

@@ -12,6 +12,8 @@ public class Player : Mover
 
     public Vector3 desiredPositionLobby;
 
+    public Vector3 desiredfirstBoss;
+
     private string WALK_ANIMATION = "Walk";
     private string DODGE_ANIMATION = "Dodge";
     private string ATTACK_ANIMATION = "Attack";
@@ -63,6 +65,11 @@ public class Player : Mover
         if (scene.name == "Main")
         {
             transform.position = desiredPositionLobby;
+        }
+
+        if(scene.name == "Level 1 - 1")
+        {
+            transform.position = desiredfirstBoss;
         }
     }
 
@@ -192,7 +199,7 @@ public class Player : Mover
         }
         
         
-        GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, new Color(1f, 0.843f, 0.0f), transform.position, Vector3.up * 30, 1.0f);    
+        GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, Color.black, transform.position, Vector3.up * 30, 1.0f);    
     }
 
     public IEnumerator ResetPlayerStats(float duration)

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ExitPortal : Collidable
 {
-    private string level1_1 = "Level 1 - 1"; // Updated scene name
+    public string level = "Level 1 - 1"; // Updated scene name
     private string TRANSITION = "work";
     private Animator anim;
     public AudioSource audioSource;
@@ -18,7 +18,7 @@ public class ExitPortal : Collidable
     }
 
     protected override void OnCollide(Collider2D coll)
-    {       
+    {   
         if (coll.name == "Weapon"&& !audioPlayed)
         {   
             GameObject fadeObject = GameObject.Find("Fade");
@@ -41,6 +41,6 @@ public class ExitPortal : Collidable
         yield return new WaitForSeconds(1.2f);
 
         // Load the new scene
-        SceneManager.LoadScene(level1_1); // Load "Level 1 - 1" scene
+        SceneManager.LoadScene(level); // Load "Level 1 - 1" scene
     }
 }
