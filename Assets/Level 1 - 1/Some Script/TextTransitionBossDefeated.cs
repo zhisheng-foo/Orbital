@@ -7,11 +7,11 @@ public class TextTransitionBossDefeated : MonoBehaviour
     public TextMeshProUGUI text;
     public float typingSpeed = 0.1f;
     public float displayDuration = 2.0f;
-    public float checkInterval = 0.1f; // Interval between boss object checks
+    public float checkInterval = 0.1f; 
 
     public string fullText;
     private Coroutine typingCoroutine;
-    private bool bossDefeated = false; // Track the status of the boss
+    private bool bossDefeated = false; 
 
     private void Start()
     {
