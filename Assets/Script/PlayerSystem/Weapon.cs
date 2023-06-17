@@ -11,8 +11,11 @@ public class Weapon : Collidable
     public int weaponLevel = 0;
     private SpriteRenderer spriteRenderer;
 
-    private float cooldown = 0.1f;
-    private float lastswing;
+    //Internal Cooldown for swing, currently set at 0.5seconds
+    private float cooldown = 0.5f;
+    private float lastSwing;
+    private Animator wepAnim;
+
 
     public bool swinging;
 
@@ -23,7 +26,7 @@ public class Weapon : Collidable
     [SerializeField]
     public AudioSource weaponSoundEffect;
 
-     [SerializeField] 
+    [SerializeField] 
     private AudioClip receiveWeaponSound;
 
     [SerializeField] 
@@ -36,16 +39,22 @@ public class Weapon : Collidable
         weaponSoundEffect = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAnim = player.GetComponent<Animator>();
+        wepAnim = GetComponent<Animator>();
     }
 
     protected override void Update()
-{
+    {
         base.Update();
 
         if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name != "Start Game")
         {   
-            StartCoroutine(Swing());
-            lastswing = Time.time;      
+            if(Time.time - lastSwing > cooldown)
+            {
+                if(Input.GetKeyDown(KeyCode))
+                lastSwing = Time.time;
+                wepAnim.SetTrigger("Attack");
+                StartCoroutine(Swing());
+            }      
         }
     }
 
@@ -97,5 +106,4 @@ public class Weapon : Collidable
 
         isPlayingSound = false; // Reset the flag after the sound effect has finished playing
     }
-  
 }
