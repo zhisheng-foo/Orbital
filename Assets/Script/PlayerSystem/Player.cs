@@ -103,6 +103,8 @@ public class Player : Mover
 
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");
+            Debug.Log("x is: " + x);
+            Debug.Log("y is: " + y);
 
             anim.SetBool(WALK_ANIMATION, true);
 

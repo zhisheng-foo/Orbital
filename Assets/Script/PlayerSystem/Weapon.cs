@@ -50,9 +50,20 @@ public class Weapon : Collidable
         {   
             if(Time.time - lastSwing > cooldown)
             {
-                if(Input.GetKeyDown(KeyCode))
+                
+                if(Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    wepAnim.SetTrigger("AttackDown");
+                }
+                else if(Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    wepAnim.SetTrigger("AttackUp");
+                }
+                else
+                {
+                    wepAnim.SetTrigger("AttackRight");   
+                }
                 lastSwing = Time.time;
-                wepAnim.SetTrigger("Attack");
                 StartCoroutine(Swing());
             }      
         }
