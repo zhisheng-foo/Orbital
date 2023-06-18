@@ -1050,6 +1050,14 @@ PrefabInstance:
       propertyPath: desiredfirstBoss.y
       value: 5.32
       objectReference: {fileID: 0}
+    - target: {fileID: 4595735991405964110, guid: 0e84249190018694587d80155d412af5, type: 3}
+      propertyPath: desiredPositionHalloween.x
+      value: 2.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595735991405964110, guid: 0e84249190018694587d80155d412af5, type: 3}
+      propertyPath: desiredPositionHalloween.y
+      value: 6.284
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e84249190018694587d80155d412af5, type: 3}
 --- !u!1001 &4932056894984618787

@@ -4621,6 +4621,8 @@ MonoBehaviour:
   lookAt: {fileID: 0}
   boundX: 0.15
   boundY: 0.05
+  bossBattleScale: 1.5
+  scaleSpeed: 2
 --- !u!4 &1911360890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3333946028454652823, guid: 6173bd3be8a678b41b61f0067c96b606, type: 3}
@@ -5646,6 +5648,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  level: Level 1 - 1
   audioSource: {fileID: 2486555460903733657}
 --- !u!114 &2486555460903733653
 MonoBehaviour:
@@ -5673,6 +5676,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  level: Level 1 - 1
   audioSource: {fileID: 2486555460903733656}
 --- !u!61 &2486555460903733654
 BoxCollider2D:
