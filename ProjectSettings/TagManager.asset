@@ -48,7 +48,7 @@ TagManager:
   - name: Collision
     uniqueID: 3380880869
     locked: 0
-  - name: Design_0
+  - name: Base
     uniqueID: 2035372871
     locked: 0
   - name: Floor
@@ -99,7 +99,7 @@ TagManager:
   - name: Actor
     uniqueID: 2766600873
     locked: 0
-  - name: ' Layer 11'
+  - name: Above Actor
     uniqueID: 2611889569
     locked: 0
   - name: Layer 12

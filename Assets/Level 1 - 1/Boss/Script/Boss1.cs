@@ -11,7 +11,7 @@ public class Boss1 : Enemy
 
     public float[] distance;
     public float minDistance = 10f; 
-    public float moveSpeed = 5f; 
+    public float moveSpeed = 2.5f; 
 
     public Vector2 bossBoundsMin; 
     public Vector2 bossBoundsMax; 
@@ -27,6 +27,11 @@ public class Boss1 : Enemy
     private bool shouldChase = false; 
 
     private bool movingBack = false;
+
+    //boss would turn off fireball once every 10 seconds for 7 seconds. Can be adjusted
+    private float fireballTimer = 0f;
+    public float fireballDisableDuration = 7f;
+    public float fireballEnableInterval = 10f;
 
     protected override void Start()
     {
@@ -89,6 +94,18 @@ public class Boss1 : Enemy
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, bossBoundsMin.x, bossBoundsMax.x);
         clampedPosition.y = Mathf.Clamp(clampedPosition.y, bossBoundsMin.y, bossBoundsMax.y);
         transform.position = clampedPosition;
+
+        //Disable fireballs for a certain duration
+        if (fireballTimer >= fireballEnableInterval)
+        {
+            DisableFireballs();
+            StartCoroutine(EnableFireballsAfterDelay(fireballDisableDuration));
+            fireballTimer = 0f;
+        }
+        else
+        {
+            fireballTimer += Time.deltaTime;
+        }
     }
 
     private IEnumerator MoveBack()
@@ -133,6 +150,23 @@ public class Boss1 : Enemy
     }
 }
 
+    private void DisableFireballs()
+{
+    foreach(Transform fireball in fireballs)
+    {
+        fireball.gameObject.SetActive(false);
+    }
+}
+
+    private IEnumerator EnableFireballsAfterDelay(float delay)
+{
+    yield return new WaitForSeconds(delay);
+
+    foreach(Transform fireball in fireballs)
+    {
+        fireball.gameObject.SetActive(true);
+    }
+}
 
     protected override void FixedUpdate()
     {
