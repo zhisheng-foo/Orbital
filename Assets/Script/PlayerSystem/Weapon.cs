@@ -26,12 +26,12 @@ public class Weapon : Collidable
     [SerializeField]
     public AudioSource weaponSoundEffect;
 
-    [SerializeField] 
+    [SerializeField]
     private AudioClip receiveWeaponSound;
 
-    [SerializeField] 
+    [SerializeField]
     private float receiveWeaponVolume = 0.7f;
-    
+
 
     protected override void Start()
     {
@@ -47,25 +47,25 @@ public class Weapon : Collidable
         base.Update();
 
         if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name != "Start Game")
-        {   
-            if(Time.time - lastSwing > cooldown)
+        {
+            if (Time.time - lastSwing > cooldown)
             {
-                
-                if(Input.GetKeyDown(KeyCode.DownArrow))
+
+                if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
-                    wepAnim.SetTrigger("AttackDown");
+                    wepAnim.SetTrigger("Attack");
                 }
-                else if(Input.GetKeyDown(KeyCode.UpArrow))
+                else if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
-                    wepAnim.SetTrigger("AttackUp");
+                    wepAnim.SetTrigger("Attack");
                 }
                 else
                 {
-                    wepAnim.SetTrigger("AttackRight");   
+                    wepAnim.SetTrigger("Attack");
                 }
                 lastSwing = Time.time;
                 StartCoroutine(Swing());
-            }      
+            }
         }
     }
 
@@ -73,12 +73,13 @@ public class Weapon : Collidable
     protected override void OnCollide(Collider2D coll)
     {
         if (coll.tag == "Fighter" && swinging == true)
-        {   
+        {
             if (coll.name == "Player")
             {
                 return;
             }
 
+            
             Damage dmg = new Damage()
             {
                 damageAmount = damagePoint,
@@ -94,7 +95,7 @@ public class Weapon : Collidable
     private bool isPlayingSound = false; // Flag to check if the sound effect is playing
 
     private IEnumerator Swing()
-    {   
+    {
         playerAnim.SetBool(ATTACK_ANIMATION, true);
         swinging = true;
 
@@ -104,7 +105,7 @@ public class Weapon : Collidable
         yield return new WaitForSeconds(1.2f);
 
         playerAnim.SetBool(ATTACK_ANIMATION, false);
-    } 
+    }
 
     private IEnumerator PlayWeaponSound()
     {
@@ -118,4 +119,3 @@ public class Weapon : Collidable
         isPlayingSound = false; // Reset the flag after the sound effect has finished playing
     }
 }
-

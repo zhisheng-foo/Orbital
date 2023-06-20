@@ -69,17 +69,15 @@ public class Player : Mover
             transform.position = desiredPositionLobby;
         }
 
-        if(scene.name == "Level 2 - 0") 
-        {
-            transform.position = desiredPositionHalloween;
-        }
-
         if(scene.name == "Level 1 - 1")
         {
             transform.position = desiredfirstBoss;
         }
 
-        
+        if(scene.name == "Level 2 - 0") 
+        {
+            transform.position = desiredPositionHalloween;
+        }
     }
 
     protected override void Start() 
