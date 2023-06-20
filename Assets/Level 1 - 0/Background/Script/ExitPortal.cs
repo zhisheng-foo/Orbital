@@ -33,7 +33,7 @@ public class ExitPortal : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {   
-        if (coll.name == "Weapon" && !audioPlayed && portalEnabled)
+        if (coll.name == "Player" && !audioPlayed && portalEnabled)
         {
             GameObject fadeObject = GameObject.Find("Fade");
             if (fadeObject != null)
