@@ -15,12 +15,8 @@ public class Crate : Collidable
         audioSource = GetComponent<AudioSource>();   
         if (other.name == "Weapon")
         {
-            // Assuming the player swings by pressing the spacebar
-            if (Input.GetKeyDown(KeyCode.Space))
-            {   
-                StartCoroutine(PlaySoundAndDestroy());
-                hasCollided = true;
-            }
+            StartCoroutine(PlaySoundAndDestroy());
+            hasCollided = true;
         }
     }
 
