@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class CameraMotor : MonoBehaviour
 {
     public Transform lookAt;
@@ -15,54 +14,42 @@ public class CameraMotor : MonoBehaviour
     private bool isInBossBattle = false;
     private Coroutine scalingCoroutine;
 
+    public float crossingValue = 17f;
+
+    private Vector3 smoothVelocity = Vector3.zero;
+    public float smoothTime = 0.1f;
+
     private void Start()
     {
         lookAt = GameObject.Find("Player").transform;
         originalSize = Camera.main.orthographicSize;
         boss = GameObject.Find("Boss"); // Replace "Boss" with the actual name of your boss GameObject
+
+        if (GameObject.Find("Boss") == null)
+        {
+            boss = GameObject.Find("Boss_2");
+        }
     }
 
     private void LateUpdate()
     {
-        Vector3 delta = Vector3.zero;
-        float deltaX = lookAt.position.x - transform.position.x;
-
-        if (deltaX > boundX || deltaX < -boundX)
+        if (lookAt != null)
         {
-            if (transform.position.x < lookAt.position.x)
-            {
-                delta.x = deltaX - boundX;
-            }
-            else
-            {
-                delta.x = deltaX + boundX;
-            }
-        }
+            Vector3 targetPosition = lookAt.position;
+            targetPosition.z = transform.position.z; // Maintain the camera's original z position
 
-        float deltaY = lookAt.position.y - transform.position.y;
+            // Smoothly move the camera towards the target position
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref smoothVelocity, smoothTime);
 
-        if (deltaY > boundY || deltaY < -boundY)
-        {
-            if (transform.position.y < lookAt.position.y)
+            // Check if the player has crossed a certain y-value and if the boss is present
+            if (!isInBossBattle && transform.position.y > crossingValue && boss != null)
             {
-                delta.y = deltaY - boundY;
+                SetBossBattle(true);
             }
-            else
+            else if (isInBossBattle && boss == null)
             {
-                delta.y = deltaY + boundY;
+                SetBossBattle(false);
             }
-        }
-
-        transform.position += new Vector3(delta.x, delta.y, 0);
-
-        // Check if the player has crossed a certain y-value and if the boss is present
-        if (!isInBossBattle && transform.position.y > 17 && boss != null)
-        {
-            SetBossBattle(true);
-        }
-        else if (isInBossBattle && boss == null)
-        {
-            SetBossBattle(false);
         }
     }
 

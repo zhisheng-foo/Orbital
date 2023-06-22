@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ProjectileMove : MonoBehaviour
 {
-    public Vector3 MoveDirection { get; set; } // Added MoveDirection property
-    public float MoveSpeed { get; set; } = 5f; // Added default MoveSpeed value
-    public float destroyDelay = 1f; // Delay before destroying the projectile
+    public Vector3 MoveDirection { get; set; }
+    public float MoveSpeed { get; set; } = 10f;
+    public float destroyDelay = 6f;
 
     private float destroyTimer;
 
@@ -19,14 +19,25 @@ public class ProjectileMove : MonoBehaviour
 
         if (destroyTimer <= 0f)
         {
-            Destroy(gameObject); // Destroy the projectile
+            Destroy(gameObject);
         }
         else
         {
-            transform.Translate(MoveDirection * MoveSpeed * Time.deltaTime); // Access MoveDirection and MoveSpeed properties
+            transform.Translate(MoveDirection * MoveSpeed * Time.deltaTime);
         }
     }
 
+    public void SetDestroyDelay(float delay)
+    {
+        destroyDelay = delay;
+    }
 
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "Player")
+        {
+            Debug.Log("Collision with player occurred.");
+        }
+    }
 }
+

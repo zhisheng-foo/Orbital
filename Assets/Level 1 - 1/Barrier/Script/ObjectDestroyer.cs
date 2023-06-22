@@ -23,7 +23,11 @@ public class ObjectDestroyer : MonoBehaviour
     }
 
     private IEnumerator DestroyObjectWithDelay()
-    {
+    {   
+        if(anim == null)
+        {
+            Destroy(gameObject);
+        }
  
         anim.SetBool(BURN_ANIMATION, true);
 
