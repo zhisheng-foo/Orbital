@@ -154,7 +154,7 @@ public class Enemy : Mover
             hitpoint -= dmg.damageAmount;
             pushDirection = new Vector3(0.0f, 0.0f, 0.0f);
 
-            if (gameObject.name == "Boss")
+            if (gameObject.name == "Boss" || gameObject.name == "Boss_2")
             {
                 GameManager.instance.ShowText(
                     dmg.damageAmount.ToString(),
