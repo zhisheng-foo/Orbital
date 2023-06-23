@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5133404685283516206, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133404685836468590, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133404685861565673, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5133404686332669427, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19,9 +31,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -4.1073356
       objectReference: {fileID: 0}
+    - target: {fileID: 5133404686332669431, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5133404686802704700, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
       propertyPath: m_Name
       value: Panny_boss Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133404686802704700, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5133404686802704701, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
       propertyPath: m_RootOrder
@@ -75,6 +95,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5133404686885793087, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133404687307856067, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1772131260, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
@@ -118,3 +146,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatSpeed: 2
   floatHeight: 0.12
+--- !u!1 &7987753109748936544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5133404686885793087, guid: a8ba2a1d4f78ad645b25b8c8e0d07cf2, type: 3}
+  m_PrefabInstance: {fileID: 3019583820631130719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!222 &1424938796190858758
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7987753109748936544}
+  m_CullTransparentMesh: 1

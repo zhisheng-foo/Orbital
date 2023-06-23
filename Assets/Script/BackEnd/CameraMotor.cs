@@ -17,7 +17,8 @@ public class CameraMotor : MonoBehaviour
     public float crossingValue = 17f;
 
     private Vector3 smoothVelocity = Vector3.zero;
-    public float smoothTime = 0.1f;
+    public float smoothTime = 0.1f; // Default smoothTime for regular camera movement
+    public float bossBattleSmoothTime = 0.05f; // SmoothTime for boss battle camera movement
 
     private void Start()
     {
@@ -38,8 +39,11 @@ public class CameraMotor : MonoBehaviour
             Vector3 targetPosition = lookAt.position;
             targetPosition.z = transform.position.z; // Maintain the camera's original z position
 
-            // Smoothly move the camera towards the target position
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref smoothVelocity, smoothTime);
+            // Adjust smoothTime based on boss battle state
+            float currentSmoothTime = isInBossBattle ? bossBattleSmoothTime : smoothTime;
+
+            // Smoothly move the camera towards the target position with adjusted smoothTime
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref smoothVelocity, currentSmoothTime);
 
             // Check if the player has crossed a certain y-value and if the boss is present
             if (!isInBossBattle && transform.position.y > crossingValue && boss != null)
@@ -86,3 +90,7 @@ public class CameraMotor : MonoBehaviour
         scalingCoroutine = null;
     }
 }
+
+
+
+

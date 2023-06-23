@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Weapon : Collidable
 {
     public int damagePoint = 1;
-    public float pushForce = 3.0f;
+    public float pushForce = 5.0f;
 
     public int weaponLevel = 0;
     private SpriteRenderer spriteRenderer;
@@ -79,7 +79,6 @@ public class Weapon : Collidable
                 return;
             }
 
-            
             Damage dmg = new Damage()
             {
                 damageAmount = damagePoint,
@@ -88,18 +87,42 @@ public class Weapon : Collidable
             };
 
             coll.SendMessage("ReceiveDamage", dmg);
+
+            if (coll.name != "Boss" && coll.name != "Boss_2")
+            {
+                // Apply the push force to the enemy over time
+                Vector3 pushDirection = (coll.transform.position - transform.position).normalized * 2.0f;
+                StartCoroutine(PushEnemy(coll.transform, pushDirection));
+            }
+
             swinging = false;
         }
     }
 
-    private bool isPlayingSound = false; // Flag to check if the sound effect is playing
+
+    private IEnumerator PushEnemy(Transform enemyTransform, Vector3 pushDirection)
+    {
+        float pushedDistance = 1f;
+        float pushDuration = 0.5f; // Adjust the duration as needed
+
+        while (pushedDistance < pushForce)
+        {
+            float pushStep = pushForce * Time.deltaTime / pushDuration;
+            enemyTransform.position += pushDirection * pushStep;
+            pushedDistance += pushStep;
+            yield return null;
+        }
+    }
+
+
+    private bool isPlayingSound = false; 
 
     private IEnumerator Swing()
     {
         playerAnim.SetBool(ATTACK_ANIMATION, true);
         swinging = true;
 
-        if (!isPlayingSound) // Check if the sound effect is already playing
+        if (!isPlayingSound) 
             StartCoroutine(PlayWeaponSound());
 
         yield return new WaitForSeconds(1.2f);
@@ -109,13 +132,16 @@ public class Weapon : Collidable
 
     private IEnumerator PlayWeaponSound()
     {
-        isPlayingSound = true; // Set the flag to indicate that the sound effect is playing
+        isPlayingSound = true; 
 
         // Play the receive damage sound
         weaponSoundEffect.PlayOneShot(receiveWeaponSound, receiveWeaponVolume);
 
         yield return new WaitForSeconds(receiveWeaponSound.length);
 
-        isPlayingSound = false; // Reset the flag after the sound effect has finished playing
+        isPlayingSound = false;
     }
 }
+
+
+

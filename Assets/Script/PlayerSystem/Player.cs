@@ -16,6 +16,8 @@ public class Player : Mover
 
     public Vector3 desiredPositionHalloween;
 
+    public Vector3 desiredSecondBoss;
+
     private string WALK_ANIMATION = "Walk";
     private string DODGE_ANIMATION = "Dodge";
     private string ATTACK_ANIMATION = "Attack";
@@ -77,6 +79,11 @@ public class Player : Mover
         if(scene.name == "Level 2 - 0") 
         {
             transform.position = desiredPositionHalloween;
+        }
+
+        if(scene.name == "Level 2 - 1")
+        {
+            transform.position = desiredSecondBoss;
         }
     }
 
