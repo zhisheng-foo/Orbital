@@ -913,7 +913,11 @@ PrefabInstance:
       objectReference: {fileID: 1745498236}
     - target: {fileID: 3311195973993584776, guid: e11069c0ca5acde49a24ba3fdc18c94f, type: 3}
       propertyPath: smoothTime
-      value: 0.1
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3311195973993584776, guid: e11069c0ca5acde49a24ba3fdc18c94f, type: 3}
+      propertyPath: bossBattleSmoothTime
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 3311195973993584820, guid: e11069c0ca5acde49a24ba3fdc18c94f, type: 3}
       propertyPath: m_Name
@@ -1067,6 +1071,14 @@ PrefabInstance:
     - target: {fileID: 3741233178113976276, guid: 0e84249190018694587d80155d412af5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741233178113976277, guid: 0e84249190018694587d80155d412af5, type: 3}
+      propertyPath: desiredSecondBoss.x
+      value: 95.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741233178113976277, guid: 0e84249190018694587d80155d412af5, type: 3}
+      propertyPath: desiredSecondBoss.y
+      value: 62.2
       objectReference: {fileID: 0}
     - target: {fileID: 5505747696743882977, guid: 0e84249190018694587d80155d412af5, type: 3}
       propertyPath: m_IsTrigger

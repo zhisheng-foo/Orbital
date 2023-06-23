@@ -11,7 +11,8 @@ public class TextTransitionBossDefeated : MonoBehaviour
 
     public string fullText;
     private Coroutine typingCoroutine;
-    private bool bossDefeated = false; 
+    private bool bossDefeated = false;
+    public string bossName;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class TextTransitionBossDefeated : MonoBehaviour
     {
         while (!bossDefeated)
         {
-            GameObject bossObject = GameObject.Find("Boss");
+            GameObject bossObject = GameObject.Find(bossName);
             if (bossObject == null)
             {
                 bossDefeated = true;
