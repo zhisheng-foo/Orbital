@@ -18,6 +18,8 @@ public class Player : Mover
 
     public Vector3 desiredSecondBoss;
 
+    public Vector3 desiredPosition3;
+
     private string WALK_ANIMATION = "Walk";
     private string DODGE_ANIMATION = "Dodge";
     private string ATTACK_ANIMATION = "Attack";
@@ -85,6 +87,11 @@ public class Player : Mover
         {
             transform.position = desiredSecondBoss;
         }
+
+        if(scene.name == "Level 3 - 0")
+        {
+            transform.position = desiredPosition3;
+        }
     }
 
     protected override void Start() 
@@ -136,6 +143,11 @@ public class Player : Mover
             dodge = false;
 
             UpdateMotor(new Vector3(x, y, 0));
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level 3 - 0")
+        {
+            FindObjectOfType<GameOverManager>().GameOver();
         }
     }
 
@@ -195,10 +207,11 @@ public class Player : Mover
                 hitpoint = 0;
                 if(!isDead)
                 {
-                    isDead = true;
+                    isDead = false; //change to true after ms2
                     Debug.Log("Game Over for player");
-                    FindObjectOfType<GameOverManager>().GameOver();
-                    //gameObject.SetActive(false);
+                    FindObjectOfType<GameOverManager>().GameOver(); 
+                    
+
                 }
             }
         }

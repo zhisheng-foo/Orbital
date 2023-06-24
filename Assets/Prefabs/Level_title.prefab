@@ -12,40 +12,12 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 185.0071
-      objectReference: {fileID: 0}
-    - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 135.5093
-      objectReference: {fileID: 0}
-    - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -31
+      value: -449
       objectReference: {fileID: 0}
     - target: {fileID: 3324878347712429846, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -47
+      value: 497
       objectReference: {fileID: 0}
     - target: {fileID: 3324878347712429850, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
       propertyPath: m_text
@@ -82,10 +54,6 @@ PrefabInstance:
     - target: {fileID: 3324878347712429850, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278453253
-      objectReference: {fileID: 0}
-    - target: {fileID: 3324878347712429850, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
-      propertyPath: m_enableWordWrapping
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3324878347712429850, guid: 83e16938f4531f448b915ea9f0722613, type: 3}
       propertyPath: m_HorizontalAlignment

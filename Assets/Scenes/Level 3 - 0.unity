@@ -123,6 +123,91 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1231127592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1412806514617116419, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: damage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: xSpeed
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: ySpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: hitpoint
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499509, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.15138839
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499509, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.15138839
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499509, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499511, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Name
+      value: Pink_Monster
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
 --- !u!1 &1889540250
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +407,10 @@ PrefabInstance:
     - target: {fileID: 6719041698081754512, guid: 25db86aab2fc24b4ea706092ca30fd13, type: 3}
       propertyPath: m_Name
       value: Death Screen Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719041698081754512, guid: 25db86aab2fc24b4ea706092ca30fd13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25db86aab2fc24b4ea706092ca30fd13, type: 3}
