@@ -198,7 +198,7 @@ public class Player : Mover
                     isDead = true;
                     Debug.Log("Game Over for player");
                     FindObjectOfType<GameOverManager>().GameOver();
-                    gameObject.SetActive(false);
+                    //gameObject.SetActive(false);
                 }
             }
         }
