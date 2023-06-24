@@ -29,7 +29,7 @@ public class GameOverManager : MonoBehaviour
         // Pause the game
         Time.timeScale = 0f;
         StartCoroutine(FadeOverlay());
-        audioSource.Play();
+        //audioSource.Play(); Fix once its done
     }
 
     private IEnumerator FadeOverlay()

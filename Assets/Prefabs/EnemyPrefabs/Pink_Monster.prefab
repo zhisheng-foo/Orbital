@@ -267,7 +267,6 @@ GameObject:
   - component: {fileID: 1412806514617116422}
   - component: {fileID: 1412806514617116420}
   - component: {fileID: 1412806514617116421}
-  - component: {fileID: 1412806514617116418}
   - component: {fileID: 1412806514617116419}
   m_Layer: 9
   m_Name: hitbox
@@ -369,35 +368,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1412806514617116418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412806514617116423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9ecefe8f0002e6408fdc980062e7eac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  damage: 0
-  pushForce: 0
-  isColliding: 0
 --- !u!114 &1412806514617116419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +476,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1528366423
-  m_SortingLayer: 12
+  m_SortingLayer: 18
   m_SortingOrder: 0
   m_Sprite: {fileID: -1734564060, guid: 320b9a8a707e2d64fa23b940ef40c0e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -583,10 +553,14 @@ MonoBehaviour:
   pushRecoverySpeed: 0
   knockTime: 0
   pushDirection: {x: 0, y: 0, z: 0}
+  ySpeed: 5
+  xSpeed: 5.5
   xpValue: 1
   triggerLength: 2.5
   chaseLength: 4
   isDead: 0
+  playerTransform: {fileID: 0}
+  anim: {fileID: 0}
   hurtSoundEffect: {fileID: 0}
   receiveDamageSound: {fileID: 8300000, guid: c874339a958aeda43ab4960f175563d3, type: 3}
   receiveDamageVolume: 1
