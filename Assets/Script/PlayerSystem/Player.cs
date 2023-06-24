@@ -153,6 +153,8 @@ public class Player : Mover
             OnLevelUp();
         }
     }
+    
+    public bool isDead;
 
     protected override void ReceiveDamage(Damage dmg) 
     {
@@ -169,7 +171,7 @@ public class Player : Mover
                 {   
                     hitpoint -= dmg.damageAmount;
                     
-                        GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, new Color(0.3f, 0f, 0.1f),
+                    GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, new Color(0.3f, 0f, 0.1f),
                         transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);
                 }
                 else 
@@ -191,9 +193,20 @@ public class Player : Mover
             if (hitpoint <= 0) 
             {
                 hitpoint = 0;
-                Death();
+                if(!isDead)
+                {
+                    isDead = true;
+                    Debug.Log("Game Over for player");
+                    FindObjectOfType<GameOverManager>().GameOver();
+                    gameObject.SetActive(false);
+                }
             }
         }
+    }
+
+    protected override void Death()
+    {
+        
     }
 
     private IEnumerator StopDodgeAnimation()

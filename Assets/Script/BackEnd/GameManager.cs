@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
     public List<int> weaponPrices;
     public List<int> xpTable;
 
-    //References
     
     //References 
     public Player player;
@@ -135,5 +134,4 @@ public class GameManager : MonoBehaviour
     public void OnLevelUp() {
         player.OnLevelUp();
     }
-
 }
