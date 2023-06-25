@@ -44,17 +44,12 @@ public class Boss1 : Enemy
         MoveFireballs();
 
         float playerDistance = Vector3.Distance(transform.position, playerTransform.position);
-
-        
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
-
-        
         if (!shouldChase && playerTransform.position.y >= chaseYPosition)
         {
             shouldChase = true;
         }
 
-        
         if (shouldChase && playerDistance < minDistance)
         {
             
@@ -77,7 +72,7 @@ public class Boss1 : Enemy
             UpdateMotor(directionToPlayer);
         }
 
-        // Face left or right based on player movement
+        // Face left or right based on boss movement
         if (playerTransform.position.x < transform.position.x)
         {
             // Player is on the left side, so face left
@@ -88,7 +83,6 @@ public class Boss1 : Enemy
             // Player is on the right side, so face right
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
-
         // Restrict boss movement within the designated area
         Vector3 clampedPosition = transform.position;
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, bossBoundsMin.x, bossBoundsMax.x);
