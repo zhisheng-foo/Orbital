@@ -32,7 +32,7 @@ public class GameOverManager : MonoBehaviour
         // Enable the game over canvas
         gameOverCanvas.SetActive(true);
         // Pause the game
-        //Time.timeScale = 0f;
+        //Time.timeScale = 0;
         StartCoroutine(FadeOverlay());
         PlayGameOverSound();
         StopBackgroundAudio();
@@ -69,15 +69,6 @@ public class GameOverManager : MonoBehaviour
     
     private void StopBackgroundAudio()
     {
-        /*
-        foreach(AudioSource bgAudioSource in backgroundAudioSources)
-        {
-            if(bgAudioSource != audioSource)
-            {
-                bgAudioSource.Stop();
-            }
-        }
-        */
         Destroy(backgroundAudioSources);
     }
 
