@@ -149,6 +149,15 @@ public class Player : Mover
         {
             FindObjectOfType<GameOverManager>().GameOver();
         }
+        if(hitpoint == 0)
+        {
+            if(!isDead)
+            {
+                isDead = true;
+                Debug.Log("Game over for player");
+                FindObjectOfType<GameOverManager>().GameOver();
+            }
+        }
     }
 
 
@@ -205,14 +214,6 @@ public class Player : Mover
             if (hitpoint <= 0) 
             {
                 hitpoint = 0;
-                if(!isDead)
-                {
-                    isDead = false; //change to true after ms2
-                    Debug.Log("Game Over for player");
-                    FindObjectOfType<GameOverManager>().GameOver(); 
-                    
-
-                }
             }
         }
     }

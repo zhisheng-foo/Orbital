@@ -12737,6 +12737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_title
       objectReference: {fileID: 0}
+    - target: {fileID: 192639511591292161, guid: 97f5bfe4d4c28fd41b76af84aa9c620f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 192639511591292189, guid: 97f5bfe4d4c28fd41b76af84aa9c620f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13989,7 +13993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6719041698081754512, guid: 25db86aab2fc24b4ea706092ca30fd13, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25db86aab2fc24b4ea706092ca30fd13, type: 3}

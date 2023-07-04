@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour
 {
     public GameObject gameOverCanvas;
-    public Image fadeOverlay;
+    public Image fadeOverlayMain;
+    public Image fadeOverlayTxt;
     public float fadeDuration = 5f;
     public AudioClip gameOverSound;
     
     private AudioSource audioSource;
+    private GameObject backgroundAudioSources;
 
     private void Start()
     {
@@ -19,6 +21,9 @@ public class GameOverManager : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = gameOverSound;
+
+        //Find all AudioSources in the scene and store them in the background
+        backgroundAudioSources = GameObject.Find("GameSound");
     }
 
     
@@ -29,22 +34,51 @@ public class GameOverManager : MonoBehaviour
         // Pause the game
         //Time.timeScale = 0f;
         StartCoroutine(FadeOverlay());
-        audioSource.Play();
+        PlayGameOverSound();
+        StopBackgroundAudio();
     }
 
     private IEnumerator FadeOverlay()
     {
         float elapsedTime = 0f;
-        Color currentColor = fadeOverlay.color;
+        Color mainColor = fadeOverlayMain.color;
+        Color txtColor = fadeOverlayTxt.color;
 
         while(elapsedTime < fadeDuration)
         {
             elapsedTime += Time.unscaledDeltaTime;
-            float alpha = Mathf.Lerp(0f, 1f, elapsedTime/fadeDuration);
-            currentColor.a = alpha;
-            fadeOverlay.color = currentColor;
+            // Calculate alpha values for main overlay and text overlay separately
+            float mainAlpha = Mathf.Lerp(0f, 1f, elapsedTime/fadeDuration);
+            float txtAlpha = Mathf.Lerp(0f, 1f, elapsedTime/(fadeDuration * 1.5f));
+
+            //Updating alpha values for main overlay and text overlay
+            mainColor.a = mainAlpha;
+            txtColor.a = txtAlpha;
+
+            //Apply Updated colors to main overlay and text overlay
+            fadeOverlayMain.color = mainColor;
+            fadeOverlayTxt.color = txtColor;
             yield return null;
         }
+    }
+
+    private void PlayGameOverSound()
+    {
+        audioSource.Play();
+    }
+    
+    private void StopBackgroundAudio()
+    {
+        /*
+        foreach(AudioSource bgAudioSource in backgroundAudioSources)
+        {
+            if(bgAudioSource != audioSource)
+            {
+                bgAudioSource.Stop();
+            }
+        }
+        */
+        Destroy(backgroundAudioSources);
     }
 
     public void RestartGame()
