@@ -23,6 +23,11 @@ public class Player : Mover
     private string WALK_ANIMATION = "Walk";
     private string DODGE_ANIMATION = "Dodge";
     private string ATTACK_ANIMATION = "Attack";
+    public GameObject projectilePrefab;
+    public float projectileSpeed = 10f;
+    public float projectileLifetime = 2f;
+
+    private Vector3 facingDirection = Vector3.right; 
 
     public GameObject boss;
 
@@ -125,6 +130,8 @@ public class Player : Mover
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");
 
+           
+
             anim.SetBool(WALK_ANIMATION, true);
 
             if (x > 0 || y > 0)
@@ -143,6 +150,11 @@ public class Player : Mover
             dodge = false;
 
             UpdateMotor(new Vector3(x, y, 0));
+        }
+
+         if (Input.GetKeyDown(KeyCode.V) && SceneManager.GetActiveScene().name == "Level 3 - 0")
+        {
+            ShootProjectile();
         }
 
         if (SceneManager.GetActiveScene().name == "Level 3 - 0")
@@ -264,6 +276,30 @@ public class Player : Mover
         weapon.damagePoint = 2;
         GameManager.instance.ShowText("  The curse has been lifted"
         , 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.30f, Vector3.up * 0.65f, 1.0f);
+    }
+
+
+    private void ShootProjectile()
+    {
+        GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+
+        ProjectileMovement projectileMovement = projectile.GetComponent<ProjectileMovement>();
+
+        Vector3 direction = facingDirection.normalized;
+
+        projectileMovement.Initialize(direction, projectileSpeed, projectileLifetime);
+    }
+
+
+
+    protected override void UpdateMotor(Vector3 input)
+    {
+        base.UpdateMotor(input);
+
+        if (input != Vector3.zero)
+        {
+            facingDirection = input;
+        }
     }
 
 }

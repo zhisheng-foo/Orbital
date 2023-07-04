@@ -141,14 +141,14 @@ public class Enemy : Mover
 
     protected override void ReceiveDamage(Damage dmg)
     {
-    // Put receive damage sound and animation trigger
-       if (!isPlayingReceiveDamageSound && !isPlayingDeathSound & Time.time - lastShout > cooldown2)
+        // Put receive damage sound and animation trigger
+        if (!isPlayingReceiveDamageSound && !isPlayingDeathSound)
         {
             StartCoroutine(PlayReceiveDamageSound());
         }
 
         if (Time.time - lastImmune > immuneTime)
-        {   
+        {
             anim.SetBool(HURT_ANIMATION, true);
             lastImmune = Time.time;
             hitpoint -= dmg.damageAmount;
@@ -158,24 +158,38 @@ public class Enemy : Mover
             {
                 GameManager.instance.ShowText(
                     dmg.damageAmount.ToString(),
-                    70, 
+                    70,
                     new Color(0f, 0f, 0f),
                     transform.position + new Vector3(2.5f, 2f, 0f),
                     Vector3.up * 40,
                     0.3f);
-            } 
-            else 
+            }
+            else
             {
                 GameManager.instance.ShowText(
-                dmg.damageAmount.ToString(),
-                25,
-                new Color(1.0f, 0f, 0f),
-                transform.position + new Vector3(2.5f, 0f, 0f),
-                Vector3.up * 20,
-                0.3f);
-            }   
+                    dmg.damageAmount.ToString(),
+                    25,
+                    new Color(1.0f, 0f, 0f),
+                    transform.position + new Vector3(2.5f, 0f, 0f),
+                    Vector3.up * 20,
+                    0.3f);
+            }
+
             StartCoroutine(HurtAttackLoop());
-            
+
+            // Check if the object is of type ProjectileMovement
+            ProjectileMovement projectileMovement = GetComponent<ProjectileMovement>();
+            if (projectileMovement == null)
+            {
+                // Not a ProjectileMovement object, apply default cooldown
+                lastImmune = Time.time;
+            }
+            else
+            {
+                // ProjectileMovement object, reduce cooldown
+                lastImmune = 0;
+            }
+
             if (hitpoint <= 0)
             {
                 hitpoint = 0;
@@ -183,6 +197,37 @@ public class Enemy : Mover
             }
         }
     }
+
+    public IEnumerator SlowDownEnemySpeed(float duration)
+    {
+        // Store the original movement speed
+        float originalYspeed = this.ySpeed;
+        float originalXspeed = this.xSpeed;
+
+        // Reduce the enemy's movement speed
+        this.ySpeed /= 2f;
+        this.xSpeed /= 2f;
+
+        Debug.Log("Helloooo");
+
+        Debug.Log("Helllo");
+
+
+        this.ySpeed = originalYspeed;
+        this.xSpeed = originalXspeed;
+
+        yield return new WaitForSeconds(1.0f);
+
+        Debug.Log("Hello");
+
+       
+    }
+
+
+
+
+
+
     private IEnumerator PlayReceiveDamageSound()
     {
         isPlayingReceiveDamageSound = true;
