@@ -76,7 +76,7 @@ public class ProjectileMovement : Collidable
         float originalXspeed = enemy.xSpeed;
 
         // Check if the speed reduction should occur (40% chance)
-        if (Random.value <= 0.2f)
+        if (Random.value <= 0.08f)
         {
             // Reduce the enemy's movement speed
             enemy.ySpeed /= 2f;

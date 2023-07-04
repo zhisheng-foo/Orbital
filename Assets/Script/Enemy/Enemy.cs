@@ -13,6 +13,8 @@ public class Enemy : Mover
 
     public bool isDead = false;
 
+    public float pushDistance = 100f;
+
     private bool chasing;
     private bool collidingWithPlayer;
 
@@ -198,30 +200,7 @@ public class Enemy : Mover
         }
     }
 
-    public IEnumerator SlowDownEnemySpeed(float duration)
-    {
-        // Store the original movement speed
-        float originalYspeed = this.ySpeed;
-        float originalXspeed = this.xSpeed;
-
-        // Reduce the enemy's movement speed
-        this.ySpeed /= 2f;
-        this.xSpeed /= 2f;
-
-        Debug.Log("Helloooo");
-
-        Debug.Log("Helllo");
-
-
-        this.ySpeed = originalYspeed;
-        this.xSpeed = originalXspeed;
-
-        yield return new WaitForSeconds(1.0f);
-
-        Debug.Log("Hello");
-
-       
-    }
+   
 
 
 
@@ -264,6 +243,14 @@ public class Enemy : Mover
         
         // Restart the loop
         StartCoroutine(HurtAttackLoop());
+    }
+
+
+    public void ApplyForce(Vector2 direction)
+    {
+        Vector2 pushVector = direction.normalized * pushDistance;
+        Vector2 newPosition = (Vector2)transform.position + pushVector;
+        transform.position = newPosition;
     }
 }
 
