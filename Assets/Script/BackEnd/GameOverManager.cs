@@ -11,9 +11,26 @@ public class GameOverManager : MonoBehaviour
     public Image fadeOverlayTxt;
     public float fadeDuration = 5f;
     public AudioClip gameOverSound;
-    
+    public Player player;
+
+
     private AudioSource audioSource;
     private GameObject backgroundAudioSources;
+
+    private static GameOverManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -23,7 +40,6 @@ public class GameOverManager : MonoBehaviour
         audioSource.clip = gameOverSound;
 
         //Find all AudioSources in the scene and store them in the background
-        backgroundAudioSources = GameObject.Find("GameSound");
     }
 
     
@@ -32,7 +48,9 @@ public class GameOverManager : MonoBehaviour
         // Enable the game over canvas
         gameOverCanvas.SetActive(true);
         // Pause the game
-        //Time.timeScale = 0;
+        Time.timeScale = 0;
+
+        backgroundAudioSources = GameObject.Find("GameSound");
         StartCoroutine(FadeOverlay());
         PlayGameOverSound();
         StopBackgroundAudio();
@@ -76,6 +94,34 @@ public class GameOverManager : MonoBehaviour
     {
         Debug.Log("Game Restart");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Start Game");
+        
+        
+        player.hitpoint = player.maxHitpoint;
+        player.isDead = false;
+        gameOverCanvas.SetActive(false);
+
+
+        Scene currentScn = SceneManager.GetActiveScene();
+
+        if(currentScn.name == "Level 1 - 0" || currentScn.name == "Level 1 - 1")
+        {
+            SceneManager.LoadScene("Level 1 - 0");
+        }
+
+        else if(currentScn.name == "Level 2 - 0" || currentScn.name == "Level 2 - 1")
+        {
+            SceneManager.LoadScene("Level 2 - 0");
+        }
+
+        else if(currentScn.name == "Level 3 - 0")
+        {
+            SceneManager.LoadScene("Start Game");
+        }
+
+        else
+        {
+            SceneManager.LoadScene("Start Game");
+        }
+        
     }
 }

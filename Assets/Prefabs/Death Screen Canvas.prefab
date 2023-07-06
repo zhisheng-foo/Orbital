@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -168.8, y: 42.6}
-  m_SizeDelta: {x: 79.1818, y: 20.3104}
+  m_AnchoredPosition: {x: -106.95352, y: 48.509735}
+  m_SizeDelta: {x: 113.8411, y: 22.2909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &145116295
 CanvasRenderer:
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.72156864}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.023584902, b: 0.023584902, a: 1}
-    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -491,6 +491,7 @@ MonoBehaviour:
   fadeOverlayTxt: {fileID: 5700531062541516672}
   fadeDuration: 5
   gameOverSound: {fileID: 8300000, guid: f81dad7d05e1e6e4aa120f1a1a66f5f8, type: 3}
+  player: {fileID: 0}
 --- !u!82 &859315673
 AudioSource:
   m_ObjectHideFlags: 0
@@ -649,7 +650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -120.70642, y: 35.768585}
+  m_AnchoredPosition: {x: -128, y: 41.2}
   m_SizeDelta: {x: 241.4129, y: 71.5372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6719041698582834216
@@ -673,7 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6886792, g: 0.60848576, b: 0.25013348, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -682,7 +683,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 69ab1a268e2e8404c9197c6ad5efce68, type: 3}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -693,4 +694,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Click anywhere to exit (NOT WORKING, PLEASE EXIT AND RELAUNCH)
+  m_Text: Click anywhere to reload

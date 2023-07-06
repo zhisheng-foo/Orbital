@@ -129,10 +129,11 @@ public class Enemy : Mover
     {   
        
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-        if(isPlayingDeathSound != true);
+        if(isPlayingDeathSound != true)
         {
             isPlayingDeathSound = true;
             deathSoundEffect.Play();
+            deathSoundEffect.loop = false;
         }
         float delay = 0.5f;
         yield return new WaitForSeconds(delay);
