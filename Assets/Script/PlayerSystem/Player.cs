@@ -197,6 +197,7 @@ public class Player : Mover
 
             lastImmune = Time.time;
             pushDirection = Vector3.zero;
+            
 
             if (rnd.Next(2) == 0) 
             {   

@@ -88,7 +88,7 @@ public class Weapon : Collidable
 
             coll.SendMessage("ReceiveDamage", dmg);
 
-            if (coll.name != "Boss" && coll.name != "Boss_2")
+            if (coll.name != "Boss" && coll.name != "Boss_2" && coll.name != "Boss_3")
             {
                 // Apply the push force to the enemy over time
                 Vector3 pushDirection = (coll.transform.position - transform.position).normalized * 2.0f;
