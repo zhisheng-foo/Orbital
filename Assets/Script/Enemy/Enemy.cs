@@ -118,7 +118,6 @@ public class Enemy : Mover
     }
     protected override void Death() {
 
-        isPlayingDeathSound = true;
         anim.SetBool(DEATH_ANIMATION,true);
         StartCoroutine(DestroyAfterAnimation());
         
@@ -130,7 +129,11 @@ public class Enemy : Mover
     {   
        
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-        deathSoundEffect.Play();
+        if(isPlayingDeathSound != true);
+        {
+            isPlayingDeathSound = true;
+            deathSoundEffect.Play();
+        }
         float delay = 0.5f;
         yield return new WaitForSeconds(delay);
         GameManager.instance.dollar += 4;
@@ -184,7 +187,7 @@ public class Enemy : Mover
             if (projectileMovement == null)
             {
                 // Not a ProjectileMovement object, apply default cooldown
-                lastImmune = Time.time;
+                lastImmune = 0f;
             }
             else
             {
