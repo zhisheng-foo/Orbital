@@ -59,7 +59,7 @@ public class ProjectileMovement : Collidable
 
             // Apply slow down effect if enemy has the movement component
             Enemy enemy = other.GetComponent<Enemy>();
-            if (enemy != null)
+            if (enemy != null && other.name != "Boss_3")
             {
                 StartCoroutine(SlowDownEnemySpeed(enemy, other));
             }

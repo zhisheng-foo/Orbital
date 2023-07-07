@@ -16,7 +16,14 @@ public class HomingMissile : MonoBehaviour
     }
 
     private void Update()
-    {
+    {   
+        Boss3 boss = GameObject.Find("Boss_3").GetComponent<Boss3>();
+
+        if (boss.isDead)
+        {
+            Destroy(gameObject);
+        }
+
         if (target != null)
         {
             Vector3 direction = (target.position - transform.position).normalized;
@@ -39,8 +46,7 @@ public class HomingMissile : MonoBehaviour
     {
         if (collision.name == "Player")
         {
-            
-
+        
             StartCoroutine(DestroyAfterDelay(1.3f));
         }
     }
