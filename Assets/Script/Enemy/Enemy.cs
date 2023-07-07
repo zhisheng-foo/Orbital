@@ -125,25 +125,32 @@ public class Enemy : Mover
      
     }
 
-    public IEnumerator DestroyAfterAnimation()
-    {   
-       
+        private IEnumerator DestroyAfterAnimation()
+    {   float delay = 0.5f;
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-        if(isPlayingDeathSound != true)
+        if (!isPlayingDeathSound)
         {
             isPlayingDeathSound = true;
             deathSoundEffect.Play();
             deathSoundEffect.loop = false;
         }
-        float delay = 0.5f;
-        yield return new WaitForSeconds(delay);
-        GameManager.instance.dollar += 4;
-        int temp = 4;
-        GameManager.instance.ShowText("+ " + temp + " TREATS", 15 , new Color(1f, 0.0f, 0f), transform.position, Vector3.up * 40, 1.0f);
         
-        Destroy(this.gameObject);
-
+        
+        yield return new WaitForSeconds(delay);
+        if (gameObject.name != "Boss" && gameObject.name != "Boss_2" && gameObject.name != "Boss_3")
+        {
+            GameManager.instance.dollar += 4;
+            int temp = 4;
+            GameManager.instance.ShowText("+ " + temp + " TREATS", 15 ,
+            new Color(1f, 0.0f, 0f), transform.position, Vector3.up * 40, 1.0f);
+        }
+        if(gameObject.name != "Boss_3" && gameObject.name != "Boss_2")
+        {
+            Destroy(gameObject);
+        }
+       
     }
+
 
     protected override void ReceiveDamage(Damage dmg)
     {
@@ -167,6 +174,16 @@ public class Enemy : Mover
                     70,
                     new Color(0f, 0f, 0f),
                     transform.position + new Vector3(2.5f, 2f, 0f),
+                    Vector3.up * 40,
+                    0.3f);
+            } else if (gameObject.name == "Boss_3")
+            {
+
+                 GameManager.instance.ShowText(
+                    dmg.damageAmount.ToString(),
+                    70,
+                    new Color(0f, 0f, 0f),
+                    transform.position + new Vector3(2.5f, 0f, 0f),
                     Vector3.up * 40,
                     0.3f);
             }
@@ -203,13 +220,6 @@ public class Enemy : Mover
             }
         }
     }
-
-   
-
-
-
-
-
 
     private IEnumerator PlayReceiveDamageSound()
     {

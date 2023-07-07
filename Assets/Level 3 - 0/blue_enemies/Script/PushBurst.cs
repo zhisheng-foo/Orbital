@@ -49,7 +49,7 @@ public class PushBurst : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("Fighter"))
+            if (collider.CompareTag("Fighter") && collider.name != "Boss_3")
             {
                 Vector2 direction = collider.transform.position - player.transform.position;
                 float distance = Vector2.Distance(player.transform.position, collider.transform.position);

@@ -189,7 +189,7 @@ public class Player : Mover
     
     public bool isDead;
 
-    protected override void ReceiveDamage(Damage dmg) 
+    public void ReceiveDamage(Damage dmg) 
     {
         if (Time.time - lastImmune > immuneTime) 
         {
