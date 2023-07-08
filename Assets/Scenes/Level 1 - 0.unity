@@ -5953,34 +5953,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1315961614}
     m_Modifications:
-    - target: {fileID: 1412806514617116421, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
-      propertyPath: m_Size.x
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412806514617116421, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
-      propertyPath: m_Size.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412806514617116421, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
-      propertyPath: xSpeed
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
-      propertyPath: ySpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
-      propertyPath: chaseLength
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
       value: 0

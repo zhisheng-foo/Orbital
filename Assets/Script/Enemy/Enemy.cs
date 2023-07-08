@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Enemy : Mover
 {
@@ -10,6 +11,8 @@ public class Enemy : Mover
     //Logic 
     public float triggerLength = 0.3f;
     public float chaseLength = 0.5f;
+
+    public bool isDestroyed = false;
 
     public bool isDead = false;
 
@@ -52,7 +55,12 @@ public class Enemy : Mover
     private Collider2D[] hits = new Collider2D[10];
 
     private bool isPlayingReceiveDamageSound = false;
+
     private bool isPlayingDeathSound = false;
+
+    public event Action OnMobDestroyed;
+
+    public mobSpawner spawner;
 
     protected override void Start()
     {
@@ -122,7 +130,6 @@ public class Enemy : Mover
         StartCoroutine(DestroyAfterAnimation());
         
         //GameManager.instance.GrantXp(xpValue);
-     
     }
 
         private IEnumerator DestroyAfterAnimation()
@@ -213,11 +220,14 @@ public class Enemy : Mover
                 lastImmune = 0;
             }
 
+
             if (hitpoint <= 0)
             {
                 hitpoint = 0;
                 Death();
             }
+
+            
         }
     }
 
@@ -266,6 +276,10 @@ public class Enemy : Mover
         Vector2 newPosition = (Vector2)transform.position + pushVector;
         transform.position = newPosition;
     }
+
+   
+
+   
 }
 
     

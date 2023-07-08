@@ -174,7 +174,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damage: 4
+  damage: 2
   pushForce: 4
   isColliding: 0
 --- !u!82 &6054684015377613754

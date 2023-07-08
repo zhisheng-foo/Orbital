@@ -1,0 +1,1415 @@
+fileFormatVersion: 2
+guid: ffcc09fcf10464746a7cd9022b10c5bb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb56c36806c70434facc7fa65a949bb0
+      internalID: -311150691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5600caca946554c88d2bab090184a2
+      internalID: 1616129954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120dccb074b5bd14a8aa834b11183ed1
+      internalID: -164862759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9d6bbbf6b716a46b5667696e7de418
+      internalID: -1570977100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd4611e93b0c9d48b3d707c38f4a3cb
+      internalID: 2086678227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f47833b15a340c40b5a11ce8527bf01
+      internalID: 654270596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ed7f23109e8284da41cd703d2e57f4
+      internalID: 289623202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ef9e0eefad8ed41a28a05d4f32cd20
+      internalID: 508675377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bdd79a5f8d61d419830845c9a66f38
+      internalID: -1185611642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4093136515b4d194a8c55126acbfda74
+      internalID: 37083493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7bd5f214d33114c8c8137ad86a0d96
+      internalID: 1116267144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b7e0dee7ede2044a3fd7b7c7c07b55
+      internalID: -907117443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca181e8e7348b6f4e810190b5801167e
+      internalID: -272886776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d72ae8854ed4c9449a0a1931fa7148a
+      internalID: -401787605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87828957b7abb4449cd1882fceec44f
+      internalID: -1036016848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7c883673431e8498d1d70d7f8eb11e
+      internalID: -2136214567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f4d73b85db77b419d09bb2423b41cf
+      internalID: 441644599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccf05ed1f4ff2c4ea98b063ceb46115
+      internalID: 213800539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3dec6401ff97504fb9e1fef6ba6ab49
+      internalID: -1156061070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c58fafde2cc0ae4a9577508719a953d
+      internalID: -600563218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bbd6e3d54fa5e4eac9670a5202701f
+      internalID: -1792690524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdc4ed13a486cd4687c1b10d15e05d6
+      internalID: -61871129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b288ed95dcfacc447add210a8fb46d01
+      internalID: -1108927807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9948b68e41728a4386e74601305eb97
+      internalID: -332688871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e252365f9b4eae542a50be6ae79c2ffa
+      internalID: -2066966029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806ed4efa4da8af49af6f9c3111a84e1
+      internalID: 293121126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e076dbab0372df24f82c8767d6e44e92
+      internalID: 1717162656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd936c1c8845ffa448bcc6bb40117a71
+      internalID: -412152415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bcc135f8256504687e316b0a4939ab
+      internalID: 872646129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 4350
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854ee29939fe4164abe5a0b376e22241
+      internalID: -1458016970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 4500
+        y: 210
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271f86057c9fbf9488f97d341c5d47d0
+      internalID: -1401159316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9818c20dfe302b45adc5badb95d444d
+      internalID: 502086915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f77f25fa25146a4abf7578d04a5ec3a
+      internalID: -177562980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9ed3cc024df2b4db21dc11109b454c
+      internalID: 1048820346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc071c3f1b35fa0469110cd137b7b973
+      internalID: -1332789345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6b3cec77780394bbdb3a8037546a7c
+      internalID: -790729612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93654c8426d60a48872d80d5b2b94be
+      internalID: -589974584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a39b234c9bb8f49ad64f05f311cb14
+      internalID: 1067148865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a502f03a465a847b29f20ed862c3e7
+      internalID: -2102494360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad98031225965b34488d1eb2ee967aaa
+      internalID: -2070514406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f52a6e7c20b9dc49b04dad394b2aac5
+      internalID: 1675644184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e160d94728a64449870b2f3e232a40d
+      internalID: 781320629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b077a8f66dae994fb53aaabe908bae0
+      internalID: 1794326752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0124e4973ead2de4d99f795d85181beb
+      internalID: 1512090970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7ac09f6f938df439fbd9dfdeb9966f
+      internalID: 2080478731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e60381f002de24db6a8d6a433eb048
+      internalID: 1512953211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdc9ffb334ed774a8e733d593025ef0
+      internalID: -695742042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fdd1d7e7365f34f9fd6b24942bfc5f
+      internalID: -1789125604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d36d54914ad46429c253977e273e81
+      internalID: -447138714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a9bfc5d2195804f9195e447f9ba1fb
+      internalID: 6910866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584a675fe79c5d94586fc8d5214dd85a
+      internalID: 408851884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa8e149a30b22440b0849729bb47843
+      internalID: 1862342018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3a7402368006c48b19ae20d2b95aaf
+      internalID: -325723799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4ca74513383fd498c007a8dd7a1a25
+      internalID: -832001256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69012b20ad4af1f4492068bd0d9c32f1
+      internalID: 1877479344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Demon_Statue_blue_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60590d0aded4faa46ad4347d30f3ded1
+      internalID: 1761150830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Demon_Statue_blue_sheet_0: -311150691
+      Demon_Statue_blue_sheet_1: 1616129954
+      Demon_Statue_blue_sheet_10: 1116267144
+      Demon_Statue_blue_sheet_11: -907117443
+      Demon_Statue_blue_sheet_12: -272886776
+      Demon_Statue_blue_sheet_13: -401787605
+      Demon_Statue_blue_sheet_14: -1036016848
+      Demon_Statue_blue_sheet_15: -2136214567
+      Demon_Statue_blue_sheet_16: 441644599
+      Demon_Statue_blue_sheet_17: 213800539
+      Demon_Statue_blue_sheet_18: -1156061070
+      Demon_Statue_blue_sheet_19: -600563218
+      Demon_Statue_blue_sheet_2: -164862759
+      Demon_Statue_blue_sheet_20: -1792690524
+      Demon_Statue_blue_sheet_21: -61871129
+      Demon_Statue_blue_sheet_22: -1108927807
+      Demon_Statue_blue_sheet_23: -332688871
+      Demon_Statue_blue_sheet_24: -2066966029
+      Demon_Statue_blue_sheet_25: 293121126
+      Demon_Statue_blue_sheet_26: 1717162656
+      Demon_Statue_blue_sheet_27: -412152415
+      Demon_Statue_blue_sheet_28: 872646129
+      Demon_Statue_blue_sheet_29: -1458016970
+      Demon_Statue_blue_sheet_3: -1570977100
+      Demon_Statue_blue_sheet_30: -1401159316
+      Demon_Statue_blue_sheet_31: 502086915
+      Demon_Statue_blue_sheet_32: -177562980
+      Demon_Statue_blue_sheet_33: 1048820346
+      Demon_Statue_blue_sheet_34: -1332789345
+      Demon_Statue_blue_sheet_35: -790729612
+      Demon_Statue_blue_sheet_36: -589974584
+      Demon_Statue_blue_sheet_37: 1067148865
+      Demon_Statue_blue_sheet_38: -2102494360
+      Demon_Statue_blue_sheet_39: -2070514406
+      Demon_Statue_blue_sheet_4: 2086678227
+      Demon_Statue_blue_sheet_40: 1675644184
+      Demon_Statue_blue_sheet_41: 781320629
+      Demon_Statue_blue_sheet_42: 1794326752
+      Demon_Statue_blue_sheet_43: 1512090970
+      Demon_Statue_blue_sheet_44: 2080478731
+      Demon_Statue_blue_sheet_45: 1512953211
+      Demon_Statue_blue_sheet_46: -695742042
+      Demon_Statue_blue_sheet_47: -1789125604
+      Demon_Statue_blue_sheet_48: -447138714
+      Demon_Statue_blue_sheet_49: 6910866
+      Demon_Statue_blue_sheet_5: 654270596
+      Demon_Statue_blue_sheet_50: 408851884
+      Demon_Statue_blue_sheet_51: 1862342018
+      Demon_Statue_blue_sheet_52: -325723799
+      Demon_Statue_blue_sheet_53: -832001256
+      Demon_Statue_blue_sheet_54: 1877479344
+      Demon_Statue_blue_sheet_55: 1761150830
+      Demon_Statue_blue_sheet_6: 289623202
+      Demon_Statue_blue_sheet_7: 508675377
+      Demon_Statue_blue_sheet_8: -1185611642
+      Demon_Statue_blue_sheet_9: 37083493
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

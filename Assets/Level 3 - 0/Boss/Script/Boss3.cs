@@ -39,6 +39,8 @@ public class Boss3 : Enemy
 
     public AudioClip deathAudioClip;
 
+    public bool isInvulnerable = false;
+
 
 
     protected override void Start()
@@ -50,11 +52,13 @@ public class Boss3 : Enemy
 
         StartCoroutine(PlayIntroAnimations());
         StartCoroutine(TeleportAndAOEDamage());
+        
     }
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
+        
     }
 
     private IEnumerator PlayIntroAnimations()
@@ -121,6 +125,9 @@ public class Boss3 : Enemy
         StartCoroutine(DestroyWithDelay(delay));
     }
 
+
+    
+
     private IEnumerator DestroyWithDelay(float delay)
     {
         
@@ -165,12 +172,17 @@ public class Boss3 : Enemy
 
     private void TeleportToPlayer()
     {   
-        
+        if (this.hitpoint == 0)
+        {
+            Death();
+        }
         if (playerTransform != null && !isTeleporting)
         {
             lastPlayerPosition = playerTransform.position;
             StartCoroutine(DelayedTeleport());
         }
+
+        
     }
 
         private IEnumerator DelayedTeleport()
@@ -214,8 +226,8 @@ public class Boss3 : Enemy
                 Player player = collider.GetComponent<Player>();
                 if (player != null)
                 {
-                    player.hitpoint -= 2;
-                    this.hitpoint += 5;
+                    player.hitpoint -= 1;
+                    this.hitpoint += 2;
 
                     // Check if hitpoint exceeds maxHitpoint
                     if (this.hitpoint > this.maxHitpoint)
@@ -223,11 +235,12 @@ public class Boss3 : Enemy
                         this.hitpoint = this.maxHitpoint;
                     }
 
-                    StartCoroutine(ShowTextWithDelay("LEECH + 5HP", 40, new Color(0.5f, 0f, 0f), 1.0f));
+                    StartCoroutine(ShowTextWithDelay("LEECH + 2HP", 40, new Color(0.5f, 0f, 0f), 1.0f));
                 }
             }
         }
     }
+
 
     private IEnumerator ShowTextWithDelay(string text, int fontSize, Color color, float delay)
     {
