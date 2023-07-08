@@ -366,7 +366,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.25, y: 1.25}
   m_EdgeRadius: 0
 --- !u!114 &1412806514617116419
 MonoBehaviour:
@@ -479,7 +479,7 @@ SpriteRenderer:
   m_SortingLayer: 18
   m_SortingOrder: 0
   m_Sprite: {fileID: -1734564060, guid: 320b9a8a707e2d64fa23b940ef40c0e4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9716981, g: 0.9671146, b: 0.9671146, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -523,7 +523,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013455987, y: -0.00924468}
+  m_Offset: {x: 0.011282206, y: -0.34939545}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -534,7 +534,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8479166, y: 1.2100856}
+  m_Size: {x: 0.897393, y: 1.8903872}
   m_EdgeRadius: 0
 --- !u!114 &1412806514825499506
 MonoBehaviour:
@@ -548,19 +548,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6903b7e99b619041935a0882d7a7603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 5
-  maxHitpoint: 5
+  hitpoint: 6
+  maxHitpoint: 6
   pushRecoverySpeed: 0
   knockTime: 0
   pushDirection: {x: 0, y: 0, z: 0}
-  ySpeed: 5
-  xSpeed: 5.5
+  ySpeed: 2
+  xSpeed: 2.5
   xpValue: 1
-  triggerLength: 2.5
+  triggerLength: 4
   chaseLength: 4
+  isDestroyed: 0
   isDead: 0
+  pushDistance: 100
   playerTransform: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 1412806514825499510}
   hurtSoundEffect: {fileID: 0}
   receiveDamageSound: {fileID: 8300000, guid: c874339a958aeda43ab4960f175563d3, type: 3}
   receiveDamageVolume: 1
@@ -579,6 +581,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  spawner: {fileID: 0}
 --- !u!82 &1135844632
 AudioSource:
   m_ObjectHideFlags: 0

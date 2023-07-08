@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -597830941
-  m_SortingLayer: 17
+  m_SortingLayerID: 1019981939
+  m_SortingLayer: 22
   m_SortingOrder: 0
   m_Sprite: {fileID: -532169303, guid: b76fb1b57dff8584eb6ab1a4c0254e2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -177,8 +177,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1683077727
-  m_SortingLayer: 19
+  m_SortingLayerID: 2023097325
+  m_SortingLayer: 24
   m_SortingOrder: 0
   m_Sprite: {fileID: -1459090779, guid: 53bd064dc92cce847876abc5495ffd63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -371,8 +371,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -597830941
-  m_SortingLayer: 17
+  m_SortingLayerID: 1101196219
+  m_SortingLayer: 23
   m_SortingOrder: 0
   m_Sprite: {fileID: -532169303, guid: b76fb1b57dff8584eb6ab1a4c0254e2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -484,8 +484,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: 1101196219
+  m_SortingLayer: 23
   m_SortingOrder: 0
   m_Sprite: {fileID: -638915280, guid: 346e7751105d28d419c65719fce895c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -567,7 +567,9 @@ MonoBehaviour:
   xpValue: 1
   triggerLength: 100
   chaseLength: 100
+  isDestroyed: 0
   isDead: 0
+  pushDistance: 100
   playerTransform: {fileID: 0}
   anim: {fileID: 5038562548702040528}
   hurtSoundEffect: {fileID: 0}
@@ -588,6 +590,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  spawner: {fileID: 0}
 --- !u!82 &5038562548702040531
 AudioSource:
   m_ObjectHideFlags: 0
