@@ -33,6 +33,11 @@ public class Boss1 : Enemy
     public float fireballDisableDuration = 7f;
     public float fireballEnableInterval = 10f;
 
+    //boss push mechanic
+    private float pushTimer = 0f;
+    public float pushInterval = 10f;
+    public float pushForce = 10f;
+    
     protected override void Start()
     {
         base.Start();
@@ -100,6 +105,25 @@ public class Boss1 : Enemy
         {
             fireballTimer += Time.deltaTime;
         }
+
+        if (pushTimer >= pushInterval)
+        {
+            AlmightyPush();
+            pushTimer = 0f;
+        }
+        else
+        {
+            pushTimer += Time.deltaTime;
+        }
+    }
+
+    private void AlmightyPush()
+    {
+        Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
+        Vector3 pushDirection = directionToPlayer;
+
+        Rigidbody2D playerRigidbody = playerTransform.GetComponent<Rigidbody2D>();
+        playerRigidbody.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
     }
 
     private IEnumerator MoveBack()
@@ -127,40 +151,40 @@ public class Boss1 : Enemy
     }
 
     private void MoveFireballs()
-{
-    for (int i = 0; i < numFireballs; i++)
     {
-        int index = i % fireballSpeed.Length;
+        for (int i = 0; i < numFireballs; i++)
+        {
+            int index = i % fireballSpeed.Length;
 
         
-        float timeFactor = Time.time * fireballSpeed[index];
+            float timeFactor = Time.time * fireballSpeed[index];
 
         
-        float angle = timeFactor * Mathf.Rad2Deg; 
-        Vector3 offset = Quaternion.Euler(0f, 0f, angle) * Vector3.up * distance[index] * 15f;
+            float angle = timeFactor * Mathf.Rad2Deg; 
+            Vector3 offset = Quaternion.Euler(0f, 0f, angle) * Vector3.up * distance[index] * 15f;
 
         
-        fireballs[i].position = transform.position + offset;
+            fireballs[i].position = transform.position + offset;
+        }
     }
-}
 
     private void DisableFireballs()
-{
-    foreach(Transform fireball in fireballs)
     {
-        fireball.gameObject.SetActive(false);
+        foreach(Transform fireball in fireballs)
+        {
+            fireball.gameObject.SetActive(false);
+        }
     }
-}
 
     private IEnumerator EnableFireballsAfterDelay(float delay)
-{
-    yield return new WaitForSeconds(delay);
-
-    foreach(Transform fireball in fireballs)
     {
-        fireball.gameObject.SetActive(true);
+        yield return new WaitForSeconds(delay);
+
+        foreach(Transform fireball in fireballs)
+        {
+            fireball.gameObject.SetActive(true);
+        }
     }
-}
 
     protected override void FixedUpdate()
     {
@@ -199,4 +223,8 @@ public class Boss1 : Enemy
         
         Destroy(gameObject);
     }
+
+
+
+
 }
