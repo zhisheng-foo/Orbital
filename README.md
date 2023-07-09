@@ -4,7 +4,8 @@ Game Available at:
 https://soulblast9938.itch.io/home-invasion(Only Updated to 1.0)
 
 
-Changelog: (This has not been kept up to date)
+Changelog: 
+
 Update 1.1:
 Level 3 done
 
