@@ -115,7 +115,7 @@ public class GameOverManager : MonoBehaviour
 
         else if(currentScn.name == "Level 3 - 0")
         {
-            SceneManager.LoadScene("Start Game");
+            SceneManager.LoadScene("Level 3 - 0");
         }
 
         else
