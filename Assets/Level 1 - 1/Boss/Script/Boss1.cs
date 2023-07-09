@@ -33,15 +33,20 @@ public class Boss1 : Enemy
     public float fireballDisableDuration = 7f;
     public float fireballEnableInterval = 10f;
 
-    //boss push mechanic
-    private float pushTimer = 0f;
-    public float pushInterval = 10f;
-    public float pushForce = 10f;
-    
+    //boss push mechanic ver2.0
+    private Rigidbody2D playerRigidbody;
+    public float knockbackForce = 10f;
+    public float knockbackInterval = 10f;
+    private float knockbackTimer = 0f;
+    private Animator BossPushTrig;
+    public bool isPush = false;
+
     protected override void Start()
     {
         base.Start();
         startPosition = transform.position;
+
+        playerRigidbody = playerTransform.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -106,24 +111,24 @@ public class Boss1 : Enemy
             fireballTimer += Time.deltaTime;
         }
 
-        if (pushTimer >= pushInterval)
+        if(knockbackTimer >= knockbackInterval)
         {
-            AlmightyPush();
-            pushTimer = 0f;
+            ShinraTensei((playerTransform.position - transform.position).normalized * 3f);
+            Debug.Log("Push");
+            knockbackTimer = 0f;
+            isPush = true;
         }
         else
         {
-            pushTimer += Time.deltaTime;
+            knockbackTimer += Time.deltaTime;
+            isPush = false;
         }
+
     }
 
-    private void AlmightyPush()
+    private void ShinraTensei(Vector2 direction)
     {
-        Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
-        Vector3 pushDirection = directionToPlayer;
-
-        Rigidbody2D playerRigidbody = playerTransform.GetComponent<Rigidbody2D>();
-        playerRigidbody.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
+        playerRigidbody.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
     }
 
     private IEnumerator MoveBack()
@@ -223,8 +228,4 @@ public class Boss1 : Enemy
         
         Destroy(gameObject);
     }
-
-
-
-
 }
