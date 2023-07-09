@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMotor : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class CameraMotor : MonoBehaviour
         {
             boss = GameObject.Find("Boss_2");
         }
+        
     }
 
     private void LateUpdate()
@@ -44,6 +46,13 @@ public class CameraMotor : MonoBehaviour
 
             // Smoothly move the camera towards the target position with adjusted smoothTime
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref smoothVelocity, currentSmoothTime);
+
+            if(SceneManager.GetActiveScene().name == "Level 3 - 0")
+            {
+                SetBossBattle(true);
+            } 
+           
+
 
             // Check if the player has crossed a certain y-value and if the boss is present
             if (!isInBossBattle && transform.position.y > crossingValue && boss != null)

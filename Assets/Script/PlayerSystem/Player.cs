@@ -18,7 +18,8 @@ public class Player : Mover
 
     public Vector3 desiredSecondBoss;
 
-    public Vector3 desiredPosition3;
+    public Vector3 desiredPositionWinter;
+
 
     private string WALK_ANIMATION = "Walk";
     private string DODGE_ANIMATION = "Dodge";
@@ -95,7 +96,7 @@ public class Player : Mover
 
         if(scene.name == "Level 3 - 0")
         {
-            transform.position = desiredPosition3;
+            transform.position = desiredPositionWinter;
         }
     }
 
@@ -152,15 +153,11 @@ public class Player : Mover
             UpdateMotor(new Vector3(x, y, 0));
         }
 
-         if (Input.GetKeyDown(KeyCode.V) && SceneManager.GetActiveScene().name == "Level 3 - 0")
+        if (Input.GetKeyDown(KeyCode.V) && SceneManager.GetActiveScene().name == "Level 3 - 0")
         {
             ShootProjectile();
         }
 
-        if (SceneManager.GetActiveScene().name == "Level 3 - 0")
-        {
-            FindObjectOfType<GameOverManager>().GameOver();
-        }
         if(hitpoint == 0)
         {
             if(!isDead)
@@ -231,10 +228,7 @@ public class Player : Mover
         }
     }
 
-    protected override void Death()
-    {
-        
-    }
+    protected override void Death(){}
 
     private IEnumerator StopDodgeAnimation()
     {

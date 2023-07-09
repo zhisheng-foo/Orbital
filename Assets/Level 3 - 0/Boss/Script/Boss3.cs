@@ -224,7 +224,7 @@ public class Boss3 : Enemy
             if (collider.name == "Player" && !this.isDead)
             {
                 Player player = collider.GetComponent<Player>();
-                if (player != null)
+                if (player != null && player.isInvulnerable == false)
                 {
                     player.hitpoint -= 1;
                     this.hitpoint += 2;
@@ -236,6 +236,10 @@ public class Boss3 : Enemy
                     }
 
                     StartCoroutine(ShowTextWithDelay("LEECH + 2HP", 40, new Color(0.5f, 0f, 0f), 1.0f));
+                } else 
+
+                {
+                    StartCoroutine(ShowTextWithDelay("NARUHOTO PLOT ARMOUR", 40, new Color(0.5f, 0f, 0f), 1.0f));
                 }
             }
         }
