@@ -153,15 +153,11 @@ public class Player : Mover
             UpdateMotor(new Vector3(x, y, 0));
         }
 
-         if (Input.GetKeyDown(KeyCode.V) && SceneManager.GetActiveScene().name == "Level 3 - 0")
+        if (Input.GetKeyDown(KeyCode.V) && SceneManager.GetActiveScene().name == "Level 3 - 0")
         {
             ShootProjectile();
         }
 
-        if (SceneManager.GetActiveScene().name == "Level 3 - 0")
-        {
-            FindObjectOfType<GameOverManager>().GameOver();
-        }
         if(hitpoint == 0)
         {
             if(!isDead)
@@ -232,10 +228,7 @@ public class Player : Mover
         }
     }
 
-    protected override void Death()
-    {
-        
-    }
+    protected override void Death(){}
 
     private IEnumerator StopDodgeAnimation()
     {
