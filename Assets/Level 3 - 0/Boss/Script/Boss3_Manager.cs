@@ -16,7 +16,9 @@ public class Boss3_Manager : MonoBehaviour
     private GameObject object2;
 
     private bool firstSpawned = false;
+
     private bool secondSpawned = false;
+    private bool thirdSpawned = false;
 
     public AudioClip objectSound;
 
@@ -26,6 +28,8 @@ public class Boss3_Manager : MonoBehaviour
 
 
     public Canvas canvasPrefab;
+
+    public bool isDestroyed = false;
 
     private void Start()
     {
@@ -51,7 +55,24 @@ public class Boss3_Manager : MonoBehaviour
             firstSpawned = true;
         }
 
-        if ((float)boss.hitpoint / (float)boss.maxHitpoint <= 0.30f && !secondSpawned)
+        if ((float)boss.hitpoint / (float)boss.maxHitpoint <= 0.50f && !secondSpawned)
+        {   
+            int randomIndex1 = Random.Range(0, object1Positions.Count);
+            int randomIndex2 = Random.Range(0, object2Positions.Count);
+
+            Vector3 position1 = object1Positions[randomIndex1];
+            Vector3 position2 = object2Positions[randomIndex2];
+
+            object1 = Instantiate(object1Prefab, position1, Quaternion.identity);
+            object2 = Instantiate(object2Prefab, position2, Quaternion.identity);
+            canvasInstance = Instantiate(canvasPrefab, transform.position, Quaternion.identity);
+            // Play the object sound
+            audioSource.PlayOneShot(objectSound);
+
+            secondSpawned = true;
+        }
+
+        if ((float)boss.hitpoint / (float)boss.maxHitpoint <= 0.25f && !thirdSpawned)
         {   
             int randomIndex1 = Random.Range(0, object1Positions.Count);
             int randomIndex2 = Random.Range(0, object2Positions.Count);
@@ -65,7 +86,23 @@ public class Boss3_Manager : MonoBehaviour
             
             audioSource.PlayOneShot(objectSound);
 
-            secondSpawned = true;
+            thirdSpawned = true;
+        }
+
+        if(boss.hitpoint <= 0)
+        {   
+            isDestroyed = true;
+            StartCoroutine(DelayedDestroy(3.0f));
+        }
+    }
+
+    private IEnumerator DelayedDestroy(float delay) {
+        {
+            yield return new WaitForSeconds(delay);
+            
+            Destroy(gameObject);
         }
     }
 }
+
+

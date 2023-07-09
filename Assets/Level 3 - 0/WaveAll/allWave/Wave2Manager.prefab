@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4689983591995899914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4689983591995899957}
+  - component: {fileID: 4689983591995899956}
+  m_Layer: 0
+  m_Name: Wave2Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4689983591995899957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689983591995899914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3155246, y: -15.506262, z: 2.3590205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4689983591995899956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689983591995899914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f019daf7dc7d87342aa4ca3fb6fbcfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstObjectsPrefab:
+  - {fileID: 7439286060343967527, guid: 0c47c6c719dfe8a4e9e7b5393a746a58, type: 3}
+  - {fileID: 430124873614928654, guid: 1586091f2b68d434db83452dae7d12af, type: 3}
+  secondObjectsPrefab:
+  - {fileID: 6099446014198771213, guid: 4e13a02b776db124e95517b2fd3b53f5, type: 3}
+  - {fileID: 1955755973407113380, guid: 127a2aeb9e9076d448f51622c7872aa4, type: 3}
+  - {fileID: 4995532772787093474, guid: aedcc7b202a27f5479079bbe3bc6c2a5, type: 3}
+  thirdObjectsPrefab:
+  - {fileID: 41240697148055121, guid: bda31b205afb7fa4694a1becf0bf81ef, type: 3}
+  - {fileID: 5568204856786125794, guid: 571d5ab38114cfa4e9794685b9db4cc1, type: 3}
+  - {fileID: 8230519836277069689, guid: 1d68967e727fee44f80ea87158698828, type: 3}
+  - {fileID: 5633503835800372274, guid: d3d1efe20bce45549bb0ae76d9f19acf, type: 3}
+  waveTitle: {fileID: 6736795273103542445, guid: d5954a9c41737d04b9623d606e62babd, type: 3}
+  hardTitle: {fileID: 3021770310138651748, guid: 16eb024613af45e498b8e3c8b66a31d4, type: 3}
