@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -125,7 +125,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.008570433, y: -0.017140388}
@@ -284,7 +284,9 @@ MonoBehaviour:
   xpValue: 1
   triggerLength: 7
   chaseLength: 7
+  isDestroyed: 0
   isDead: 0
+  pushDistance: 100
   playerTransform: {fileID: 0}
   anim: {fileID: 792329775406884015}
   hurtSoundEffect: {fileID: 0}
@@ -305,6 +307,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  spawner: {fileID: 0}
   fireballSpeed:
   - 2.5
   - -2.5
@@ -341,6 +344,11 @@ MonoBehaviour:
   bossBoundsMin: {x: -15, y: 25}
   bossBoundsMax: {x: 25, y: 39}
   chaseYPosition: 20
+  fireballDisableDuration: 7
+  fireballEnableInterval: 10
+  knockbackForce: 10
+  knockbackInterval: 10
+  isPush: 0
 --- !u!61 &792329775406884003
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -631,8 +639,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -684,7 +692,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.008570433, y: -0.017140388}
@@ -772,8 +780,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -825,7 +833,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.008570433, y: -0.017140388}
@@ -913,8 +921,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -966,7 +974,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.008570433, y: -0.017140388}
@@ -1270,8 +1278,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1323,7 +1331,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.008570433, y: -0.017140388}
@@ -1411,8 +1419,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1464,7 +1472,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.02571106, y: -0.008570671}
@@ -1552,8 +1560,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1605,7 +1613,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.008570433, y: -0.017140388}
@@ -1693,8 +1701,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1746,7 +1754,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.008570433, y: -0.017140388}
@@ -1834,8 +1842,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1528366423
-  m_SortingLayer: 18
+  m_SortingLayerID: -1683077727
+  m_SortingLayer: 19
   m_SortingOrder: 0
   m_Sprite: {fileID: 41848112, guid: 5e09324e2230d9340a97803a37c9ec7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1887,7 +1895,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.008570433, y: -0.017140388}
