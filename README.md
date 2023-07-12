@@ -6,6 +6,9 @@ https://soulblast9938.itch.io/home-invasion (Only Updated to 1.0)
 
 Changelog: 
 
+Update 1.2:
+Victory Scene in progress
+
 Update 1.1:
 Level 3 done
 
