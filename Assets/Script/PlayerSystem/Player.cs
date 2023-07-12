@@ -42,7 +42,7 @@ public class Player : Mover
     private Rigidbody2D rb2D;
     private bool healMessageShown = false;
 
-   
+    private GameObject dustObject;
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -57,7 +57,20 @@ public class Player : Mover
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {   
-
+        dustObject = GameObject.Find("Dust");
+        SpriteRenderer spriteRendererDust = dustObject.GetComponent<SpriteRenderer>();
+        if (scene.name == "Level 3 - 0")
+        {
+            if (spriteRendererDust != null)
+            {
+                spriteRendererDust.enabled = true;
+            }
+        } else 
+        {
+            spriteRendererDust.enabled = false;
+        } 
+ 
+        
         if (scene.name == "Start Game")
         {
             spriteRenderer.enabled = false;
@@ -97,6 +110,7 @@ public class Player : Mover
         if(scene.name == "Level 3 - 0")
         {
             transform.position = desiredPositionWinter;
+          
         }
     }
 

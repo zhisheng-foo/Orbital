@@ -9,15 +9,17 @@ public class PushBurst : MonoBehaviour
     public float cooldownDuration = 4f; 
     public float requiredDistance = 20f; 
     public AudioClip pushSound;
-    public GameObject dustObject; // Reference to the "Dust" object
+    private GameObject dustObject; // Reference to the "Dust" object
 
     private GameObject player; // Reference to the player
     private AudioSource audioSource; // Reference to the audio source component
     private bool isOnCooldown = false; // Flag to indicate if the push burst is on cooldown
+    
 
     private void Start()
     {
         player = GameObject.Find("Player");
+        dustObject = GameObject.Find("Dust");
         audioSource = GetComponent<AudioSource>();
 
         // Hide the "Dust" object at the start
