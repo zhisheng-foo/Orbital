@@ -256,7 +256,7 @@ public class Boss3 : Enemy
             color,
             transform.position + new Vector3(2.5f, 0f, 0f),
             Vector3.up * 40,
-            0.3f
+            1.1f
         );
     }
 
