@@ -1048,13 +1048,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 52c419632180a684b8bde2a2a555fad5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.227
+  m_Volume: 0.237
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2463,6 +2463,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8219814470103748244, guid: 7915787d6e9d435418c24780b1f583f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219814470103748246, guid: 7915787d6e9d435418c24780b1f583f2, type: 3}
+      propertyPath: Priority
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8219814470103748247, guid: 7915787d6e9d435418c24780b1f583f2, type: 3}
