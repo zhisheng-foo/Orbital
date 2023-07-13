@@ -21,7 +21,7 @@ public class Hearts : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Start Game")
+        if (scene.name == "Start Game" || scene.name == "Victory 1 - 0")
         {
             gameObject.SetActive(false);
         }
