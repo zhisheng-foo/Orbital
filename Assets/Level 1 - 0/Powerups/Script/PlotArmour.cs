@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlotArmour : Collidable
-{   
-
+{
     private float cooldown = 1.5f;
     private float lastShout;
+    private bool canShowNoStackingMessage = true;
 
     private int dollarRequired = 20;
 
@@ -14,14 +14,14 @@ public class PlotArmour : Collidable
 
     private float plotCooldown = 1.0f;
     private float lastArmour;
-    
 
     private bool isDestroyed = false;
+    private bool isBought = false; // Track if the object has been bought
 
     public AudioSource powerUpAudioSource;
     public AudioSource powerUpEndAudioSource;
     public AudioSource insufficientFundsAudioSource;
-    
+
     protected override void OnCollide(Collider2D coll)
     {
         if (coll.name != "Player")
@@ -31,43 +31,51 @@ public class PlotArmour : Collidable
 
         Player player = GameManager.instance.player;
 
-        if (isDestroyed)
+        if (isDestroyed || isBought) // Check if the object has been bought
         {
             return;
         }
 
-        if (GameManager.instance.dollar >= dollarRequired)
-        {   
+        if (GameManager.instance.dollar >= dollarRequired && !player.noStackingplot)
+        {
             if (Time.time - lastArmour > plotCooldown)
             {
                 lastArmour = Time.time;
 
                 GameManager.instance.dollar -= dollarRequired;
-               
-                GameManager.instance.ShowText("Plot Armour activated  ", 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.45f, Vector3.up * 30, 1.0f);
+                player.noStackingplot = true;
+
+                GameManager.instance.ShowText("Plot Armour activated", 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.45f, Vector3.up * 30, 1.0f);
                 player.StartCoroutine(ActivateInvulnerabilityAndDestroyObject(duration));
 
                 // Play power-up audio
                 powerUpAudioSource.Play();
+
+                isBought = true; // Set the object as bought
+                gameObject.SetActive(false);
             }
         }
         else
         {
-            if (Time.time - lastShout > cooldown)
+            if (canShowNoStackingMessage && Time.time - lastShout > cooldown)
             {
                 lastShout = Time.time;
 
                 if (GameManager.instance.dollar < dollarRequired)
                 {
-                    GameManager.instance.ShowText("Prove yourself. You are not the protagonist."
-                    , 20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
+                    GameManager.instance.ShowText("Prove yourself. You are not the protagonist.", 20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
 
                     // Play insufficient funds audio
                     insufficientFundsAudioSource.Play();
                 }
                 else
                 {
-                    lastShout = Time.time - cooldown; // Reset the lastShout time to avoid showing the message immediately after buying the doughnut
+                    GameManager.instance.ShowText("NO STACKING", 20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
+                    canShowNoStackingMessage = false; // Prevent showing the message until cooldown ends
+
+                    // Play insufficient funds audio
+                    insufficientFundsAudioSource.Play();
+                    StartCoroutine(ResetNoStackingMessageCooldown());
                 }
             }
         }
@@ -84,15 +92,25 @@ public class PlotArmour : Collidable
         yield return new WaitForSeconds(duration);
 
         player.isInvulnerable = false;
+        player.noStackingplot = false;
 
+         Vector3 textPosition = player.transform.position + Vector3.up * 0.25f;
+        GameManager.instance.ShowText("Plot Armour Deactivated", 20, new Color(0f, 0f, 0f), textPosition, Vector3.up , 1.0f);
+
+        yield return new WaitForSeconds(1.0f);
         // Play power-up end audio
-        
         powerUpEndAudioSource.Play();
 
-        Vector3 textPosition = player.transform.position + Vector3.up * 0.45f;
-        GameManager.instance.ShowText("   Plot Armour Deactivated", 20, new Color(0f, 0f, 0f), textPosition, Vector3.up * 30, 1.0f);
+       
 
         // Destroy the object after the power-up duration
         Destroy(gameObject);
+    }
+
+    IEnumerator ResetNoStackingMessageCooldown()
+    {
+        yield return new WaitForSeconds(cooldown);
+
+        canShowNoStackingMessage = true; // Reset the cooldown to allow showing the message again
     }
 }

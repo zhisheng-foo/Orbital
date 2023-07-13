@@ -16,7 +16,6 @@ public class Weapon : Collidable
     private float lastSwing;
     private Animator wepAnim;
 
-
     public bool swinging;
 
     public Player player;
@@ -46,7 +45,8 @@ public class Weapon : Collidable
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name != "Start Game")
+        if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name != "Start Game" 
+            && SceneManager.GetActiveScene().name != "Victory 1 - 0")
         {
             if (Time.time - lastSwing > cooldown)
             {

@@ -42,6 +42,10 @@ public class Player : Mover
     private Rigidbody2D rb2D;
     private bool healMessageShown = false;
 
+    public bool noStackingAtk = false;
+
+    public bool noStackingplot = false;
+
     private GameObject dustObject;
     private void OnEnable()
     {
@@ -71,7 +75,7 @@ public class Player : Mover
         } 
  
         
-        if (scene.name == "Start Game")
+        if (scene.name == "Start Game" ||scene.name == "Victory 1 - 0")
         {
             spriteRenderer.enabled = false;
         }
@@ -136,7 +140,7 @@ public class Player : Mover
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Start Game")
+        if (SceneManager.GetActiveScene().name != "Start Game" || SceneManager.GetActiveScene().name != "Victory 1 - 0")
         {
             // Enable Rigidbody2D component
             if (rb2D != null)
@@ -272,6 +276,7 @@ public class Player : Mover
         ySpeed = 5.0f;
         xSpeed = 5.5f;
         weapon.damagePoint = 2;
+        this.noStackingAtk = false;
         GameManager.instance.ShowText("Ham Breathing deactivated"
         , 20,new Color(0f, 0f, 0f), transform.position, Vector3.up * 0.45f, 1.0f);
         

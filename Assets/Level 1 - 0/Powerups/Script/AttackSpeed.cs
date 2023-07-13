@@ -5,7 +5,7 @@ using TMPro;
 
 public class AttackSpeed : Collidable
 {
-    private float cooldown = 1.5f;
+    private float cooldown = 0.2f;
     private float lastShout;
 
     private int dollarRequired = 20;
@@ -31,6 +31,10 @@ public class AttackSpeed : Collidable
 
     public AudioSource powerDownAudioSource;
 
+    private bool isShouting = false;
+    private float shoutCooldown = 3f;
+    private float lastShoutTime;
+
     protected override void Start()
     {
         base.Start();
@@ -55,7 +59,7 @@ public class AttackSpeed : Collidable
             return;
         }
 
-        if (GameManager.instance.dollar >= dollarRequired)
+        if (GameManager.instance.dollar >= dollarRequired && player.noStackingAtk == false)
         {
             if (Time.time - lastAtkSpd > atkspdCooldown)
             {
@@ -70,41 +74,51 @@ public class AttackSpeed : Collidable
                 player.ySpeed *= 1.5f;
                 player.xSpeed *= 1.5f;
                 weapon.damagePoint *= 2;
+                player.noStackingAtk = true;
 
                 // Play power-up audio
                 powerUpAudioSource.Play();
 
                 // Start coroutine to reset player's speed and attack after duration
                 player.StartCoroutine(player.ResetPlayerStats(duration));
-               
+
                 isBought = true; // Set the object as bought
                 gameObject.SetActive(false);
-                
+
                 Destroy(gameObject);
             }
         }
         else
         {
-            if (Time.time - lastShout > cooldown)
+            if (!isShouting && Time.time - lastShoutTime > shoutCooldown)
             {
-                lastShout = Time.time;
-
-                if (GameManager.instance.dollar < dollarRequired)
-                {
-                    GameManager.instance.ShowText("More. You are not fit to learn",
-                        20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
-
-                    // Play insufficient dollar audio
-                    insufficientDollarAudioSource.Play();
-                }
-                else
-                {
-                    lastShout = Time.time - cooldown; // Reset the lastShout time to avoid showing the message immediately after buying the doughnut
-                }
+                lastShoutTime = Time.time;
+                StartCoroutine(ShoutNoStacking());
             }
         }
     }
 
+    IEnumerator ShoutNoStacking()
+    {
+        isShouting = true;
 
+        if (GameManager.instance.dollar < dollarRequired)
+        {
+            GameManager.instance.ShowText("More. You are not fit to learn",
+                20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
+
+            // Play insufficient dollar audio
+            insufficientDollarAudioSource.Play();
+        }
+        else
+        {
+            GameManager.instance.ShowText("NO STACKING",
+                20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 0.5f);
+            insufficientDollarAudioSource.Play();
+        }
+
+        yield return new WaitForSeconds(cooldown);
+
+        isShouting = false;
+    }
 }
-
