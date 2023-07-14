@@ -25,7 +25,7 @@ public class BGMctrl : MonoBehaviour
         audiosource.clip = spider;
         audiosource.Play();
 
-        yield return new WaitForSeconds(spider.length);
+        yield return new WaitForSeconds(spider.length + 1.0f);
 
         audiosource.clip = BGM;
         audiosource.Play();

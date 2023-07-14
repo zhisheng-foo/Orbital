@@ -32,7 +32,7 @@ public class LevelManagerVictory : MonoBehaviour
         audiosource.clip = ReZeroMonsterSpawn;
         audiosource.Play();
 
-        yield return new WaitForSeconds(10f); // Wait for 40 - 29 = 10 seconds
+        yield return new WaitForSeconds(15f); // Wait for 40 - 29 = 10 seconds
         SceneManager.LoadScene("Start Game");
     }
     
