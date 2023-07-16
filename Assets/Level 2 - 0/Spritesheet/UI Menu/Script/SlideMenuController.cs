@@ -10,20 +10,18 @@ public class SlideMenuController : MonoBehaviour
 
     private bool isMenuVisible = false;
     private bool isGamePaused = false;
-    private bool isTransitioning = false;  // Flag to track menu transition
+    private bool isTransitioning = false;  
 
     private void Start()
     {
         button.onClick.AddListener(ToggleMenu);
         button.interactable = false;
-
-        // Get the AudioSource component from the same GameObject
         audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && !isTransitioning)  // Check if not currently transitioning
+        if (Input.GetKeyDown(KeyCode.P) && !isTransitioning)  
         {
             ToggleMenu();
         }
@@ -32,13 +30,13 @@ public class SlideMenuController : MonoBehaviour
     private void ToggleMenu()
     {
         if (isTransitioning)
-            return;  // Return early if already transitioning
+            return;  
 
         isMenuVisible = !isMenuVisible;
 
         if (isMenuVisible)
         {
-            StartCoroutine(PauseGameAndShowMenuAfterDelay(0.4f));  // Start the delay
+            StartCoroutine(PauseGameAndShowMenuAfterDelay(0.4f)); 
 
             // Play the audio clip
             if (audioSource != null)
@@ -48,22 +46,22 @@ public class SlideMenuController : MonoBehaviour
         }
         else
         {
-            menuAnimator.SetTrigger("hide");  // Hide the menu
-            Time.timeScale = 1f;  // Unpause the game
+            menuAnimator.SetTrigger("hide"); 
+            Time.timeScale = 1f; 
             isGamePaused = false;
         }
     }
 
     private IEnumerator PauseGameAndShowMenuAfterDelay(float delay)
     {
-        menuAnimator.SetTrigger("show");  // Show the menu
-        isTransitioning = true;  // Set transitioning flag
+        menuAnimator.SetTrigger("show");  
+        isTransitioning = true;  
 
         yield return new WaitForSeconds(delay);
 
-        Time.timeScale = 0f;  // Pause the game
+        Time.timeScale = 0f;  
         isGamePaused = true;
 
-        isTransitioning = false;  // Reset transitioning flag
+        isTransitioning = false;  
     }
 }
