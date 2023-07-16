@@ -5,19 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Portal : Collidable
 {
-    public Vector3 desiredPlayerPosition = new Vector3(-0.05f, 7.17f, 0.0f); // Specify the desired position in the Inspector
-
+    public Vector3 desiredPlayerPosition = new Vector3(-0.05f, 7.17f, 0.0f);
     private string startGame = "Start Game";
     private string TRANSITION = "Transit";
     private Animator anim;
     public AudioSource audioSource;
     private bool audioPlayed = false;
-
     private static Portal instance;
-
     private void Awake()
-    {
-        
+    {     
         instance = this;
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -55,10 +51,8 @@ public class Portal : Collidable
         anim.SetBool(TRANSITION, true);
         yield return new WaitForSeconds(1.2f);
 
-        // Load the new scene
         SceneManager.LoadScene(startGame);
-
-        // Reset the player's position to the desired position in the new scene
+        
         GameObject playerObject = GameObject.Find("Player");
         if (playerObject != null)
         {

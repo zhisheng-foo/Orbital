@@ -7,26 +7,22 @@ public class bar_hp_boss : MonoBehaviour
 {
     public Enemy boss;
     public Slider boss_slider;
-    public string playerName = "Player"; // The name of the player GameObject
-
-    public float distanceThreshold = 20f; // Define the distance threshold for showing the UI
-
+    private string playerName = "Player";
+    public float distanceThreshold = 20f; 
     private bool isInRange = false;
     private GameObject playerObject;
     private bool isSliderVisible = false;
-
     void Awake()
     {
         boss_slider = GetComponent<Slider>();
-        boss_slider.gameObject.SetActive(true); // Ensure the slider GameObject is active
-        boss_slider.enabled = false; // Disable the slider component graphics initially
-        playerObject = GameObject.Find(playerName); // Find the player object by name
+        boss_slider.gameObject.SetActive(true); 
+        boss_slider.enabled = false; 
+        playerObject = GameObject.Find(playerName); 
         if (playerObject == null)
         {
             Debug.LogWarning("Player object not found!");
         }
     }
-
     void Update()
     {
         if (playerObject == null)
@@ -39,9 +35,9 @@ public class bar_hp_boss : MonoBehaviour
         if (distanceToBoss <= distanceThreshold)
         {
             isInRange = true;
-            if (!isSliderVisible) // Show the slider if it's not already visible
+            if (!isSliderVisible) 
             {
-                boss_slider.enabled = true; // Enable the slider component graphics
+                boss_slider.enabled = true; 
                 isSliderVisible = true;
             }
             float fillValue = (float)boss.hitpoint / (float)boss.maxHitpoint;
@@ -50,9 +46,9 @@ public class bar_hp_boss : MonoBehaviour
         else
         {
             isInRange = false;
-            if (isSliderVisible) // Hide the slider if it's visible
+            if (isSliderVisible) 
             {
-                boss_slider.enabled = false; // Disable the slider component graphics
+                boss_slider.enabled = false; 
                 isSliderVisible = false;
             }
         }

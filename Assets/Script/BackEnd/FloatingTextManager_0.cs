@@ -11,7 +11,7 @@ public class FloatingTextManager_0 : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        
         instance = this;
         DontDestroyOnLoad(gameObject);
     }

@@ -4,9 +4,7 @@ public class Sound : MonoBehaviour
 {
     public AudioSource bossMusic;
     public AudioSource victoryMusic;
-
     public string bossObjectName;
-
     private GameObject bossObject;
     private bool bossDestroyed = false;
     private bool isCrossfading = false;
@@ -54,7 +52,6 @@ public class Sound : MonoBehaviour
 
         bossMusic.Stop();
         victoryMusic.Play();
-
         isCrossfading = false;
     }
 }

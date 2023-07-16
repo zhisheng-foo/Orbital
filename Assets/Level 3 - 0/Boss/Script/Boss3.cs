@@ -7,48 +7,36 @@ public class Boss3 : Enemy
     public float missileSpeed = 5f;
     public float missileLifetime = 3f;
     public float missileRotationSpeed = 200f;
-    public string PROJECTILE_ANIMATION = "Project";
-    public string IDLE_STATE = "boss_idle";
-    public string INTRO_ANIMATION_1 = "boss_reverse_death";
-    public string INTRO_ANIMATION_2 = "show_off";
-
-
+    private string PROJECTILE_ANIMATION = "Project";
+    private string IDLE_STATE = "boss_idle";
+    private string INTRO_ANIMATION_1 = "boss_reverse_death";
+    private string INTRO_ANIMATION_2 = "show_off";
     private string TELEPORT_ANIMATION_before = "Teleport";
-
     private string TELEPORT_ANIMATION_after = "Teleport1";
-
     private string DEATH_ANIMATION = "Death";
-
     private Animator animator;
     public float missileSpawnDelay = 1f;
-
     private AudioSource audioSource;
     public AudioClip projectileAudioClip;
-
     private bool isPlayingDeathSound = false;
-
     private float teleportInterval = 3f;
     private float aoeDamageRadius = 0.92f;
     private float aoeDamageAmount = 2f;
-
     private Vector3 lastPlayerPosition;
     public bool isDead = false;
-
     private AudioSource audioSource2;
     public AudioClip teleportAudioClip;
-
     public AudioClip deathAudioClip;
-
     public bool isInvulnerable = false;
 
 
 
     protected override void Start()
     {
-        playerTransform = GameObject.Find("Player").transform; // Assign player's transform
-        animator = GetComponent<Animator>(); // Assign the Animator component
-        audioSource = GetComponentInChildren<AudioSource>(); // Assign the AudioSource component from a child object
-        audioSource2 = GetComponentInChildren<AudioSource>(); // Assign the AudioSource component from a child object
+        playerTransform = GameObject.Find("Player").transform;
+        animator = GetComponent<Animator>(); 
+        audioSource = GetComponentInChildren<AudioSource>(); 
+        audioSource2 = GetComponentInChildren<AudioSource>();
 
         StartCoroutine(PlayIntroAnimations());
         StartCoroutine(TeleportAndAOEDamage());
@@ -63,19 +51,15 @@ public class Boss3 : Enemy
 
     private IEnumerator PlayIntroAnimations()
     {
-        // Play the first introduction animation
+        
         animator.Play(INTRO_ANIMATION_1);
-
-        // Wait for the duration of the first introduction animation
+    
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-
-        // Play the second introduction animation
+    
         animator.Play(INTRO_ANIMATION_2);
-
-        // Wait for the duration of the second introduction animation
+     
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        // Transition to the idle state
         animator.Play(IDLE_STATE);
 
         StartCoroutine(ShootMissiles());
@@ -93,7 +77,7 @@ public class Boss3 : Enemy
     private void ShootMissile()
     {
         Debug.Log("Shoot missile");
-        animator.SetBool(PROJECTILE_ANIMATION, true); // Set the boolean parameter to trigger the animation
+        animator.SetBool(PROJECTILE_ANIMATION, true); 
 
         GameObject missile = Instantiate(missilePrefab, transform.position, Quaternion.identity);
         missile.GetComponent<HomingMissile>().Initialize(playerTransform, missileSpeed, missileLifetime);
@@ -102,13 +86,13 @@ public class Boss3 : Enemy
         // Play the audio clip
         audioSource.PlayOneShot(projectileAudioClip);
 
-        StartCoroutine(ResetAnimation()); // Reset the animation after a delay
+        StartCoroutine(ResetAnimation());
     }
 
     private IEnumerator ResetAnimation()
     {
-        yield return new WaitForSeconds(0.8f); // Delay before resetting the animation
-        animator.SetBool(PROJECTILE_ANIMATION, false); // Set the boolean parameter to trigger the animation
+        yield return new WaitForSeconds(0.8f); 
+        animator.SetBool(PROJECTILE_ANIMATION, false); 
     }
 
     protected override void Death()
@@ -140,11 +124,8 @@ public class Boss3 : Enemy
             transform.position, Vector3.up * 20, 1.0f);
 
         yield return new WaitForSeconds(delay);
-
-        // Destroy all projectiles
+     
         DestroyProjectiles();
-
-        // Destroy the boss
         Destroy(gameObject);
     }
 
@@ -187,9 +168,8 @@ public class Boss3 : Enemy
 
         private IEnumerator DelayedTeleport()
     {
-        isTeleporting = true; // Set the boolean parameter to true to indicate teleporting
+        isTeleporting = true; 
 
-        // Trigger the teleport "before" animation
         animator.SetBool(TELEPORT_ANIMATION_before, true);
 
         yield return new WaitForSeconds(0.6f);
@@ -203,15 +183,14 @@ public class Boss3 : Enemy
             PerformAOEDamage();
         }
 
-        // Disable the teleport "before" animation
         animator.SetBool(TELEPORT_ANIMATION_before, false);
         
         yield return new WaitForSeconds(1f);
 
-        // Disable the teleport "after" animation
+        
         animator.SetBool(TELEPORT_ANIMATION_after, false);
 
-        isTeleporting = false; // Reset the boolean variable
+        isTeleporting = false;
     }
 
 
@@ -229,7 +208,6 @@ public class Boss3 : Enemy
                     player.hitpoint -= 1;
                     this.hitpoint += 2;
 
-                    // Check if hitpoint exceeds maxHitpoint
                     if (this.hitpoint > this.maxHitpoint)
                     {
                         this.hitpoint = this.maxHitpoint;
@@ -259,6 +237,4 @@ public class Boss3 : Enemy
             0.3f
         );
     }
-
-
 }

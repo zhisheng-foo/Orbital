@@ -5,7 +5,6 @@ public class ProjectileMove : MonoBehaviour
     public Vector3 MoveDirection { get; set; }
     public float MoveSpeed { get; set; } = 10f;
     public float destroyDelay = 6f;
-
     private float destroyTimer;
 
     private void Start()

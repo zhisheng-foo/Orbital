@@ -7,9 +7,7 @@ public class TextTransitionBoss : MonoBehaviour
     public TextMeshProUGUI text;
     public float transitionDuration = 1.0f;
     public float shakeIntensity = 0.1f;
-
     private Vector3 initialPosition;
-
     private void Start()
     {
         initialPosition = text.transform.position;

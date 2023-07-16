@@ -12,29 +12,20 @@ public class Boss2 : Enemy
     public Transform[] firePoints;
     public Vector2[] restPositions;
     public float shootingRange = 25f;
-
     private float fireTimer;
     private bool alternateDirection;
     private int fireCount; 
     private bool resting;
     private float restTimer;
-
     private AudioSource audioSource;
     private AudioSource rangeAudioSource;
-
     private string DEATH_ANIMATION = "Death";
     private string TELEPORT_ANIMATION = "Teleport";
-
     private string NORMAL_ANIMATION = "Idle";
-
     private int counter = 0;
     private bool isAnimatingTeleport;
     private float teleportAnimationDuration = 1f;
-
     private bool isPlayingDeathSound = false;
-
-    
-
     private void Start()
     {
         transform.position = new Vector3(88.15f, 98.11f, 0f);
@@ -59,7 +50,6 @@ public class Boss2 : Enemy
 
     private void Update()
     {
-        // Check if the player is within range
         GameObject player = GameObject.Find("Player");
         if (player != null && Vector3.Distance(transform.position, player.transform.position) <= shootingRange)
         {   
@@ -70,15 +60,11 @@ public class Boss2 : Enemy
 
                 if (fireTimer <= 0f)
                 {
-                    DestroyProjectiles(); // Destroy existing projectiles
-
+                    DestroyProjectiles(); 
                     if (fireCount % 2 == 0 && fireCount != 0)
                     {
-                        // Start the rest period
                         resting = true;
                         restTimer = restDuration;
-
-                        // Teleport to a random rest position
                         Vector2 randomRestPosition = GetRandomRestPosition();
                         StartCoroutine(TeleportAnimation(randomRestPosition));
                     }
@@ -134,19 +120,14 @@ public class Boss2 : Enemy
 
         isAnimatingTeleport = true;
 
-        
         base.anim.SetBool(TELEPORT_ANIMATION, true);
-
-        
+   
         yield return new WaitForSeconds(teleportAnimationDuration);
 
-        
         transform.position = new Vector3(targetPosition.x, targetPosition.y, 0f);
-
-        
+   
         base.anim.SetBool(TELEPORT_ANIMATION, false);
-
-        
+   
         yield return new WaitForSeconds(teleportAnimationDuration);
 
         base.anim.SetBool(NORMAL_ANIMATION, true);
@@ -156,16 +137,13 @@ public class Boss2 : Enemy
         if (hitpoint == 0) {
             Death();
         }
-        
-
+    
         isAnimatingTeleport = false;
     }
 
-    
-
     protected override void Death()
     {   
-        if(isPlayingDeathSound)
+        if (isPlayingDeathSound)
             return;
 
         base.anim.SetBool(DEATH_ANIMATION, true);
@@ -185,7 +163,8 @@ public class Boss2 : Enemy
         yield return new WaitForSeconds(delay1);
         GameManager.instance.dollar += 30;
         int temp = 30;
-        GameManager.instance.ShowText(" SLAP HIM HARD + " + 30 + " TREATS", 35 , new Color(0f, 0f, 0f),
+        GameManager.instance.ShowText(" SLAP HIM HARD + " + 30 + " TREATS", 35 ,
+         new Color(0f, 0f, 0f),
         transform.position, Vector3.up * 20, 1.0f);
 
         yield return new WaitForSeconds(delay); 
@@ -215,15 +194,16 @@ public class Boss2 : Enemy
                
                 if (alternateDirection)
                 {
-                    // Reverse the angle
+                    
                     angle = (i * angleStep) + (angleStep / 2f);
                 }
 
-                // Convert the angle to a direction vector
+                
                 Vector3 direction = Quaternion.Euler(0f, 0f, angle) * firePoint.up;
 
-                GameObject projectilePrefab = projectilePrefabs[0]; // Use the first projectile prefab
-                GameObject projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y, 0f), firePoint.rotation);
+                GameObject projectilePrefab = projectilePrefabs[0]; 
+                GameObject projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x,
+                 transform.position.y, 0f), firePoint.rotation);
                 ProjectileMove projectileMove = projectile.GetComponent<ProjectileMove>();
                 projectileMove.MoveDirection = direction.normalized;
                 projectileMove.MoveSpeed = projectileSpeed+2;
@@ -240,7 +220,7 @@ public class Boss2 : Enemy
         }
     }
 
-        private void FireDirectionalProjectiles()
+    private void FireDirectionalProjectiles()
     {
         float angleStep = 90f;
 
@@ -253,8 +233,9 @@ public class Boss2 : Enemy
                 
                 Vector3 direction = Quaternion.Euler(0f, 0f, angle) * firePoint.up;
 
-                GameObject projectilePrefab = projectilePrefabs[2]; // Get a random projectile prefab
-                GameObject projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y, 0f), firePoint.rotation);
+                GameObject projectilePrefab = projectilePrefabs[2]; 
+                GameObject projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x,
+                 transform.position.y, 0f), firePoint.rotation);
                 ProjectileMove projectileMove = projectile.GetComponent<ProjectileMove>();
                 projectileMove.MoveDirection = direction.normalized;
                 projectileMove.MoveSpeed = projectileSpeed + 4;
@@ -270,7 +251,6 @@ public class Boss2 : Enemy
             }
         }
     }
-
 
     private void FireOtherProjectiles()
     {
@@ -292,8 +272,9 @@ public class Boss2 : Enemy
                
                 Vector3 direction = Quaternion.Euler(0f, 0f, angle) * firePoint.up;
 
-                GameObject projectilePrefab = projectilePrefabs[1]; // Get a random projectile prefab
-                GameObject projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y, 0f), firePoint.rotation);
+                GameObject projectilePrefab = projectilePrefabs[1]; 
+                GameObject projectile = Instantiate(projectilePrefab, new Vector3(transform.position.x,
+                 transform.position.y, 0f), firePoint.rotation);
                 ProjectileMove projectileMove = projectile.GetComponent<ProjectileMove>();
                 projectileMove.MoveDirection = direction.normalized;
                 projectileMove.MoveSpeed = projectileSpeed + 5;

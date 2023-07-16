@@ -5,32 +5,20 @@ using UnityEngine;
 public class Boss3_Manager : MonoBehaviour
 {
     public Boss3 boss;
-
     public GameObject object1Prefab;
     public GameObject object2Prefab;
-
     public List<Vector3> object1Positions;
     public List<Vector3> object2Positions;
-
     private GameObject object1;
     private GameObject object2;
-
     private bool firstSpawned = false;
-
     private bool secondSpawned = false;
     private bool thirdSpawned = false;
-
     public AudioClip objectSound;
-
     private AudioSource audioSource;
-
     private Canvas canvasInstance;
-
-
     public Canvas canvasPrefab;
-
     public bool isDestroyed = false;
-
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();

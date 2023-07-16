@@ -6,28 +6,20 @@ using TMPro;
 public class SameSceneFade : Collidable
 {
     public Vector3 targetPosition;
-
     public List<GameObject> objectsToDestroy;
     public TextMeshProUGUI textMesh;
     public float collisionTextDuration = 2f;
-
     private Coroutine flashingCoroutine;
     private bool canCollide = true;
     private float collisionCooldown = 3f;
-
     public AudioSource audioSource;
-    public float collisionAudioCooldown = 2f; // Cooldown duration in seconds
-
+    public float collisionAudioCooldown = 2f;
     private bool canPlayCollisionAudio = true;
-
     private GameObject player;
     private GameObject fadeObject;
-
     private string TRANSITION = "work";
     private string SAME_SCENE = "same";
-
     private Animator fadeAnimator;
-
     protected override void Start()
     {
         base.Start();
@@ -41,7 +33,6 @@ public class SameSceneFade : Collidable
 
         audioSource = GetComponent<AudioSource>();
 
-        // Disable the textMesh object at the start
         if (textMesh != null)
         {
             textMesh.gameObject.SetActive(false);
@@ -88,22 +79,20 @@ public class SameSceneFade : Collidable
 
     private IEnumerator WaitForFadeComplete()
     {
-        yield return new WaitForSeconds(1f); // Wait for the first animation to complete
+        yield return new WaitForSeconds(1f); 
 
-        // Disable the first animation
         if (fadeAnimator != null)
         {
             fadeAnimator.SetBool(TRANSITION, false);
             TeleportPlayer();
         }
 
-        // Play the black fade to normal animation
         if (fadeAnimator != null)
         {
             fadeAnimator.SetBool(SAME_SCENE, true);
         }
 
-        yield return new WaitForSeconds(1f); // Wait for the black fade animation to complete
+        yield return new WaitForSeconds(1f);
     }
 
     private void TeleportPlayer()

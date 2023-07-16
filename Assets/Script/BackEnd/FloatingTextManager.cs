@@ -7,14 +7,12 @@ public class FloatingTextManager : MonoBehaviour
 {
     public GameObject textContainer;
     public GameObject textPrefab;
-
-
     private List<FloatingText> floatingTexts = new List<FloatingText>();
-
     private void Start(){
-        DontDestroyOnLoad(gameObject);
-    }
 
+        DontDestroyOnLoad(gameObject);
+
+    }
     private void Update() {
         foreach (FloatingText txt in floatingTexts)
         {
@@ -32,8 +30,7 @@ public class FloatingTextManager : MonoBehaviour
         floatingText.txt.color = color;
         floatingText.go.transform.position = Camera.main.WorldToScreenPoint(position);
         floatingText.motion = motion;
-        floatingText.duration = duration; 
-        
+        floatingText.duration = duration;  
         floatingText.Show();
 
     }
@@ -42,14 +39,13 @@ public class FloatingTextManager : MonoBehaviour
 
         FloatingText txt = floatingTexts.Find(x => !x.active);
 
-        if(txt == null) {
+        if (txt == null) {
             txt = new FloatingText();
             txt.go = Instantiate(textPrefab);
             txt.go.transform.SetParent(textContainer.transform);
             txt.txt = txt.go.GetComponent<Text>();
 
             floatingTexts.Add(txt);
-
         }
         return txt;
     }

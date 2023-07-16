@@ -6,24 +6,15 @@ public class mobSpawner : MonoBehaviour
 {
     public GameObject[] mobPrefabs;
     public int[] numMobsToSpawn;
-
-
     public Boss3 boss;
-
     private List<GameObject> mobList = new List<GameObject>();
-
     private int totalNumMobs = 0;
     private int numMobsKilled = 0;
-
     private string DEATH_ANIMATION = "Death";
-
     private bool isDestroyed = false;
-
-
     private void Start()
     {
-        SpawnMobs();
-        
+        SpawnMobs();      
     }
 
     private IEnumerator SpawnMobsWithDelay(float initialDelay, float delay)
@@ -35,7 +26,8 @@ public class mobSpawner : MonoBehaviour
         {
             for (int j = 0; j < numMobsToSpawn[i]; j++)
             {
-                GameObject mob = Instantiate(mobPrefabs[i], transform.position, Quaternion.identity);
+                GameObject mob = Instantiate(mobPrefabs[i],
+                 transform.position, Quaternion.identity);
                 mobList.Add(mob);
                 yield return new WaitForSeconds(delay);
             }
@@ -74,7 +66,7 @@ public class mobSpawner : MonoBehaviour
 
         if (numMobsKilled == totalNumMobs)
         {
-            float delay = 2.0f; // Set the delay value (in seconds) here
+            float delay = 2.0f; 
 
             StartCoroutine(DestroyWithDelay(delay));
         }

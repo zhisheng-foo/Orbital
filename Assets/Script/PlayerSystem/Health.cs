@@ -6,28 +6,24 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public Player player;
-
-    
-
     public int numOfHearts;
-
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
-
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
-         
     void Update()
     {    
-        if(player.hitpoint > numOfHearts) {
+        if (player.hitpoint > numOfHearts) 
+        {
             player.hitpoint = numOfHearts;
         }
+
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i < player.hitpoint)
+            if (i < player.hitpoint)
             {
                 hearts[i].sprite = fullHeart;
             } else {
@@ -43,6 +39,5 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = true;
             }
         }
-
     }
 }

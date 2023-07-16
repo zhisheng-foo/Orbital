@@ -11,20 +11,17 @@ public class FloatingText
     public Vector3 motion;
     public float duration;
     public float lastShown;
-
     public void Show() 
     {
         active = true;
         lastShown = Time.time;
         go.SetActive(active);
     }
-
     public void Hide() 
     {
         active = false;
         go.SetActive(active);
     }
-
     public void UpdateFloatingText() 
     {
         if (!active) 
@@ -39,6 +36,4 @@ public class FloatingText
 
         go.transform.position += motion * Time.deltaTime;
     }
-
-
 }

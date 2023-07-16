@@ -8,35 +8,29 @@ public class LevelManagerVictory : MonoBehaviour
     public AudioClip BGM;
     public AudioClip ReZeroMonsterSpawn;
     public AudioClip convoaudio;
-
     private AudioSource audiosource;
-
     void Start()
     {
         audiosource = GetComponent<AudioSource>();
         StartCoroutine(PlayAudioClips());
+        GameManager.instance.dollar = 0;
     }
 
     IEnumerator PlayAudioClips()
     {
-        /*
-        yield return new WaitForSeconds(2f); // Wait for 2 seconds
-        audiosource.clip = BGM;
-        audiosource.Play();
-        */
-        yield return new WaitForSeconds(9.3f); // Wait for 11.3 - 2 = 9.3 seconds
+        
+        yield return new WaitForSeconds(9.3f); 
         audiosource.clip = convoaudio;
         audiosource.Play();
 
-        yield return new WaitForSeconds(17.7f); // Wait for 29 - 11.3 = 17.7 seconds
+        yield return new WaitForSeconds(17.7f); 
         audiosource.clip = ReZeroMonsterSpawn;
         audiosource.Play();
 
-        yield return new WaitForSeconds(15f); // Wait for 40 - 29 = 10 seconds
+        yield return new WaitForSeconds(15f); 
         SceneManager.LoadScene("Start Game");
     }
     
-    // Update is called once per frame
     void Update()
     {
 

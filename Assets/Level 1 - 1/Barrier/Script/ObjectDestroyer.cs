@@ -30,12 +30,11 @@ public class ObjectDestroyer : MonoBehaviour
         }
  
         anim.SetBool(BURN_ANIMATION, true);
-
-        // Wait for the animation to complete
+        
         float burnAnimationDuration = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
         yield return new WaitForSeconds(burnAnimationDuration);
 
-        // Destroy this object
+        
         Destroy(gameObject);
     }
 }

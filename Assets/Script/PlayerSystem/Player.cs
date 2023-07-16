@@ -7,56 +7,36 @@ public class Player : Mover
 {
     private SpriteRenderer spriteRenderer;
     private int buffer;
-
     public Vector3 desiredPosition;
-
     public Vector3 desiredPositionLobby;
-
     public Vector3 desiredfirstBoss;
-
     public Vector3 desiredPositionHalloween;
-
     public Vector3 desiredSecondBoss;
-
     public Vector3 desiredPositionWinter;
-
-
     private string WALK_ANIMATION = "Walk";
-    
     public GameObject projectilePrefab;
     public float projectileSpeed = 10f;
     public float projectileLifetime = 2f;
-
     private Vector3 facingDirection = Vector3.right; 
-
-    public GameObject boss;
-
     public Animator anim;
     private bool dodge;
-
     public Weapon weapon;
-
     public bool isInvulnerable = false;
-
     private Rigidbody2D rb2D;
     private bool healMessageShown = false;
-
     public bool noStackingAtk = false;
-
     public bool noStackingplot = false;
-
     private GameObject dustObject;
+    public bool isDead;
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        
+        SceneManager.sceneLoaded += OnSceneLoaded;     
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {   
@@ -68,12 +48,12 @@ public class Player : Mover
             {
                 spriteRendererDust.enabled = true;
             }
-        } else 
+        } 
+        else 
         {
             spriteRendererDust.enabled = false;
         } 
- 
-        
+    
         if (scene.name == "Start Game" ||scene.name == "Victory 1 - 0")
         {
             spriteRenderer.enabled = false;
@@ -83,11 +63,9 @@ public class Player : Mover
             spriteRenderer.enabled = true;
         }
 
-
         if (scene.name == "Level 1 - 0")
         {   
-            transform.position = desiredPosition;
-            
+            transform.position = desiredPosition;      
         }
 
         if (scene.name == "Main")
@@ -95,25 +73,24 @@ public class Player : Mover
             transform.position = desiredPositionLobby;
         }
 
-        if(scene.name == "Level 1 - 1")
+        if (scene.name == "Level 1 - 1")
         {
             transform.position = desiredfirstBoss;
         }
 
-        if(scene.name == "Level 2 - 0") 
+        if (scene.name == "Level 2 - 0") 
         {
             transform.position = desiredPositionHalloween;
         }
 
-        if(scene.name == "Level 2 - 1")
+        if (scene.name == "Level 2 - 1")
         {
             transform.position = desiredSecondBoss;
         }
 
-        if(scene.name == "Level 3 - 0")
+        if (scene.name == "Level 3 - 0")
         {
-            transform.position = desiredPositionWinter;
-          
+            transform.position = desiredPositionWinter;    
         }
     }
 
@@ -124,31 +101,26 @@ public class Player : Mover
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb2D = GetComponent<Rigidbody2D>();
         
-        rb2D.freezeRotation = true; // Prevent rotation
-
+        rb2D.freezeRotation = true; 
         SceneManager.sceneLoaded += OnSceneLoaded;
             
     }
-  
-
+    
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Start Game" || SceneManager.GetActiveScene().name != "Victory 1 - 0")
+        if (SceneManager.GetActiveScene().name != "Start Game" 
+        || SceneManager.GetActiveScene().name != "Victory 1 - 0")
         {
-            // Enable Rigidbody2D component
             if (rb2D != null)
                 rb2D.simulated = true;
 
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");
-
-           
 
             anim.SetBool(WALK_ANIMATION, true);
 
@@ -175,9 +147,9 @@ public class Player : Mover
             ShootProjectile();
         }
 
-        if(hitpoint == 0)
+        if ( hitpoint == 0)
         {
-            if(!isDead)
+            if (!isDead)
             {
                 isDead = true;
                 Debug.Log("Game over for player");
@@ -185,11 +157,6 @@ public class Player : Mover
             }
         }
     }
-
-
-
-    
-    public bool isDead;
 
     public void ReceiveDamage(Damage dmg) 
     {
@@ -200,30 +167,28 @@ public class Player : Mover
             lastImmune = Time.time;
             pushDirection = Vector3.zero;
             
-
             if (rnd.Next(2) == 0) 
             {   
                 if (!isInvulnerable) 
                 {   
                     hitpoint -= dmg.damageAmount;
                     
-                    GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, new Color(0.3f, 0f, 0.1f),
-                        transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);
+                    GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, 
+                    new Color(0.3f, 0f, 0.1f), transform.position + new Vector3(2f, 0f, 0f), 
+                    Vector3.up * 25, 0.3f);
                 }
                 else 
                 {
                     GameManager.instance.ShowText("Plot Armour", 20, new Color(0.1f, 0.1f, 0.1f),
                         transform.position + new Vector3(1.5f, 0f, 0f), Vector3.up * 25, 0.3f);
-                }
-               
+                }     
             }
             else 
             {
                 dodge = true;
             
                 GameManager.instance.ShowText("DODGE", 20, new Color(0.3f, 0f, 0.1f),
-                    transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);
-                
+                    transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);       
             }
 
             if (hitpoint <= 0) 
@@ -234,19 +199,17 @@ public class Player : Mover
     }
 
     protected override void Death(){}
-
-
      public void Heal (int healingAmount) {
-        if(hitpoint == maxHitpoint) {
+        if (hitpoint == maxHitpoint) {
             return;
         }
         hitpoint += healingAmount;
         if (hitpoint > maxHitpoint) {
             hitpoint = maxHitpoint;
         }
-        
-        
-        GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, Color.black, transform.position, Vector3.up * 30, 1.0f);    
+
+        GameManager.instance.ShowText("The chosen grants you + " + healingAmount.ToString() + " hp", 20, 
+        Color.black, transform.position, Vector3.up * 30, 1.0f);    
     }
 
     public IEnumerator ResetPlayerStats(float duration)
@@ -263,7 +226,6 @@ public class Player : Mover
         
     }
 
-
     public IEnumerator ResetPlayerStatsTrade(float duration)
     {   
         yield return new WaitForSeconds(duration);
@@ -273,10 +235,10 @@ public class Player : Mover
         , 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.30f, Vector3.up * 0.65f, 1.0f);
     }
 
-
     private void ShootProjectile()
     {
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject projectile 
+        = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
         ProjectileMovement projectileMovement = projectile.GetComponent<ProjectileMovement>();
 
@@ -284,8 +246,6 @@ public class Player : Mover
 
         projectileMovement.Initialize(direction, projectileSpeed, projectileLifetime);
     }
-
-
 
     protected override void UpdateMotor(Vector3 input)
     {
@@ -296,7 +256,6 @@ public class Player : Mover
             facingDirection = input;
         }
     }
-
 }
 
 

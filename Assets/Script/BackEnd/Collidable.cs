@@ -6,12 +6,11 @@ public class Collidable : MonoBehaviour
 {
     public ContactFilter2D filter;
     private BoxCollider2D boxCollider;
-
     private Collider2D[] hits = new Collider2D[10];
-
     protected virtual void Start() {
-        
+
         boxCollider = GetComponent<BoxCollider2D>();
+        
     }
 
     protected virtual void Update() {
@@ -29,10 +28,8 @@ public class Collidable : MonoBehaviour
     }
 
     protected virtual void OnCollide(Collider2D coll) {
+
         Debug.Log("OnCollide was not implemented");
 
     }
-
-    
-
 }

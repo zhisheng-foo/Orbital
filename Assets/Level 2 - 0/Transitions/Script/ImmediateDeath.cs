@@ -8,11 +8,9 @@ public class ImmediateDeath : Collidable
     private Player player;
     public AudioSource audioSource;
     private bool hasPlayedAudio;
-    public TextMeshProUGUI textMesh; // Public TextMeshProUGUI object reference
-    public float displayDuration = 2f; // Duration in seconds to display the text
-
+    public TextMeshProUGUI textMesh; 
+    public float displayDuration = 2f; 
     public string text;
-
     protected override void Start()
     {
         base.Start();
@@ -20,7 +18,6 @@ public class ImmediateDeath : Collidable
         audioSource = GetComponent<AudioSource>();
         hasPlayedAudio = false;
 
-        // Hide the TextMeshProUGUI initially
         if (textMesh != null)
         {
             textMesh.gameObject.SetActive(false);
@@ -31,16 +28,13 @@ public class ImmediateDeath : Collidable
     {
         if (coll.name == "Player" && player != null)
         {
-            // Reduce player's hitpoints to zero
             player.hitpoint = 0;
 
-            // Play audio upon collision if it hasn't been played before
             if (audioSource != null && !hasPlayedAudio)
             {
                 audioSource.Play();
                 hasPlayedAudio = true;
 
-                // Display the text on the TextMeshProUGUI object
                 DisplayText();
             }
         }
@@ -50,11 +44,8 @@ public class ImmediateDeath : Collidable
     {
         if (textMesh != null)
         {
-            // Activate the TextMeshProUGUI object
             textMesh.gameObject.SetActive(true);
-            textMesh.text = text; // Set the text to display
-
-            // Destroy the TextMeshProUGUI object after the display duration
+            textMesh.text = text; 
             StartCoroutine(DestroyTextAfterDelay(displayDuration));
         }
     }
@@ -65,7 +56,6 @@ public class ImmediateDeath : Collidable
 
         if (textMesh != null)
         {
-            // Deactivate and destroy the TextMeshProUGUI object
             textMesh.gameObject.SetActive(false);
             Destroy(textMesh.gameObject);
         }

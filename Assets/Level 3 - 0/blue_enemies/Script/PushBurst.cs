@@ -9,20 +9,17 @@ public class PushBurst : MonoBehaviour
     public float cooldownDuration = 4f; 
     public float requiredDistance = 20f; 
     public AudioClip pushSound;
-    private GameObject dustObject; // Reference to the "Dust" object
-
-    private GameObject player; // Reference to the player
-    private AudioSource audioSource; // Reference to the audio source component
-    private bool isOnCooldown = false; // Flag to indicate if the push burst is on cooldown
+    private GameObject dustObject;
+    private GameObject player;
+    private AudioSource audioSource; 
+    private bool isOnCooldown = false; 
     
-
     private void Start()
     {
         player = GameObject.Find("Player");
         dustObject = GameObject.Find("Dust");
         audioSource = GetComponent<AudioSource>();
 
-        // Hide the "Dust" object at the start
         if (dustObject != null)
         {
             dustObject.SetActive(false);
@@ -47,14 +44,16 @@ public class PushBurst : MonoBehaviour
 
     private void PerformPushBurst()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.transform.position, pushDistance);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.transform.position,
+         pushDistance);
 
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("Fighter") && collider.name != "Boss_3")
             {
                 Vector2 direction = collider.transform.position - player.transform.position;
-                float distance = Vector2.Distance(player.transform.position, collider.transform.position);
+                float distance = Vector2.Distance(player.transform.position,
+                 collider.transform.position);
 
                 if (distance <= requiredDistance)
                 {
@@ -71,10 +70,7 @@ public class PushBurst : MonoBehaviour
             }
         }
 
-        // Play the push burst sound effect
         audioSource.PlayOneShot(pushSound);
-
-        // Put the push burst on cooldown
         StartCoroutine(StartCooldown());
     }
 
@@ -92,8 +88,6 @@ public class PushBurst : MonoBehaviour
             yield return null;
         }
         dustObject.SetActive(false);
-
-        // Ensure the enemy reaches the target position exactly
         collider.transform.position = targetPosition;
     }
 

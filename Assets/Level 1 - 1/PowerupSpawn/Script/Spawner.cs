@@ -6,12 +6,9 @@ public class Spawner : MonoBehaviour
 {
     public GameObject[] objectsToSpawn; 
     public float spawnInterval = 25f; 
-
     private GameObject spawnedObject; 
-
     private void Start()
-    {
-        
+    {      
         StartCoroutine(SpawnObjects());
     }
 
@@ -29,13 +26,10 @@ public class Spawner : MonoBehaviour
             {
                 
                 Destroy(spawnedObject);
-
-               
                 GameObject objectToSpawn = objectsToSpawn[Random.Range(0, objectsToSpawn.Length)];
                 spawnedObject = Instantiate(objectToSpawn, transform.position, Quaternion.identity);
             }
-
-            
+             
             yield return new WaitForSeconds(spawnInterval);
         }
     }

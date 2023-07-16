@@ -8,11 +8,9 @@ public class BarrierController : MonoBehaviour
     public GameObject bossObject; 
     public float delay = 0.01f; 
     public AudioSource audioSource; 
-
     private bool barrierSpawned = false; 
     private int counter = 0;
     private Transform playerTransform; 
-
     private void Start()
     {
         // Find the player object by name
@@ -30,12 +28,12 @@ public class BarrierController : MonoBehaviour
     private void Update()
     {
         
-        if (playerTransform != null && playerTransform.position.y > transform.position.y && !barrierSpawned)
+        if (playerTransform != null 
+        && playerTransform.position.y > transform.position.y && !barrierSpawned)
         {
             StartCoroutine(DelayedSpawnBarrier());
         }
-
-        
+   
         if (bossObject == null)
         {
             DestroyBarrier();
