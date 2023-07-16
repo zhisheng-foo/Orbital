@@ -8,7 +8,7 @@ public class SameSceneFade : Collidable
     public Vector3 targetPosition;
     public List<GameObject> objectsToDestroy;
     public TextMeshProUGUI textMesh;
-    public float collisionTextDuration = 2f;
+    public float collisionTextDuration = 0.5f;
     private Coroutine flashingCoroutine;
     private bool canCollide = true;
     private float collisionCooldown = 3f;

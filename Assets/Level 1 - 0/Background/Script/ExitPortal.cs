@@ -12,7 +12,7 @@ public class ExitPortal : Collidable
     public AudioSource audioSource;
 
     public TextMeshProUGUI textMesh;
-    public float collisionTextDuration = 2f;
+    public float collisionTextDuration = 1f;
 
     private Coroutine flashingCoroutine;
     private bool audioPlayed = false;

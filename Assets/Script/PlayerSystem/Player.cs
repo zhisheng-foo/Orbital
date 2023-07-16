@@ -28,6 +28,12 @@ public class Player : Mover
     public bool noStackingplot = false;
     private GameObject dustObject;
     public bool isDead;
+    /*
+    public bool atkbuffed = false;
+    incase we need to make it so that the attack dmg of the weapon gets reset every level,
+    maybe can adjust at the portal and check if this bool is true + current scene name. 
+    */
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;     
@@ -198,8 +204,11 @@ public class Player : Mover
         }
     }
 
-    protected override void Death(){}
-     public void Heal (int healingAmount) {
+    protected override void Death()
+    {
+    }
+
+    public void Heal (int healingAmount) {
         if (hitpoint == maxHitpoint) {
             return;
         }
@@ -212,14 +221,14 @@ public class Player : Mover
         Color.black, transform.position, Vector3.up * 30, 1.0f);    
     }
 
-    public IEnumerator ResetPlayerStats(float duration)
+    public IEnumerator ResetPlayerStats(float duration, int originalDamagePoint)
     {
         yield return new WaitForSeconds(duration);
     
         // Reset player's speed and attack to original values
         ySpeed = 5.0f;
         xSpeed = 5.5f;
-        weapon.damagePoint = 2;
+        weapon.damagePoint = originalDamagePoint;
         this.noStackingAtk = false;
         GameManager.instance.ShowText("Ham Breathing deactivated"
         , 20,new Color(0f, 0f, 0f), transform.position, Vector3.up * 0.45f, 1.0f);
@@ -230,7 +239,7 @@ public class Player : Mover
     {   
         yield return new WaitForSeconds(duration);
 
-        weapon.damagePoint = 2;
+        weapon.damagePoint -= 999;
         GameManager.instance.ShowText("  The curse has been lifted"
         , 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.30f, Vector3.up * 0.65f, 1.0f);
     }

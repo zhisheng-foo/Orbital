@@ -24,6 +24,8 @@ public class AttackSpeed : Collidable
     private bool isShouting = false;
     private float shoutCooldown = 3f;
     private float lastShoutTime;
+
+    
     protected override void Start()
     {
         base.Start();
@@ -64,10 +66,11 @@ public class AttackSpeed : Collidable
                 player.xSpeed *= 1.5f;
                 weapon.damagePoint *= 2;
                 player.noStackingAtk = true;
+                
 
                 
                 powerUpAudioSource.Play();
-                player.StartCoroutine(player.ResetPlayerStats(duration));
+                player.StartCoroutine(player.ResetPlayerStats(duration, originalDamagePoint));
 
                 isBought = true; 
                 gameObject.SetActive(false);

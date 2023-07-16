@@ -16,6 +16,9 @@ public class GameOverManager : MonoBehaviour
     private GameObject backgroundAudioSources;
     private static GameOverManager instance;
 
+    public Weapon weapon;
+    public GameManager gamemanager;
+
     private void Awake()
     {
         if (instance == null)
@@ -92,19 +95,39 @@ public class GameOverManager : MonoBehaviour
         player.isDead = false;
         gameOverCanvas.SetActive(false);
 
+        //player.atkbuffed = true;        
+        //reloading current scene
         Scene currentScn = SceneManager.GetActiveScene();
-
         if (currentScn.name == "Level 1 - 0" || currentScn.name == "Level 1 - 1")
         {
             SceneManager.LoadScene("Level 1 - 0");
+            weapon.damagePoint += 1;
+            gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
+            player.transform.position, Vector3.up * 20, 1.5f);
+
         }
-        else if (currentScn.name == "Level 2 - 0" || currentScn.name == "Level 2 - 1")
+        else if (currentScn.name == "Level 2 - 0")
         {
             SceneManager.LoadScene("Level 2 - 0");
+            gamemanager.ShowText("Try reading this time", 25, new Color(0f, 255f, 0f), 
+            player.transform.position, Vector3.up * 20, 1.5f);
+            
+        }
+        else if(currentScn.name == "Level 2 - 1")
+        {
+            SceneManager.LoadScene("Level 2 - 0");
+            weapon.damagePoint += 1;
+            gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
+            player.transform.position, Vector3.up * 20, 1.5f);
+            
         }
         else if (currentScn.name == "Level 3 - 0")
         {
             SceneManager.LoadScene("Level 3 - 0");
+            weapon.damagePoint += 1;
+            gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
+            player.transform.position, Vector3.up * 20, 1.5f);
+            
         }
         else
         {
