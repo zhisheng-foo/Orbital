@@ -10,14 +10,11 @@ public class Chest : Collectable
 
     [SerializeField]
     private AudioSource scaredSoundEffect;
-    
-
     protected override void OnCollect() 
     {   
         anim = GetComponent<Animator>();
 
-        if (!collected)
-        
+        if (!collected)   
         {
             collected = true;
             anim.SetBool(CLOSE_ANIMATION, true);

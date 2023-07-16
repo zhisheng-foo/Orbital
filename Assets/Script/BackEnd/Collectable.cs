@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Collectable : Collidable
 {
     protected bool collected;
@@ -14,7 +13,6 @@ public class Collectable : Collidable
             OnCollect();
         }
     }
-
     protected virtual void OnCollect() 
     {
         collected = true;

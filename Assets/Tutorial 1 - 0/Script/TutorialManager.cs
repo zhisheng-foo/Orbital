@@ -7,7 +7,6 @@ public class TutorialManager : MonoBehaviour
 {
     public AudioClip GoodMorningVietnam;
     public AudioClip AnotherSong;
-
     private AudioSource audiosource;
     private bool playedFirstSong;
 
@@ -26,18 +25,16 @@ public class TutorialManager : MonoBehaviour
             audiosource.loop = true;
             audiosource.volume = 0.56f;
             audiosource.Play();
-            playedFirstSong = false; // Reset the flag to prevent playing the second song repeatedly      
-        }
-        
-        StartCoroutine(LoadStartGameSceneAfterDelay()); // Start the coroutine to load the Start Game scene
+            playedFirstSong = false;     
+        }    
+        StartCoroutine(LoadStartGameSceneAfterDelay());
     }
 
     IEnumerator LoadStartGameSceneAfterDelay()
     {
         yield return new WaitForSeconds(42.0f);
 
-        // Gradually decrease the volume over time
-        float fadeDuration = 1.0f; // Adjust the duration as per your preference
+        float fadeDuration = 1.0f; 
         float startVolume = audiosource.volume;
         float startTime = Time.time;
 
@@ -51,6 +48,6 @@ public class TutorialManager : MonoBehaviour
         audiosource.volume = 0f;
 
         yield return new WaitForSeconds(4.0f);
-        SceneManager.LoadScene("Start Game"); // Load the Start Game scene
+        SceneManager.LoadScene("Start Game"); 
     }
 }

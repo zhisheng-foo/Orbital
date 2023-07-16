@@ -14,7 +14,6 @@ public class Play : MonoBehaviour
     public float hideDuration = 2.0f;
 
     private Color originalColor;
-
     private void Start()
     {
         originalColor = playButton.image.color;

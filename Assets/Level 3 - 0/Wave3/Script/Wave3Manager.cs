@@ -6,27 +6,19 @@ public class Wave3Manager : MonoBehaviour
 {
     public GameObject firstObject;
     public GameObject bossObjectPrefab;
-
     private GameObject bossObjectInstance;
-
     private bool isBossDestroyed = false;
-
     public Canvas waveTitle;
-
     public Canvas hardTitle;
-
     private int counter = 0;
-
     private int counter1 = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         Instantiate(waveTitle);
         Destroy(firstObject);
     }
-
-    // Update is called once per frame
+    
     void Update()
     {   
         Destroy(firstObject);

@@ -8,7 +8,6 @@ public class TextTransitionBossDefeated : MonoBehaviour
     public float typingSpeed = 0.1f;
     public float displayDuration = 2.0f;
     public float checkInterval = 0.1f; 
-
     public string fullText;
     private Coroutine typingCoroutine;
     private bool bossDefeated = false;
@@ -22,7 +21,6 @@ public class TextTransitionBossDefeated : MonoBehaviour
 
         StartCoroutine(CheckBossStatus());
     }
-
     private IEnumerator CheckBossStatus()
     {
         while (!bossDefeated)
@@ -36,14 +34,12 @@ public class TextTransitionBossDefeated : MonoBehaviour
             yield return new WaitForSeconds(checkInterval);
         }
     }
-
     private void DisplayText()
     {
         text.enabled = true;
         typingCoroutine = StartCoroutine(TypeText());
         StartCoroutine(DestroyAfterDelay());
     }
-
     private IEnumerator TypeText()
     {
         foreach (char c in fullText)
@@ -52,7 +48,6 @@ public class TextTransitionBossDefeated : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
     }
-
     private IEnumerator DestroyAfterDelay()
     {
         yield return new WaitForSeconds(displayDuration);

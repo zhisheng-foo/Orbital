@@ -9,13 +9,11 @@ public class TitleAnimation : MonoBehaviour
     public string fullText = "";
     private string currentText = "";
     public AudioSource audioSource;
-    
- 
+
     private void Awake()
     {   
         audioSource = GetComponent<AudioSource>();
-        textMeshPro = GetComponent<TextMeshProUGUI>();
-        
+        textMeshPro = GetComponent<TextMeshProUGUI>();    
     }
 
     private void Start()
@@ -27,8 +25,7 @@ public class TitleAnimation : MonoBehaviour
             audioSource.Play();
         }
         
-        StartCoroutine(PlayTypewriterEffect());
-        
+        StartCoroutine(PlayTypewriterEffect());     
     }
 
     private IEnumerator PlayTypewriterEffect()

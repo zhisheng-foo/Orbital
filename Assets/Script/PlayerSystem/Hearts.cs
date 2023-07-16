@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class Hearts : MonoBehaviour
 {
     private static Hearts instance;
-
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -15,10 +14,8 @@ public class Hearts : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
-
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "Start Game" || scene.name == "Victory 1 - 0")

@@ -4,30 +4,19 @@ using UnityEngine;
 using System;
 
 public class Enemy : Mover
-{
-    //Experience
-    public int xpValue = 1;
-
-    //Logic 
+{ 
     public float triggerLength = 0.3f;
     public float chaseLength = 0.5f;
-
     public bool isDestroyed = false;
-
     public bool isDead = false;
-
     public float pushDistance = 100f;
-
     private bool chasing;
     private bool collidingWithPlayer;
-
     public Transform playerTransform;
     private Vector3 startingPosition;
-
     public Animator anim;
     private string DEATH_ANIMATION = "Death";
     private string HURT_ANIMATION = "Hurt";
-
     private string ATTACK_ANIMATION = "Attack";
 
     [SerializeField]
@@ -39,27 +28,17 @@ public class Enemy : Mover
     [SerializeField] 
     public float receiveDamageVolume = 1.0f;
 
-
-
     [SerializeField]
     public AudioSource deathSoundEffect;
-
     public ContactFilter2D filter;
     private BoxCollider2D hitbox;
-
     private float cooldown = 0.4f;
-
     private float cooldown2 = 0.6f;
     private float lastShout;
-
     private Collider2D[] hits = new Collider2D[10];
-
     private bool isPlayingReceiveDamageSound = false;
-
     private bool isPlayingDeathSound = false;
-
     public event Action OnMobDestroyed;
-
     public mobSpawner spawner;
 
     protected override void Start()
@@ -98,8 +77,8 @@ public class Enemy : Mover
             else 
             {
                 UpdateMotor(startingPosition - transform.position);
-            } 
 
+            } 
         }
         else 
         {
@@ -122,18 +101,17 @@ public class Enemy : Mover
 
             hits[i] = null;
         }
-
     }
     protected override void Death() {
 
         anim.SetBool(DEATH_ANIMATION,true);
         StartCoroutine(DestroyAfterAnimation());
-        
-        //GameManager.instance.GrantXp(xpValue);
+
     }
 
-        private IEnumerator DestroyAfterAnimation()
-    {   float delay = 0.5f;
+    private IEnumerator DestroyAfterAnimation()
+    {   
+        float delay = 0.5f;
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
         if (!isPlayingDeathSound)
         {
@@ -141,27 +119,25 @@ public class Enemy : Mover
             deathSoundEffect.Play();
             deathSoundEffect.loop = false;
         }
-        
-        
+    
         yield return new WaitForSeconds(delay);
-        if (gameObject.name != "Boss" && gameObject.name != "Boss_2" && gameObject.name != "Boss_3")
+        if (gameObject.name != "Boss" && gameObject.name != "Boss_2" 
+        && gameObject.name != "Boss_3")
         {
             GameManager.instance.dollar += 4;
             int temp = 4;
             GameManager.instance.ShowText("+ " + temp + " TREATS", 15 ,
             new Color(1f, 0.0f, 0f), transform.position, Vector3.up * 40, 1.0f);
         }
-        if(gameObject.name != "Boss_3" && gameObject.name != "Boss_2")
+        if (gameObject.name != "Boss_3" && gameObject.name != "Boss_2")
         {
             Destroy(gameObject);
-        }
-       
+        }    
     }
 
 
     protected override void ReceiveDamage(Damage dmg)
     {
-        // Put receive damage sound and animation trigger
         if (!isPlayingReceiveDamageSound && !isPlayingDeathSound)
         {
             StartCoroutine(PlayReceiveDamageSound());
@@ -183,7 +159,8 @@ public class Enemy : Mover
                     transform.position + new Vector3(2.5f, 2f, 0f),
                     Vector3.up * 40,
                     0.3f);
-            } else if (gameObject.name == "Boss_3")
+            } 
+            else if (gameObject.name == "Boss_3")
             {
 
                  GameManager.instance.ShowText(
@@ -207,27 +184,22 @@ public class Enemy : Mover
 
             StartCoroutine(HurtAttackLoop());
 
-            // Check if the object is of type ProjectileMovement
             ProjectileMovement projectileMovement = GetComponent<ProjectileMovement>();
+
             if (projectileMovement == null)
             {
-                // Not a ProjectileMovement object, apply default cooldown
                 lastImmune = 0f;
             }
             else
             {
-                // ProjectileMovement object, reduce cooldown
                 lastImmune = 0;
             }
-
 
             if (hitpoint <= 0)
             {
                 hitpoint = 0;
                 Death();
-            }
-
-            
+            }         
         }
     }
 
@@ -238,34 +210,25 @@ public class Enemy : Mover
         {
 
             hurtSoundEffect.PlayOneShot(receiveDamageSound, receiveDamageVolume);
-
             yield return new WaitForSeconds(receiveDamageSound.length);
-
         }
-        
-
+    
         isPlayingReceiveDamageSound = false;
     }   
 
     private IEnumerator HurtAttackLoop()
     {
-        // Wait for the hurt animation to finish playing
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
         
-        // Transition to the attack animation
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+          
         anim.SetBool(HURT_ANIMATION, false);
         anim.SetBool(ATTACK_ANIMATION, true);
       
-        
-        // Wait for the attack animation to finish playing
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
         
-        // Transition back to the hurt animation
         anim.SetBool(ATTACK_ANIMATION, false);
         anim.SetBool(HURT_ANIMATION, true);
 
-        
-        // Restart the loop
         StartCoroutine(HurtAttackLoop());
     }
 
@@ -275,11 +238,7 @@ public class Enemy : Mover
         Vector2 pushVector = direction.normalized * pushDistance;
         Vector2 newPosition = (Vector2)transform.position + pushVector;
         transform.position = newPosition;
-    }
-
-   
-
-   
+    }  
 }
 
     

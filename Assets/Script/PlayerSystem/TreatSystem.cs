@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 public class TreatSystem : MonoBehaviour
 {
     private static TreatSystem instance;
-
-    // Start is called before the first frame update
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -16,10 +14,9 @@ public class TreatSystem : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        
+        SceneManager.sceneLoaded += OnSceneLoaded;       
     }
-
+    
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "Start Game" || scene.name == "Victory 1 - 0")

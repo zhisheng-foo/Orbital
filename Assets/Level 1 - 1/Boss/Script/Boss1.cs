@@ -8,32 +8,21 @@ public class Boss1 : Enemy
     public Transform[] fireballs;
 
     public int numFireballs = 2;
-
     public float[] distance;
     public float minDistance = 10f; 
     public float moveSpeed = 2.5f; 
-
     public Vector2 bossBoundsMin; 
     public Vector2 bossBoundsMax; 
-
     public float chaseYPosition = 20f; 
-
     private string DEATH_ANIMATION = "Death";
-
     private string ATTACK_ANIMATION = "Attack";
     private bool isPlayingDeathSound = false;
-
     private Vector3 startPosition; 
     private bool shouldChase = false; 
-
     private bool movingBack = false;
-
-    //boss would turn off fireball once every 10 seconds for 7 seconds. Can be adjusted
     private float fireballTimer = 0f;
     public float fireballDisableDuration = 7f;
     public float fireballEnableInterval = 10f;
-
-    //boss push mechanic ver2.0
     private Rigidbody2D playerRigidbody;
     public float knockbackForce = 10f;
     public float knockbackInterval = 10f;
@@ -64,11 +53,9 @@ public class Boss1 : Enemy
         {
             
             Vector3 directionAwayFromPlayer = -directionToPlayer;
-
-            
+   
             if (!movingBack)
             {
-                // Start moving back
                 movingBack = true;
                 StartCoroutine(MoveBack());
             }
@@ -82,24 +69,20 @@ public class Boss1 : Enemy
             UpdateMotor(directionToPlayer);
         }
 
-        // Face left or right based on boss movement
         if (playerTransform.position.x < transform.position.x)
         {
-            // Player is on the left side, so face left
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
         else if (playerTransform.position.x > transform.position.x)
         {
-            // Player is on the right side, so face right
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
-        // Restrict boss movement within the designated area
+
         Vector3 clampedPosition = transform.position;
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, bossBoundsMin.x, bossBoundsMax.x);
         clampedPosition.y = Mathf.Clamp(clampedPosition.y, bossBoundsMin.y, bossBoundsMax.y);
         transform.position = clampedPosition;
 
-        //Disable fireballs for a certain duration
         if (fireballTimer >= fireballEnableInterval)
         {
             DisableFireballs();
@@ -123,7 +106,6 @@ public class Boss1 : Enemy
             knockbackTimer += Time.deltaTime;
             isPush = false;
         }
-
     }
 
     private void ShinraTensei(Vector2 direction)
@@ -140,15 +122,13 @@ public class Boss1 : Enemy
         {
             UpdateMotor(directionToInitial);
 
-            // Face left or right based on player movement
+            
             if (playerTransform.position.x < transform.position.x)
             {
-                // Player is on the left side, so face left
                 transform.localScale = new Vector3(-1f, 1f, 1f);
             }
             else if (playerTransform.position.x > transform.position.x)
             {
-                // Player is on the right side, so face right
                 transform.localScale = new Vector3(1f, 1f, 1f);
             }
             yield return null;
@@ -166,9 +146,9 @@ public class Boss1 : Enemy
 
         
             float angle = timeFactor * Mathf.Rad2Deg; 
-            Vector3 offset = Quaternion.Euler(0f, 0f, angle) * Vector3.up * distance[index] * 15f;
-
-        
+            Vector3 offset = Quaternion.Euler(0f, 0f, angle) 
+            * Vector3.up * distance[index] * 15f;
+  
             fireballs[i].position = transform.position + offset;
         }
     }
@@ -197,8 +177,7 @@ public class Boss1 : Enemy
     }
 
     protected override void Death()
-    {
-        
+    {     
         base.anim.SetBool(DEATH_ANIMATION, true);
         isPlayingDeathSound = true;
         
@@ -220,12 +199,11 @@ public class Boss1 : Enemy
         yield return new WaitForSeconds(delay1);
         GameManager.instance.dollar += 20;
         int temp = 20;
-        GameManager.instance.ShowText("YEEE BOII + " + temp + " TREATS", 30 , new Color(1f, 1f, 0.5f),
+        GameManager.instance.ShowText("YEEE BOII + " 
+        + temp + " TREATS", 30 , new Color(1f, 1f, 0.5f),
         transform.position, Vector3.up * 20, 1.0f);
 
         yield return new WaitForSeconds(delay);
-
-        
         Destroy(gameObject);
     }
 }

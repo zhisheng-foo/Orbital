@@ -8,18 +8,15 @@ public class CoinScore : MonoBehaviour
     public GameManager instance;
     public Text MyscoreText;
     private int treatNum;
-
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
-
     private void Start()
     {
         treatNum = instance.dollar;
         MyscoreText.text = ": " + treatNum;
     }
-
     private void Update()
     {
         treatNum = instance.dollar;

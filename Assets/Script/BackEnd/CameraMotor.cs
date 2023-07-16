@@ -9,29 +9,26 @@ public class CameraMotor : MonoBehaviour
     public float boundX = 0.15f;
     public float boundY = 0.05f;
     public float bossBattleScale = 1.5f;
-    public float scaleSpeed = 2f; // Speed of the scaling effect
+    public float scaleSpeed = 2f; 
     private float originalSize;
     private GameObject boss;
     private bool isInBossBattle = false;
     private Coroutine scalingCoroutine;
-
     public float crossingValue = 17f;
-
     private Vector3 smoothVelocity = Vector3.zero;
-    public float smoothTime = 0.1f; // Default smoothTime for regular camera movement
-    public float bossBattleSmoothTime = 0.05f; // SmoothTime for boss battle camera movement
+    public float smoothTime = 0.1f; 
+    public float bossBattleSmoothTime = 0.05f; 
 
     private void Start()
     {
         lookAt = GameObject.Find("Player").transform;
         originalSize = Camera.main.orthographicSize;
-        boss = GameObject.Find("Boss"); // Replace "Boss" with the actual name of your boss GameObject
+        boss = GameObject.Find("Boss"); 
 
         if (GameObject.Find("Boss") == null)
         {
             boss = GameObject.Find("Boss_2");
-        }
-        
+        }       
     }
 
     private void LateUpdate()
@@ -39,22 +36,18 @@ public class CameraMotor : MonoBehaviour
         if (lookAt != null)
         {
             Vector3 targetPosition = lookAt.position;
-            targetPosition.z = transform.position.z; // Maintain the camera's original z position
-
-            // Adjust smoothTime based on boss battle state
+            targetPosition.z = transform.position.z; 
+     
             float currentSmoothTime = isInBossBattle ? bossBattleSmoothTime : smoothTime;
 
-            // Smoothly move the camera towards the target position with adjusted smoothTime
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref smoothVelocity, currentSmoothTime);
+            transform.position = Vector3.SmoothDamp(transform.position, 
+            targetPosition, ref smoothVelocity, currentSmoothTime);
 
-            if(SceneManager.GetActiveScene().name == "Level 3 - 0")
+            if (SceneManager.GetActiveScene().name == "Level 3 - 0")
             {
                 SetBossBattle(true);
             } 
-           
-
-
-            // Check if the player has crossed a certain y-value and if the boss is present
+                   
             if (!isInBossBattle && transform.position.y > crossingValue && boss != null)
             {
                 SetBossBattle(true);
@@ -70,7 +63,7 @@ public class CameraMotor : MonoBehaviour
     {
         if (isBossBattle == isInBossBattle)
         {
-            return; // No need to re-trigger the scaling effect if already in the desired state
+            return; 
         }
 
         isInBossBattle = isBossBattle;
@@ -95,7 +88,7 @@ public class CameraMotor : MonoBehaviour
             Camera.main.orthographicSize = newScale;
             yield return null;
         }
-
+        
         scalingCoroutine = null;
     }
 }

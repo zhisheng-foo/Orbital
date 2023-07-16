@@ -7,28 +7,22 @@ public class Wave2Manager : MonoBehaviour
     public GameObject[] firstObjectsPrefab;
     public GameObject[] secondObjectsPrefab;
     public GameObject[] thirdObjectsPrefab;
-
     private GameObject[] firstObjectInstances;
     private GameObject[] secondObjectInstances;
     private GameObject[] thirdObjectInstances;
-
     private bool isFirstObjectsDestroyed = false;
     private bool isSecondObjectsDestroyed = false;
     private bool isThirdObjectsDestroyed = false;
-
     private int counter = 0;
-
     public Canvas waveTitle;
     public Canvas hardTitle;
 
-    // Start is called before the first frame update
     void Start()
     {   
         Instantiate(waveTitle);
         InstantiateFirstObjects();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (!isSecondObjectsDestroyed && AreObjectsDestroyed(firstObjectInstances))

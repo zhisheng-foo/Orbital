@@ -7,17 +7,11 @@ public class Weapon : Collidable
 {
     public int damagePoint = 1;
     public float pushForce = 5.0f;
-
-    public int weaponLevel = 0;
     private SpriteRenderer spriteRenderer;
-
-    //Internal Cooldown for swing, currently set at 0.5seconds
     private float cooldown = 0.5f;
     private float lastSwing;
     private Animator wepAnim;
-
     public bool swinging;
-
     public Player player;
     private Animator playerAnim;
     private string ATTACK_ANIMATION = "Attack";
@@ -31,7 +25,7 @@ public class Weapon : Collidable
     [SerializeField]
     private float receiveWeaponVolume = 0.7f;
 
-
+    private bool isPlayingSound = false; 
     protected override void Start()
     {
         base.Start();
@@ -50,14 +44,11 @@ public class Weapon : Collidable
         {
             if (Time.time - lastSwing > cooldown)
             {
-          
                 StartCoroutine(Swing());
                 lastSwing = Time.time;
             }
         }
     }
-
-
     protected override void OnCollide(Collider2D coll)
     {
         if (coll.tag == "Fighter" && swinging == true)
@@ -78,8 +69,8 @@ public class Weapon : Collidable
 
             if (coll.name != "Boss" && coll.name != "Boss_2" && coll.name != "Boss_3")
             {
-                // Apply the push force to the enemy over time
-                Vector3 pushDirection = (coll.transform.position - transform.position).normalized * 2.0f;
+                Vector3 pushDirection 
+                = (coll.transform.position - transform.position).normalized * 2.0f;
                 StartCoroutine(PushEnemy(coll.transform, pushDirection));
             }
 
@@ -91,7 +82,7 @@ public class Weapon : Collidable
     private IEnumerator PushEnemy(Transform enemyTransform, Vector3 pushDirection)
     {
         float pushedDistance = 1f;
-        float pushDuration = 0.5f; // Adjust the duration as needed
+        float pushDuration = 0.5f; 
 
         while (pushedDistance < pushForce)
         {
@@ -100,14 +91,10 @@ public class Weapon : Collidable
             pushedDistance += pushStep;
             yield return null;
         }
-    }
-
-
-    private bool isPlayingSound = false; 
+    }  
 
     private IEnumerator Swing()
-    {
-       
+    {    
         swinging = true;
         wepAnim.SetTrigger("Attack");
         playerAnim.SetBool(ATTACK_ANIMATION, true);
@@ -116,9 +103,7 @@ public class Weapon : Collidable
         yield return new WaitForSeconds(0.001f);
         playerAnim.SetBool(ATTACK_ANIMATION, false);
         
-    }
-
-  
+    }  
 }
 
 

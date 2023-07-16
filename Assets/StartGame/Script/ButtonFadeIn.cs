@@ -3,18 +3,16 @@ using UnityEngine.UI;
 
 public class ButtonFadeIn : MonoBehaviour
 {
-    public float fadeInDuration = 1f; // Duration of the fade-in animation
+    public float fadeInDuration = 1f; 
     private Button button;
     private float currentTime = 0f;
     private bool isFading = false;
-
     void Start()
     {
         button = GetComponent<Button>();
         button.interactable = false;
         button.image.canvasRenderer.SetAlpha(0f);
     }
-
     void Update()
     {
         if (isFading)
@@ -30,12 +28,9 @@ public class ButtonFadeIn : MonoBehaviour
             }
         }
     }
-
     public void StartFadeIn()
     {
         isFading = true;
         currentTime = 0f;
-    }
-
-    
+    }   
 }

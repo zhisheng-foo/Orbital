@@ -6,13 +6,11 @@ public class CameraScaling : MonoBehaviour
     private float originalSize; 
     private GameObject boss;
     private bool isInBossBattle = false;
-
     private void Start()
     {
         originalSize = Camera.main.orthographicSize;
         boss = GameObject.Find("Boss");
     }
-
     private void Update()
     {
         if (!isInBossBattle && transform.position.y > 10 && boss != null)
@@ -20,7 +18,6 @@ public class CameraScaling : MonoBehaviour
             SetBossBattle(true);
         }
     }
-
     public void SetBossBattle(bool isBossBattle)
     {
         isInBossBattle = isBossBattle;
@@ -34,7 +31,6 @@ public class CameraScaling : MonoBehaviour
             Camera.main.orthographicSize = originalSize;
         }
     }
-
     public void BossDefeated()
     {
         if (isInBossBattle)

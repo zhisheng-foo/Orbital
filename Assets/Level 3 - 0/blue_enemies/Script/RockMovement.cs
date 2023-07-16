@@ -26,9 +26,7 @@ public class RockMovement : MonoBehaviour
     {
         while (true)
         {
-            // Move the rock towards the specified direction with the given throw force
             transform.position += direction * throwForce * Time.deltaTime;
-
             yield return null;
         }
     }

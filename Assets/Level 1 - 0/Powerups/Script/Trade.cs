@@ -7,18 +7,13 @@ public class Trade : Collidable
     private float cooldown = 1.5f;
     private float lastShout;
     public float duration = 10f;
-
     private int healthRequired = 5;
-
     private float tradeCooldown = 1.0f;
     private float lastTrade;
-
     private bool isDestroyed = false;
-    private bool isBought = false; // Track if the object has been bought
-
+    private bool isBought = false; 
     private Weapon weapon;
     private Player player;
-
     public AudioSource powerUpAudioSource;
     public AudioSource insufficientHealthAudioSource;
 
@@ -36,12 +31,12 @@ public class Trade : Collidable
             return;
         }
 
-        if (isDestroyed || isBought) // Check if the object has been bought
+        if (isDestroyed || isBought) 
         {
             return;
         }
 
-        if(player.hitpoint > healthRequired) 
+        if (player.hitpoint > healthRequired) 
         {
             lastTrade = Time.time;
             player.hitpoint -= healthRequired;
@@ -53,13 +48,13 @@ public class Trade : Collidable
             powerUpAudioSource.Play();
 
             player.StartCoroutine(player.ResetPlayerStatsTrade(duration));
-            isBought = true; // Set the object as bought
+            isBought = true; 
             gameObject.SetActive(false);
                 
             Destroy(gameObject);
         }
 
-         else
+        else
         {
             if (Time.time - lastShout > cooldown)
             {
@@ -70,20 +65,13 @@ public class Trade : Collidable
                     GameManager.instance.ShowText("Not enough sacrifice",
                         20, new Color(0f, 0f, 0f), transform.position, Vector3.up * 20, 1.0f);
 
-                    // Play insufficient dollar audio
                     insufficientHealthAudioSource.Play();
                 }
                 else
                 {
-                    lastShout = Time.time - cooldown; // Reset the lastShout time to avoid showing the message immediately after buying the doughnut
+                    lastShout = Time.time - cooldown; 
                 }
             }
         }
-
     }
-
-
-
-
-
 }

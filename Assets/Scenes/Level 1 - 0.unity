@@ -5475,6 +5475,14 @@ PrefabInstance:
       propertyPath: triggerLength
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2041527
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.006278217
+      objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -5683,6 +5691,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1315961614}
     m_Modifications:
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2039868
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.006195247
+      objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5822,6 +5838,14 @@ PrefabInstance:
     - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: chaseLength
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2399212
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.024162471
       objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
@@ -6040,6 +6064,14 @@ PrefabInstance:
     - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: chaseLength
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2286612
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.018532455
       objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
@@ -6902,6 +6934,14 @@ PrefabInstance:
     - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: chaseLength
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.215058
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.01173085
       objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
@@ -7873,6 +7913,14 @@ PrefabInstance:
       propertyPath: chaseLength
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2204915
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.014447629
+      objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -8732,6 +8780,14 @@ PrefabInstance:
       propertyPath: chaseLength
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2327455
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.02057463
+      objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -8902,6 +8958,14 @@ PrefabInstance:
     - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: chaseLength
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2150599
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.011731803
       objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder
@@ -12139,6 +12203,14 @@ PrefabInstance:
     - target: {fileID: 1412806514825499506, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: chaseLength
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2165791
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412806514825499507, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.012491405
       objectReference: {fileID: 0}
     - target: {fileID: 1412806514825499508, guid: 62ec27cdf0f896d42b9e3ac95f0c7ae9, type: 3}
       propertyPath: m_RootOrder

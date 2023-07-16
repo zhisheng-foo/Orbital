@@ -9,7 +9,6 @@ public class barrierLevel1 : Collidable
     public string deathAnimation = "DEATH";
     public TextMeshProUGUI textMesh;
     private string playerName = "Player";
-
     private bool isDestroyed = false;
     private GameObject playerObject;
     private Coroutine flashingCoroutine;
@@ -25,7 +24,6 @@ public class barrierLevel1 : Collidable
             textMesh.gameObject.SetActive(false);
         }
 
-    
         playerObject = GameObject.Find(playerName);
     }
 
@@ -37,7 +35,6 @@ public class barrierLevel1 : Collidable
         {
             return;
         }
-
         
         bool allObjectsDestroyed = true;
         foreach (GameObject obj in objects)
@@ -49,7 +46,6 @@ public class barrierLevel1 : Collidable
             }
         }
 
-      
         if (allObjectsDestroyed)
         {
             isDestroyed = true;
@@ -61,17 +57,14 @@ public class barrierLevel1 : Collidable
 
     private IEnumerator PlayDeathAnimationAndDestroy()
     {
-        // Play death animation
+
         Animator animator = GetComponent<Animator>();
         if (animator != null)
         {
             animator.SetBool(deathAnimation, true);
         }
-
-       
+    
         yield return new WaitForSeconds(0.75f);
-
-        // Destroy the object
         Destroy(gameObject);
     }
 
@@ -82,15 +75,12 @@ public class barrierLevel1 : Collidable
         {
             return;
         }
-
-        
+      
         if (coll.gameObject == playerObject && textMesh != null)
         {
             textMesh.gameObject.SetActive(true);
             StartFlashing();
             StartCoroutine(HideTextMeshAfterDelay(2.4f));
-
-            // Activate cooldown
             StartCoroutine(ActivateCooldown());
         }
     }
@@ -98,8 +88,7 @@ public class barrierLevel1 : Collidable
     private void StartFlashing()
     {
         if (flashingCoroutine == null)
-        {
-            
+        {          
             flashingCoroutine = StartCoroutine(FlashText());
         }
     }
@@ -107,8 +96,7 @@ public class barrierLevel1 : Collidable
     private void StopFlashing()
     {
         if (flashingCoroutine != null)
-        {
-            
+        {      
             StopCoroutine(flashingCoroutine);
             flashingCoroutine = null;
         }
@@ -119,15 +107,10 @@ public class barrierLevel1 : Collidable
         while (true)
         {
             
-            textMesh.gameObject.SetActive(true);
-
-            
+            textMesh.gameObject.SetActive(true); 
             yield return new WaitForSeconds(0.4f);
-
-            
+  
             textMesh.gameObject.SetActive(false);
-
-            
             yield return new WaitForSeconds(0.4f);
         }
     }
@@ -135,26 +118,22 @@ public class barrierLevel1 : Collidable
     private IEnumerator HideTextMeshAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-
-        
+    
         StopFlashing();
-
-        
+   
         if (textMesh != null)
         {
             textMesh.gameObject.SetActive(false);
         }
     }
-
+    
     private IEnumerator ActivateCooldown()
     {
         
-        canCollide = false;
+        canCollide = false; 
 
-        
-        yield return new WaitForSeconds(collisionCooldown);
+        yield return new WaitForSeconds(collisionCooldown);  
 
-        
         canCollide = true;
     }
 }

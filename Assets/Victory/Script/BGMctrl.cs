@@ -6,14 +6,10 @@ public class BGMctrl : MonoBehaviour
 {
     public AudioClip BGM;
     public AudioClip spider;
-
     private AudioSource audiosource;
-
     private bool isPaused = false;
     private float pauseTime = 11.3f;
     private float currentTime = 0f;
-    
-    // Start is called before the first frame update
     void Start()
     {
         audiosource = GetComponent<AudioSource>();
@@ -40,7 +36,6 @@ public class BGMctrl : MonoBehaviour
 
         audiosource.Pause();
 
-        // Resume playing after the pause time
         while (audiosource.time < BGM.length)
         {
             if (!isPaused)
@@ -52,7 +47,6 @@ public class BGMctrl : MonoBehaviour
         }
     }
 
-    // Method to pause/resume the audio
     public void PauseResumeAudio()
     {
         isPaused = !isPaused;
@@ -62,7 +56,7 @@ public class BGMctrl : MonoBehaviour
         else
             audiosource.UnPause();
     }
-    // Update is called once per frame
+
     void Update()
     {
         
