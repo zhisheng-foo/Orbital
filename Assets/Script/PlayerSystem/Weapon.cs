@@ -50,21 +50,9 @@ public class Weapon : Collidable
         {
             if (Time.time - lastSwing > cooldown)
             {
-
-                if (Input.GetKeyDown(KeyCode.DownArrow))
-                {
-                    wepAnim.SetTrigger("Attack");
-                }
-                else if (Input.GetKeyDown(KeyCode.UpArrow))
-                {
-                    wepAnim.SetTrigger("Attack");
-                }
-                else
-                {
-                    wepAnim.SetTrigger("Attack");
-                }
-                lastSwing = Time.time;
+          
                 StartCoroutine(Swing());
+                lastSwing = Time.time;
             }
         }
     }
@@ -119,28 +107,18 @@ public class Weapon : Collidable
 
     private IEnumerator Swing()
     {
-        playerAnim.SetBool(ATTACK_ANIMATION, true);
+       
         swinging = true;
-
-        if (!isPlayingSound) 
-            StartCoroutine(PlayWeaponSound());
-
-        yield return new WaitForSeconds(1.2f);
-
-        playerAnim.SetBool(ATTACK_ANIMATION, false);
-    }
-
-    private IEnumerator PlayWeaponSound()
-    {
-        isPlayingSound = true; 
-
-        // Play the receive damage sound
+        wepAnim.SetTrigger("Attack");
+        playerAnim.SetBool(ATTACK_ANIMATION, true);
         weaponSoundEffect.PlayOneShot(receiveWeaponSound, receiveWeaponVolume);
 
-        yield return new WaitForSeconds(receiveWeaponSound.length);
-
-        isPlayingSound = false;
+        yield return new WaitForSeconds(0.001f);
+        playerAnim.SetBool(ATTACK_ANIMATION, false);
+        
     }
+
+  
 }
 
 

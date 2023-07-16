@@ -22,8 +22,7 @@ public class Player : Mover
 
 
     private string WALK_ANIMATION = "Walk";
-    private string DODGE_ANIMATION = "Dodge";
-    private string ATTACK_ANIMATION = "Attack";
+    
     public GameObject projectilePrefab;
     public float projectileSpeed = 10f;
     public float projectileLifetime = 2f;
@@ -132,7 +131,7 @@ public class Player : Mover
     }
   
 
-      private void OnDestroy()
+    private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
@@ -188,19 +187,7 @@ public class Player : Mover
     }
 
 
-    public void OnLevelUp() 
-    {
-        maxHitpoint++;
-        hitpoint = maxHitpoint;
-    }
 
-    public void SetLevel(int level) 
-    {
-        for (int i = 0; i < level; i++) 
-        {
-            OnLevelUp();
-        }
-    }
     
     public bool isDead;
 
@@ -233,10 +220,10 @@ public class Player : Mover
             else 
             {
                 dodge = true;
-                anim.SetBool(DODGE_ANIMATION, true);
+            
                 GameManager.instance.ShowText("DODGE", 20, new Color(0.3f, 0f, 0.1f),
                     transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);
-                StartCoroutine(StopDodgeAnimation());
+                
             }
 
             if (hitpoint <= 0) 
@@ -248,12 +235,6 @@ public class Player : Mover
 
     protected override void Death(){}
 
-    private IEnumerator StopDodgeAnimation()
-    {
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length); 
-
-        anim.SetBool(DODGE_ANIMATION, false);
-    }
 
      public void Heal (int healingAmount) {
         if(hitpoint == maxHitpoint) {
