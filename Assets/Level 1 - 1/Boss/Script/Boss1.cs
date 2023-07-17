@@ -29,6 +29,7 @@ public class Boss1 : Enemy
     private float knockbackTimer = 0f;
     private Animator BossPushTrig;
     public bool isPush = false;
+    private bool isActive = false;
 
     protected override void Start()
     {
@@ -39,9 +40,23 @@ public class Boss1 : Enemy
     }
 
     private void Update()
-    {
+    {        
+        if(!isActive && playerTransform.position.y >= 17f)
+        {
+            isActive = true;
+        }
+        
+        if(!isActive)
+        {
+            return; //Exit update loop i guess
+        }
+        
+        
+        
+        //1st mech(rotating fireballs)
         MoveFireballs();
 
+        //2nd mech(Kiting player)
         float playerDistance = Vector3.Distance(transform.position, playerTransform.position);
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
         if (!shouldChase && playerTransform.position.y >= chaseYPosition)
@@ -51,7 +66,6 @@ public class Boss1 : Enemy
 
         if (shouldChase && playerDistance < minDistance)
         {
-            
             Vector3 directionAwayFromPlayer = -directionToPlayer;
    
             if (!movingBack)
@@ -64,11 +78,9 @@ public class Boss1 : Enemy
         }
         else if (shouldChase)
         {
-            
             movingBack = false; 
             UpdateMotor(directionToPlayer);
         }
-
         if (playerTransform.position.x < transform.position.x)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -83,6 +95,7 @@ public class Boss1 : Enemy
         clampedPosition.y = Mathf.Clamp(clampedPosition.y, bossBoundsMin.y, bossBoundsMax.y);
         transform.position = clampedPosition;
 
+        //mech 1.5(fireball on and off)
         if (fireballTimer >= fireballEnableInterval)
         {
             DisableFireballs();
@@ -94,9 +107,10 @@ public class Boss1 : Enemy
             fireballTimer += Time.deltaTime;
         }
 
+        //3rd mech (fart)
         if(knockbackTimer >= knockbackInterval)
         {
-            ShinraTensei((playerTransform.position - transform.position).normalized * 3f);
+            Fart((playerTransform.position - transform.position).normalized * 3f);
             Debug.Log("Push");
             knockbackTimer = 0f;
             isPush = true;
@@ -108,7 +122,8 @@ public class Boss1 : Enemy
         }
     }
 
-    private void ShinraTensei(Vector2 direction)
+    
+    private void Fart(Vector2 direction)
     {
         playerRigidbody.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
     }

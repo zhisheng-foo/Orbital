@@ -66,7 +66,7 @@ public class ExitPortal : Collidable
         yield return new WaitForSeconds(1.2f);
 
         // Load the new scene
-        SceneManager.LoadScene(level); // Load "Level 1 - 1" scene
+        SceneManager.LoadScene(level); 
     }
 
     private bool AllObjectsDestroyed()

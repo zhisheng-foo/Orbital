@@ -28,11 +28,10 @@ public class Player : Mover
     public bool noStackingplot = false;
     private GameObject dustObject;
     public bool isDead;
-    /*
-    public bool atkbuffed = false;
-    incase we need to make it so that the attack dmg of the weapon gets reset every level,
-    maybe can adjust at the portal and check if this bool is true + current scene name. 
-    */
+    
+    public bool atkbuffed1 = false;
+    public bool atkbuffed2 = false;
+    public bool atkbuffed3= false;
 
     private void OnEnable()
     {
@@ -87,6 +86,14 @@ public class Player : Mover
         if (scene.name == "Level 2 - 0") 
         {
             transform.position = desiredPositionHalloween;
+            if(atkbuffed1)
+            {
+                weapon.damagePoint = 2;
+                GameManager.instance.ShowText("Weapon Dmg Reset Haha", 35, new Color(32f, 197f, 200f),
+                        transform.position + new Vector3(1.5f, 0f, 0f), Vector3.up * 25, 2.5f);
+                Debug.Log("Damage changed back to 2");
+                atkbuffed1 = false;
+            }
         }
 
         if (scene.name == "Level 2 - 1")
@@ -97,6 +104,14 @@ public class Player : Mover
         if (scene.name == "Level 3 - 0")
         {
             transform.position = desiredPositionWinter;    
+            if(atkbuffed2)
+            {
+                weapon.damagePoint  = 2;
+                GameManager.instance.ShowText("Weapon Dmg Reset Haha", 35, new Color(32f, 197f, 200f),
+                        transform.position + new Vector3(1.5f, 0f, 0f), Vector3.up * 25, 2.5f);
+                Debug.Log("dmg changed to 2");
+                atkbuffed2 = false;
+            }
         }
     }
 
@@ -153,7 +168,7 @@ public class Player : Mover
             ShootProjectile();
         }
 
-        if ( hitpoint == 0)
+        if (hitpoint == 0)
         {
             if (!isDead)
             {

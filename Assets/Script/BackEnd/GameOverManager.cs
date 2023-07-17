@@ -89,49 +89,52 @@ public class GameOverManager : MonoBehaviour
     public void RestartGame()
     {
         Debug.Log("Game Restart");
-        Time.timeScale = 1f;
           
         player.hitpoint = player.maxHitpoint;
         player.isDead = false;
         gameOverCanvas.SetActive(false);
 
-        //player.atkbuffed = true;        
         //reloading current scene
         Scene currentScn = SceneManager.GetActiveScene();
         if (currentScn.name == "Level 1 - 0" || currentScn.name == "Level 1 - 1")
         {
             SceneManager.LoadScene("Level 1 - 0");
             weapon.damagePoint += 1;
+            player.atkbuffed1 = true;
             gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
-            player.transform.position, Vector3.up * 20, 1.5f);
+                player.transform.position, Vector3.up * 20, 1.5f);
 
         }
         else if (currentScn.name == "Level 2 - 0")
         {
             SceneManager.LoadScene("Level 2 - 0");
-            gamemanager.ShowText("Try reading this time", 25, new Color(0f, 255f, 0f), 
-            player.transform.position, Vector3.up * 20, 1.5f);
+            gamemanager.ShowText("Wai u die?", 25, new Color(0f, 255f, 0f), 
+                player.transform.position, Vector3.up * 20, 2f);
             
         }
         else if(currentScn.name == "Level 2 - 1")
         {
             SceneManager.LoadScene("Level 2 - 0");
             weapon.damagePoint += 1;
+            player.atkbuffed2 = true;
             gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
-            player.transform.position, Vector3.up * 20, 1.5f);
+                player.transform.position, Vector3.up * 20, 1.5f);
             
         }
         else if (currentScn.name == "Level 3 - 0")
         {
             SceneManager.LoadScene("Level 3 - 0");
             weapon.damagePoint += 1;
-            gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
-            player.transform.position, Vector3.up * 20, 1.5f);
+            player.atkbuffed3 = true;
+            gamemanager.ShowText("+1 attack, u have 2 new skills cuz boggo just rmbred.", 25, new Color(0f, 255f, 0f), 
+                player.transform.position, Vector3.up * 20, 3f);
             
         }
         else
         {
             SceneManager.LoadScene("Start Game");
-        }     
+            weapon.damagePoint = 2;
+        }
+        Time.timeScale = 1f;     
     }
 }

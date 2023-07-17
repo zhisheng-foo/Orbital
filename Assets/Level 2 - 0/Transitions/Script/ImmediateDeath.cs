@@ -28,8 +28,7 @@ public class ImmediateDeath : Collidable
     {
         if (coll.name == "Player" && player != null)
         {
-            player.hitpoint = 0;
-
+            player.transform.position = new Vector3(2f, 6f, 0); //to solve double death.
             if (audioSource != null && !hasPlayedAudio)
             {
                 audioSource.Play();
@@ -37,6 +36,7 @@ public class ImmediateDeath : Collidable
 
                 DisplayText();
             }
+            player.hitpoint = 0;
         }
     }
 

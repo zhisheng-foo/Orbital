@@ -63,6 +63,21 @@ public class LevelManager : MonoBehaviour
     IEnumerator LoadVictorySceneAfterDelay()
     {
         yield return new WaitForSeconds(victoryDelay); 
+    
+        
+        //check here
+        GameObject[] tobedeletedObjects = GameObject.FindGameObjectsWithTag("ToBeD");
+        GameObject[] fighterObjects = GameObject.FindGameObjectsWithTag("Fighter");
+        GameObject[] objectsToDestroy = new GameObject[tobedeletedObjects.Length + fighterObjects.Length];
+        tobedeletedObjects.CopyTo(objectsToDestroy, 0);
+        fighterObjects.CopyTo(objectsToDestroy, tobedeletedObjects.Length);
+
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            Destroy(obj);
+        }
+
+        
         fadeAnimator.SetBool(TRANSITION,true);
 
         yield return new WaitForSeconds(3.0f);

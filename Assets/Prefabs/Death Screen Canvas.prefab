@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -106.95352, y: 48.509735}
+  m_AnchoredPosition: {x: -113.3, y: 52.8}
   m_SizeDelta: {x: 113.8411, y: 22.2909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &145116295
@@ -98,7 +98,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
     m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -431,7 +431,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 200
   m_TargetDisplay: 0
 --- !u!114 &6719041698081754514
 MonoBehaviour:
@@ -491,6 +491,8 @@ MonoBehaviour:
   fadeDuration: 5
   gameOverSound: {fileID: 8300000, guid: f81dad7d05e1e6e4aa120f1a1a66f5f8, type: 3}
   player: {fileID: 0}
+  weapon: {fileID: 0}
+  gamemanager: {fileID: 0}
 --- !u!82 &859315673
 AudioSource:
   m_ObjectHideFlags: 0
