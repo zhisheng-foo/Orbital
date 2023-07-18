@@ -1,10 +1,13 @@
 # GrassToucher's Home Invasion
 
 Game Available at:
-https://soulblast9938.itch.io/home-invasion (Only Updated to 1.0)
+https://soulblast9938.itch.io/home-invasion (Updated to 0.2.0)
 
 
 Changelog: 
+
+Update 0.2.0:
+Ready for user testing for milestone 3. Fixed small issue for pause screen --> Start game screen
 
 Update 0.1.4:
 Level 3 loop fixed, powerup attack damage fixed
