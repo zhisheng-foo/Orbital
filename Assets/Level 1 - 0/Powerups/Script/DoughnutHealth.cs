@@ -22,7 +22,7 @@ public class DoughnutHealth : Collidable
         base.Start();   
         audioSource = GetComponent<AudioSource>();  
         audioSource.volume = healAudioVolume;
-        player = FindObjectOfType<Player>();
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     protected override void OnCollide(Collider2D coll)

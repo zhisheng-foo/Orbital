@@ -39,7 +39,7 @@ public class Wave2Manager : MonoBehaviour
             counter++;
         }
 
-        if (AreObjectsDestroyed(thirdObjectInstances))
+        if (AreObjectsDestroyed(thirdObjectInstances) && isThirdObjectsDestroyed)
         {
             Destroy(gameObject);
         }

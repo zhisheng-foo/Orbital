@@ -80,7 +80,7 @@ public class barrierLevel1 : Collidable
         {
             textMesh.gameObject.SetActive(true);
             StartFlashing();
-            StartCoroutine(HideTextMeshAfterDelay(1.4f)); //was 2.4
+            StartCoroutine(HideTextMeshAfterDelay(1f)); //was 2.4
             StartCoroutine(ActivateCooldown());
         }
     }

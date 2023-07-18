@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8009711382973489150, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}
       propertyPath: mobPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8009711382973489150, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}
       propertyPath: mobPrefabs.Array.data[1]
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 2456106859073708111, guid: b72a35b06c08aef4abd11b1ca8fac892, type: 3}
     - target: {fileID: 8009711382973489151, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}
       propertyPath: m_Name
-      value: Village_Wave_2_2.2
+      value: Village_Wave_2_2.2 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}

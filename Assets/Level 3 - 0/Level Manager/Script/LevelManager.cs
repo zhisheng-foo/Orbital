@@ -19,8 +19,12 @@ public class LevelManager : MonoBehaviour
     private string TRANSITION = "work";
     private Animator fadeAnimator;
     private GameObject fadeObject;
+
+    private Player player;
+
     void Start()
     {   
+        player = GameObject.Find("Player").GetComponent<Player>();
         fadeObject = GameObject.Find("Fade");
         StartCoroutine(StartDelay());
 
@@ -65,22 +69,13 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(victoryDelay); 
     
         
-        //check here
-        GameObject[] tobedeletedObjects = GameObject.FindGameObjectsWithTag("ToBeD");
-        GameObject[] fighterObjects = GameObject.FindGameObjectsWithTag("Fighter");
-        GameObject[] objectsToDestroy = new GameObject[tobedeletedObjects.Length + fighterObjects.Length];
-        tobedeletedObjects.CopyTo(objectsToDestroy, 0);
-        fighterObjects.CopyTo(objectsToDestroy, tobedeletedObjects.Length);
-
-        foreach (GameObject obj in objectsToDestroy)
-        {
-            Destroy(obj);
-        }
-
-        
         fadeAnimator.SetBool(TRANSITION,true);
 
         yield return new WaitForSeconds(3.0f);
+        player.transform.position = new Vector3(100000000000000000f, 1000000000000000f, 0);
+
+
         SceneManager.LoadScene("Victory 1 - 0");
+
     }
 }

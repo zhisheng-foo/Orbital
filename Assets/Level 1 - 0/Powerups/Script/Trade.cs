@@ -17,6 +17,8 @@ public class Trade : Collidable
     public AudioSource powerUpAudioSource;
     public AudioSource insufficientHealthAudioSource;
 
+    public int ogCeleryDmgPt; 
+
     protected override void Start()
     {
         base.Start();
@@ -44,10 +46,11 @@ public class Trade : Collidable
              GameManager.instance.ShowText("The curse has been placed   ",
                     20, new Color(0f, 0f, 0f), transform.position, 
                     Vector3.up * 20, 1.0f);
+            ogCeleryDmgPt = weapon.damagePoint;
             weapon.damagePoint += 999;
             powerUpAudioSource.Play();
 
-            player.StartCoroutine(player.ResetPlayerStatsTrade(duration));
+            player.StartCoroutine(player.ResetPlayerStatsTrade(duration, ogCeleryDmgPt));
             isBought = true; 
             gameObject.SetActive(false);
                 

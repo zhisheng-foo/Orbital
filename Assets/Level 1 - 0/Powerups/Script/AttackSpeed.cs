@@ -17,7 +17,7 @@ public class AttackSpeed : Collidable
     private Player player;
     private float originalYSpeed;
     private float originalXSpeed;
-    private int originalDamagePoint;
+    public int ogHamDmgPt;
     public AudioSource powerUpAudioSource;
     public AudioSource insufficientDollarAudioSource;
     public AudioSource powerDownAudioSource;
@@ -35,7 +35,7 @@ public class AttackSpeed : Collidable
         // Store original values
         originalYSpeed = player.ySpeed;
         originalXSpeed = player.xSpeed;
-        originalDamagePoint = weapon.damagePoint;
+        
     }
 
     protected override void OnCollide(Collider2D coll)
@@ -60,8 +60,9 @@ public class AttackSpeed : Collidable
 
                 GameManager.instance.ShowText("Ham Breathing First Form",
                     20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.45f, Vector3.up * 30, 1.0f);
-
                 
+                ogHamDmgPt = weapon.damagePoint;
+            
                 player.ySpeed *= 1.5f;
                 player.xSpeed *= 1.5f;
                 weapon.damagePoint *= 2;
@@ -70,7 +71,7 @@ public class AttackSpeed : Collidable
 
                 
                 powerUpAudioSource.Play();
-                player.StartCoroutine(player.ResetPlayerStats(duration, originalDamagePoint));
+                player.StartCoroutine(player.ResetPlayerStats(duration, ogHamDmgPt));
 
                 isBought = true; 
                 gameObject.SetActive(false);

@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8009711382973489150, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}
       propertyPath: mobPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8009711382973489150, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}
       propertyPath: mobPrefabs.Array.data[1]
@@ -71,6 +71,14 @@ PrefabInstance:
       propertyPath: mobPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 2456106859073708111, guid: b72a35b06c08aef4abd11b1ca8fac892, type: 3}
+    - target: {fileID: 8009711382973489150, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}
+      propertyPath: numMobsToSpawn.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009711382973489150, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}
+      propertyPath: numMobsToSpawn.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8009711382973489151, guid: b3a406be89373f948a1b39524dfebfe1, type: 3}
       propertyPath: m_Name
       value: Village_Wave_2_2.1 Variant

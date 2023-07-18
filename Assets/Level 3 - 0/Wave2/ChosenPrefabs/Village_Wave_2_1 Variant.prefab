@@ -8,12 +8,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 798642752067229332, guid: 6bad51ad323d89e4892883984b430773, type: 3}
+      propertyPath: mobPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 798642752067229332, guid: 6bad51ad323d89e4892883984b430773, type: 3}
       propertyPath: mobPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 3220758330454325994, guid: b74c3a9769707934fa4e4251c34be3eb, type: 3}
+    - target: {fileID: 798642752067229332, guid: 6bad51ad323d89e4892883984b430773, type: 3}
+      propertyPath: mobPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 2456106859073708111, guid: b72a35b06c08aef4abd11b1ca8fac892, type: 3}
     - target: {fileID: 798642752067229333, guid: 6bad51ad323d89e4892883984b430773, type: 3}
       propertyPath: m_Name
-      value: Village_Wave_2_1
+      value: Village_Wave_2_1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 798642752067229353, guid: 6bad51ad323d89e4892883984b430773, type: 3}
       propertyPath: m_RootOrder

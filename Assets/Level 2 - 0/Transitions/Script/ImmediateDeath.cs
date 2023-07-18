@@ -14,7 +14,7 @@ public class ImmediateDeath : Collidable
     protected override void Start()
     {
         base.Start();
-        player = FindObjectOfType<Player>();
+        player = GameObject.Find("Player").GetComponent<Player>();
         audioSource = GetComponent<AudioSource>();
         hasPlayedAudio = false;
 

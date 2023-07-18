@@ -2233,15 +2233,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4119363565971777964, guid: 4ad47498363fb74479b0af75722dd764, type: 3}
       propertyPath: m_Text
-      value: 
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119363565971777964, guid: 4ad47498363fb74479b0af75722dd764, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4119363565971777967, guid: 4ad47498363fb74479b0af75722dd764, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 23.6
+      value: 6.399994
       objectReference: {fileID: 0}
     - target: {fileID: 4119363565971777967, guid: 4ad47498363fb74479b0af75722dd764, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -39.3
+      value: -32.990997
       objectReference: {fileID: 0}
     - target: {fileID: 4119363566140466648, guid: 4ad47498363fb74479b0af75722dd764, type: 3}
       propertyPath: m_Pivot.x
@@ -2337,11 +2341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4119363567673315410, guid: 4ad47498363fb74479b0af75722dd764, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 311.3
+      value: 286.7
       objectReference: {fileID: 0}
     - target: {fileID: 4119363567673315410, guid: 4ad47498363fb74479b0af75722dd764, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 282.3
+      value: 278
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad47498363fb74479b0af75722dd764, type: 3}
@@ -2406,7 +2410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1578647956391145897, guid: 1850537bddcb8a44184c32161b3c9ced, type: 3}
       propertyPath: destroyTime
-      value: 1.8
+      value: 3.04
       objectReference: {fileID: 0}
     - target: {fileID: 1578647956391145899, guid: 1850537bddcb8a44184c32161b3c9ced, type: 3}
       propertyPath: m_AnchoredPosition.x

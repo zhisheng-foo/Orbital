@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 151.5, y: -273.2}
+  m_AnchoredPosition: {x: 111, y: -273.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &48633780
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Was that...an isekai dream?
+  m_text: ?!?!?!?! Was i sleep?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66465527720f18949a5cd51062c23f13, type: 2}
   m_sharedMaterial: {fileID: 3436861323382967251, guid: 66465527720f18949a5cd51062c23f13, type: 2}
@@ -209,15 +209,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 65.37
+  m_fontSizeBase: 65.37
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1900,7 +1900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -226, y: -277}
+  m_AnchoredPosition: {x: -241, y: -275}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101607334
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Throw him into another iseka again '
+  m_text: 'Throw him into another isekai again '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66465527720f18949a5cd51062c23f13, type: 2}
   m_sharedMaterial: {fileID: 3436861323382967251, guid: 66465527720f18949a5cd51062c23f13, type: 2}
@@ -1950,15 +1950,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 47.6
+  m_fontSizeBase: 47.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2276,7 +2276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100.6, y: -273.1}
+  m_AnchoredPosition: {x: -10.7, y: -273.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248883614
@@ -2299,7 +2299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'cringe magic : xue hua piao piao'
+  m_text: 'Secret technique : xue hua piao piao'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66465527720f18949a5cd51062c23f13, type: 2}
   m_sharedMaterial: {fileID: 3436861323382967251, guid: 66465527720f18949a5cd51062c23f13, type: 2}
@@ -2326,14 +2326,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53
-  m_fontSizeBase: 53
+  m_fontSize: 44.4
+  m_fontSizeBase: 44.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2611,7 +2611,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: joe mama found...quick i have to perform my special jutsu
+  m_text: joe mama!!!!!! quick i have to perform my mating call uwu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66465527720f18949a5cd51062c23f13, type: 2}
   m_sharedMaterial: {fileID: 3436861323382967251, guid: 66465527720f18949a5cd51062c23f13, type: 2}

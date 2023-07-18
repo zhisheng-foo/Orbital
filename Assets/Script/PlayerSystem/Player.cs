@@ -33,6 +33,20 @@ public class Player : Mover
     public bool atkbuffed2 = false;
     public bool atkbuffed3= false;
 
+    private static Player playerInstance;
+
+    private void Awake()
+    {
+        if (playerInstance != null && playerInstance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        playerInstance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;     
@@ -236,25 +250,35 @@ public class Player : Mover
         Color.black, transform.position, Vector3.up * 30, 1.0f);    
     }
 
-    public IEnumerator ResetPlayerStats(float duration, int originalDamagePoint)
+    public IEnumerator ResetPlayerStats(float duration, int ogHamDmgPt)
     {
         yield return new WaitForSeconds(duration);
     
         // Reset player's speed and attack to original values
         ySpeed = 5.0f;
         xSpeed = 5.5f;
-        weapon.damagePoint = originalDamagePoint;
+        Trade trade = FindObjectOfType<Trade>();
+        if(weapon.damagePoint <= ogHamDmgPt)
+        {
+            ogHamDmgPt = weapon.damagePoint;
+        }
+        weapon.damagePoint = ogHamDmgPt;
         this.noStackingAtk = false;
         GameManager.instance.ShowText("Ham Breathing deactivated"
         , 20,new Color(0f, 0f, 0f), transform.position, Vector3.up * 0.45f, 1.0f);
         
     }
 
-    public IEnumerator ResetPlayerStatsTrade(float duration)
+    public IEnumerator ResetPlayerStatsTrade(float duration, int ogCeleryDmgPt)
     {   
         yield return new WaitForSeconds(duration);
+        AttackSpeed AS = FindObjectOfType<AttackSpeed>();
 
-        weapon.damagePoint -= 999;
+        if(ogCeleryDmgPt >= AS.ogHamDmgPt && AS.ogHamDmgPt != 0)
+        {
+            ogCeleryDmgPt = AS.ogHamDmgPt; 
+        }
+        weapon.damagePoint = ogCeleryDmgPt;
         GameManager.instance.ShowText("  The curse has been lifted"
         , 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.30f, Vector3.up * 0.65f, 1.0f);
     }
