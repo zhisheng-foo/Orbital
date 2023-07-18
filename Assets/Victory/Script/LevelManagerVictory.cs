@@ -14,22 +14,7 @@ public class LevelManagerVictory : MonoBehaviour
 
     void Awake()
     {
-        /*
-        //check here
-        GameObject[] tobedeletedObjects = GameObject.FindGameObjectsWithTag("ToBeD");
-        GameObject[] fighterObjects = GameObject.FindGameObjectsWithTag("Fighter");
-        Debug.Log(tobedeletedObjects + "TBD " + fighterObjects + " figherobjects");
-        GameObject[] objectsToDestroy = new GameObject[tobedeletedObjects.Length + fighterObjects.Length];
-        tobedeletedObjects.CopyTo(objectsToDestroy, 0);
-        fighterObjects.CopyTo(objectsToDestroy, tobedeletedObjects.Length);
-
-        foreach (GameObject obj in objectsToDestroy)
-        {
-            Destroy(obj);
-        }
-        */
         player = GameObject.Find("Player").GetComponent<Player>();
-
     }
 
     void Start()

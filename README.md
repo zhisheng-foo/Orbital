@@ -6,6 +6,8 @@ https://soulblast9938.itch.io/home-invasion (Only Updated to 1.0)
 
 Changelog: 
 
+Update 0.1.4:
+Level 3 loop fixed, powerup attack damage fixed
 
 Update 0.1.3:
 Boss 1 fart timer,

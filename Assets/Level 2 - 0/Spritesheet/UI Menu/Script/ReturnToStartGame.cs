@@ -42,6 +42,7 @@ public class ReturnToStartGame : MonoBehaviour
                 if (anim != null)
                     anim.SetBool("work", true);
 
+                player.transform.position = new Vector3(100000000000000000f, 1000000000000000f, 0);
                 // Load the specified scene immediately
                 SceneManager.LoadScene(sceneToLoad);
             }
