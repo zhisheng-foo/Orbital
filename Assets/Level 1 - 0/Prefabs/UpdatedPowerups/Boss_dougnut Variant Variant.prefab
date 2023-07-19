@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7397946336883290207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 103.48415
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.178194
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.053089
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105368, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331024541885105375, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
+      propertyPath: m_Name
+      value: Boss_dougnut Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 791cd74617acd07409c9ecd0bc68efaf, type: 3}
