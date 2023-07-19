@@ -6,6 +6,12 @@ https://soulblast9938.itch.io/home-invasion (Updated to 0.2.0)
 
 Changelog: 
 
+Update 0.2.1:
+Lowered dodge chance(now adjustable)
+Reset wep dmg from 3-0 to 1-0
+shifted camera to pos of player
+adjusted powerups for 2-0
+
 Update 0.2.0:
 Ready for user testing for milestone 3. Fixed small issue for pause screen --> Start game screen
 
