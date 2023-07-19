@@ -27,13 +27,14 @@ public class Player : Mover
     public bool noStackingAtk = false;
     public bool noStackingplot = false;
     private GameObject dustObject;
-    public bool isDead;
+    public bool isPlayerDead;
     
     public bool atkbuffed1 = false;
     public bool atkbuffed2 = false;
     public bool atkbuffed3= false;
 
     private static Player playerInstance;
+    public float dodgeChance = 0.1f;
 
     private void Awake()
     {
@@ -84,7 +85,15 @@ public class Player : Mover
 
         if (scene.name == "Level 1 - 0")
         {   
-            transform.position = desiredPosition;      
+            transform.position = desiredPosition;
+            if(atkbuffed3)
+            {
+                weapon.damagePoint  = 2;
+                GameManager.instance.ShowText("Weapon Dmg Reset Haha", 35, new Color(32f, 197f, 200f),
+                        transform.position + new Vector3(1.5f, 0f, 0f), Vector3.up * 25, 2.5f);
+                Debug.Log("dmg changed to 2");
+                atkbuffed3 = false;
+            }      
         }
 
         if (scene.name == "Main")
@@ -184,16 +193,16 @@ public class Player : Mover
 
         if (hitpoint == 0)
         {
-            if (!isDead)
+            if (!isPlayerDead)
             {
-                isDead = true;
+                isPlayerDead = true;
                 Debug.Log("Game over for player");
                 FindObjectOfType<GameOverManager>().GameOver();
             }
         }
     }
 
-    public void ReceiveDamage(Damage dmg) 
+    public void ReceiveDamage(Damage dmg) //takes in damage and a dodgeChance that can be adjusted.
     {
         if (Time.time - lastImmune > immuneTime) 
         {
@@ -202,6 +211,29 @@ public class Player : Mover
             lastImmune = Time.time;
             pushDirection = Vector3.zero;
             
+            if(rnd.NextDouble() < dodgeChance)
+            {
+                dodge = true;
+                GameManager.instance.ShowText("DODGE", 20, new Color(0.3f, 0f, 0.1f),
+                    transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);
+            }
+            else
+            {
+                if(!isInvulnerable)
+                {
+                    hitpoint -= dmg.damageAmount;
+                    GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, 
+                        new Color(0.3f, 0f, 0.1f), transform.position + new Vector3(2f, 0f, 0f), 
+                        Vector3.up * 25, 0.3f);
+                }
+                else 
+                {
+                    GameManager.instance.ShowText("Plot Armour", 20, new Color(0.1f, 0.1f, 0.1f),
+                        transform.position + new Vector3(1.5f, 0f, 0f), Vector3.up * 25, 0.3f);
+                }
+            }
+            
+            /*
             if (rnd.Next(2) == 0) 
             {   
                 if (!isInvulnerable) 
@@ -225,6 +257,7 @@ public class Player : Mover
                 GameManager.instance.ShowText("DODGE", 20, new Color(0.3f, 0f, 0.1f),
                     transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);       
             }
+            */
 
             if (hitpoint <= 0) 
             {

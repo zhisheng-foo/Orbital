@@ -142,11 +142,16 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3652001274205937231, guid: 592553a9137fb124c9f3eb9962d92741, type: 3}
   projectileSpeed: 10
   projectileLifetime: 2
-  boss: {fileID: 0}
   anim: {fileID: 6668556105939997822}
   weapon: {fileID: 3741233176581099479}
   isInvulnerable: 0
-  isDead: 0
+  noStackingAtk: 0
+  noStackingplot: 0
+  isPlayerDead: 0
+  atkbuffed1: 0
+  atkbuffed2: 0
+  atkbuffed3: 0
+  dodgeChance: 0.3
 --- !u!61 &5505747696743882977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -473,7 +478,6 @@ MonoBehaviour:
     maxNormalAngle: 0
   damagePoint: 2
   pushForce: 2
-  weaponLevel: 0
   swinging: 1
   player: {fileID: 3741233178113976277}
   weaponSoundEffect: {fileID: 6573173328157084135}

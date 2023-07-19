@@ -91,7 +91,7 @@ public class GameOverManager : MonoBehaviour
         Debug.Log("Game Restart");
           
         player.hitpoint = player.maxHitpoint;
-        player.isDead = false;
+        player.isPlayerDead = false;
         gameOverCanvas.SetActive(false);
 
         //reloading current scene
