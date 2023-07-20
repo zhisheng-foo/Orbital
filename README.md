@@ -1,7 +1,7 @@
 # GrassToucher's Home Invasion
 
 Game Available at:
-https://soulblast9938.itch.io/home-invasion (Updated to 0.2.0)
+https://soulblast9938.itch.io/home-invasion (Updated to 0.2.2)
 
 
 Changelog: 
