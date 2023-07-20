@@ -21,7 +21,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9060742677032250065, guid: 4318fcea73a690d45a6cc4fe9d22ab50, type: 3}
       propertyPath: m_Name
-      value: bosshpbar
+      value: bosshpbar Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060742677032250068, guid: 4318fcea73a690d45a6cc4fe9d22ab50, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9060742677032250070, guid: 4318fcea73a690d45a6cc4fe9d22ab50, type: 3}
       propertyPath: m_Pivot.x

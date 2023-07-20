@@ -7,9 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 12863791307759532, guid: 539d36bdd43ce3b44b214e92eb89f9ed, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 12863791307759534, guid: 539d36bdd43ce3b44b214e92eb89f9ed, type: 3}
       propertyPath: m_Name
-      value: Level_title Variant Variant (1) Variant
+      value: Level_title Variant Variant (1) Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 12863791307759534, guid: 539d36bdd43ce3b44b214e92eb89f9ed, type: 3}
       propertyPath: m_IsActive

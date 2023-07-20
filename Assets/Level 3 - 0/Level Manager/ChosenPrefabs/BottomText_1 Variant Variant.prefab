@@ -17,10 +17,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613006648681978464, guid: dec92e48c4efd1d48bef34ab9761a4a7, type: 3}
       propertyPath: m_Name
-      value: BottomText_1 Variant
+      value: BottomText_1 Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6613006648681978464, guid: dec92e48c4efd1d48bef34ab9761a4a7, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613006648681978466, guid: dec92e48c4efd1d48bef34ab9761a4a7, type: 3}
+      propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6613006648681978468, guid: dec92e48c4efd1d48bef34ab9761a4a7, type: 3}
