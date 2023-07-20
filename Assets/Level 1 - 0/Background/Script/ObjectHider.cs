@@ -2,6 +2,11 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 
+/* 
+Controls the canvas elements to display level titles as well as other information that 
+the player may need to see/know as they load into the scene and hiding them after a set duration
+*/
+
 public class ObjectHider : MonoBehaviour
 {
     public float hideDuration = 2f; // Duration in seconds for which the object will be hidden

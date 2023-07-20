@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Mover : Fighter
+/*
+Handles movement of all objects that move. 
+Example: Enemy, Player and Boss classes will inherit form mover. 
+Inherits from Fighter class.
+*/
+
+
+public abstract class Mover : Fighter  
 {
     protected BoxCollider2D boxCollider;
     protected Vector3 moveDelta;
     protected RaycastHit2D hit;
-    public float ySpeed = 5.0f;
+    public float ySpeed = 5.0f;   //base movespeed
     public float xSpeed = 5.5f;
     protected virtual void Start() {
 
@@ -19,15 +26,18 @@ public abstract class Mover : Fighter
         
     }
 
-    protected virtual void UpdateMotor(Vector3 input) {
+//Update of gameobject's position to simulate moving
+    protected virtual void UpdateMotor(Vector3 input) { 
 
         moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
+        
         if (moveDelta.x > 0) {
             transform.localScale = Vector3.one;
         } 
+
         else if (moveDelta.x < 0) {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1); 
         }
 
         moveDelta += pushDirection;

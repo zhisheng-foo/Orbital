@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/*
+Basic class for all hostile NPCs that the player will face in the game.
+By default will chase the player class when entering a certain range.
+Inherits from Mover Class.
+*/
+
 public class Enemy : Mover
 { 
     public float triggerLength = 0.3f;

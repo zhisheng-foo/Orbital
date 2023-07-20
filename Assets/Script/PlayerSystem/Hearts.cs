@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+UI element to provide a visual representation of the player's current and max hitpoint.
+*/
+
 public class Hearts : MonoBehaviour
 {
     private static Hearts instance;

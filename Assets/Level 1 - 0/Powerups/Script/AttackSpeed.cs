@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/*
+Doubles the player gameobject's attack and movement speed. Visually represented
+in game as a ham
+*/
+
 public class AttackSpeed : Collidable
 {
     private float cooldown = 0.2f;

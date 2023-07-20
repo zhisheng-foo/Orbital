@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Destroyable objects in scenes.
+*/
+
 public class Crate : Collidable
 {   
     public AudioSource audioSource;

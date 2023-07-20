@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+Updated class of NPC with no animation
+*/
 public class NPCTextPerson2 : Collidable
 {
     public string message;

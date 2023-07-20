@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* 
+Shows information to the player and provides a sense of interactability with the environment
+Inclues damage, damage taken, dialogue with NPCs, obtaining "treats" (dollars)
+*/
+
 public class FloatingTextManager : MonoBehaviour
 {
     public GameObject textContainer;

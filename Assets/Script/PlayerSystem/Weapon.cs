@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+The player's primary means of dealing damage to enemy classes
+Has a base cooldown between attacks of 0.5f to prevent spam. Is a collidable object
+that is controlled by unity's animator.
+*/
+
+
 public class Weapon : Collidable
 {
     public int damagePoint = 1;

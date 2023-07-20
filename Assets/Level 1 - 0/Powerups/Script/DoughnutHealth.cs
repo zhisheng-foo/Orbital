@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Handles the healing logic of the doughnut to only heal the player
+by at most 5 hitpoints
+*/
+
 public class DoughnutHealth : Collidable
 {
     private float healCooldown = 1.0f;

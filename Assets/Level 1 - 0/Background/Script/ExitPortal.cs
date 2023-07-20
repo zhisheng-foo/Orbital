@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+/*
+Portal Object to teleport the player to the next scene
+*/
+
 public class ExitPortal : Collidable
 {
     public string level = "Level 1 - 1"; // Updated scene name

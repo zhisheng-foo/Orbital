@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/* 
+Visual element of the portal for 1 - 0.
+Controls the rate at which the portal shrinks
+*/
+
 public class Shrinking : MonoBehaviour
 {
     public float shrinkSpeed = 0.5f; // Adjust this value to control the speed of shrinking

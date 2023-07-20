@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Responsible for moving the player gameobject to the next scene as well as ensuring the 
+player gameobject spawns at the correct spawn point for each scene.
+*/
+
 public class Portal : Collidable
 {
     public Vector3 desiredPlayerPosition = new Vector3(-0.05f, 7.17f, 0.0f);

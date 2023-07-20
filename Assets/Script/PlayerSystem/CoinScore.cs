@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+UI element to show the user whenever they obtain treats as well as adding the
+amound of treats obtained to the gamemanager.
+*/
+
 public class CoinScore : MonoBehaviour
 {
     public GameManager instance;

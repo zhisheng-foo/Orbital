@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Hides or Shows the treat counters for the UI depending on which scene the player class is in
+*/
+
+
 public class TreatSystem : MonoBehaviour
 {
     private static TreatSystem instance;

@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Ensures that the boss hp bar canvas object is reflected correctly and when needed
+Such as only showing when the player is in the boss room.
+*/
+
 public class bar_hp_boss : MonoBehaviour
 {
     public Enemy boss;

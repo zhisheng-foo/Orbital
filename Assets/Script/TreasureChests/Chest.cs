@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+visual representation of all chests as well as the amount of treats that each chest
+contains which is pre-set in Unity's IDE beforehand
+*/
+
 public class Chest : Collectable
 {
     private Animator anim;

@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Basic NPC class that cannot move but can be interacted with which will provide
+flavour text or hints to the player depending on context.
+
+Inherits from collidable
+*/
+
 public class NPCTextPerson : Collidable
 {
     public string message;

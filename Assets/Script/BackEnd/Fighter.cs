@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+/*
+Basic class for all fighters in the game. Initalises the hitpoints of all fighters and immune time.
+*/
+
 public class Fighter : MonoBehaviour
 {
     public int hitpoint = 10;

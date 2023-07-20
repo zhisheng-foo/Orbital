@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Used when the NPC has a set of animated sprites.
+*/
 public class NPCTextPerson1 : Collidable
 {
     public string message;

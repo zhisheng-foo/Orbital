@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Main playable character class, includes relevant animation and spawning
+location of the player as well as updating player stats as they obtain powerups.
+*/
+
 public class Player : Mover 
 {
     private SpriteRenderer spriteRenderer;

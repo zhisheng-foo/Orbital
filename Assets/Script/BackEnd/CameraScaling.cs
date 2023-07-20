@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/*
+Zooms out the camera during the boss battle to provide the player with increased visibility, 
+and provide a more thematic experience
+*/
+
 public class CameraScaling : MonoBehaviour
 {
     public float bossBattleScale = 1.5f; 

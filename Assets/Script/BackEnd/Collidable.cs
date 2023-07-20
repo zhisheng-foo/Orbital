@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Basic class for all objects that can be interacted with such as NPCs or treasure chests,
+Enemies, Bosses, portals.
+*/
+
 public class Collidable : MonoBehaviour
 {
     public ContactFilter2D filter;

@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Handles the passing of information to the floating text class so that it can provide information
+to the player and creates responsiveness to interaction with the environment.
+
+Also stores the current amount of dollar "treats" that the player has and is updated accordingly.
+*/
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -11,6 +18,8 @@ public class GameManager : MonoBehaviour
     public Weapon weapon;
     public int dollar = 0;
     private int experience;
+    
+    
     private void Awake() {
 
         if (GameManager.instance != null) {
@@ -25,12 +34,15 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    //Passes to floating text with relevant information.
     public void ShowText(string msg, int fontSize, Color color,
      Vector3 position, Vector3 motion, float duration){
     
         FloatingTextManager.Show(msg, fontSize, color, position, motion, duration);
     } 
 
+
+    //Saves the current amount of "treats"
     public void SaveState() 
     {     
         string s = "";
@@ -43,6 +55,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString("SaveState",s);       
     }
     
+    //Loads the amount of "treats"
     public void LoadState(Scene s, LoadSceneMode mode)
     {
         if (!PlayerPrefs.HasKey("SaveState")) {

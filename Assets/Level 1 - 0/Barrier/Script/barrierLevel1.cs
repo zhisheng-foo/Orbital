@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/*
+Ensures all mobs are killed in an area of a scene 
+to prevent the player from skipping areas
+*/
+
 public class barrierLevel1 : Collidable
 {
     public GameObject[] objects;

@@ -4,6 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*
+Handles the death screen canvas when player dies,
+as well as increasing player weapon damage by 1,
+resetting the player weapon when entering new level such as: 1-1 to 2-1 if player has died
+through the use of bools which is initialised in the player class.
+*/
+
+
+
 public class GameOverManager : MonoBehaviour
 {
     public GameObject gameOverCanvas;
@@ -18,6 +27,8 @@ public class GameOverManager : MonoBehaviour
 
     public Weapon weapon;
     public GameManager gamemanager;
+
+
 
     private void Awake()
     {
@@ -41,6 +52,7 @@ public class GameOverManager : MonoBehaviour
 
     }
     
+    //Called when player hitpoint reaches 0. Enables the canvas and starts the fade to black.
     public void GameOver()
     {
 
@@ -54,6 +66,7 @@ public class GameOverManager : MonoBehaviour
         StopBackgroundAudio();
     }
 
+    //Part of GameOver(), pauses the game immediately.
     private IEnumerator FadeOverlay()
     {
         float elapsedTime = 0f;
@@ -76,16 +89,20 @@ public class GameOverManager : MonoBehaviour
         }
     }
 
+    //Start the death sound.
     private void PlayGameOverSound()
     {
         audioSource.Play();
     }
     
+    //Stop any BGM that is still palying.
     private void StopBackgroundAudio()
     {
         Destroy(backgroundAudioSources);
     }
 
+    //Button to "respawn" the player at the beginning of the level. 
+    //Example: 2-1 will respawn at 2-0 with +1 increased weapon damage
     public void RestartGame()
     {
         Debug.Log("Game Restart");

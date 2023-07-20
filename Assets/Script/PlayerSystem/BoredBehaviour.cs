@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+Animation for the player class
+*/
+
 public class BoredBehaviour : StateMachineBehaviour
 {
     [SerializeField]

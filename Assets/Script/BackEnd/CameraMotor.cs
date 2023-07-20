@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Ensures that the camera is correctly sized and follows the player class.
+*/
+
 public class CameraMotor : MonoBehaviour
 {
     public Transform lookAt;

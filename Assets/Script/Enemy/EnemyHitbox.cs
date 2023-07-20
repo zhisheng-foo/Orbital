@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Hitbox of the enemy class that is attached to all enemy gameobjects.
+Will handle the receving of damage from player or other sources
+Inherits from collidable class
+*/
+
 public class EnemyHitbox : Collidable
 {
     public int damage = 1;

@@ -1,6 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
+/*
+Controls the projectile shot by the player such as the duration and speed of the projectile
+
+Inherits from collidable
+*/
+
 public class ProjectileMovement : Collidable
 {
     private Vector3 direction;

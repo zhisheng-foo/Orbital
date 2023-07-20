@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+Works with Hearts as a UI element to provide a visual representation of player's current and
+maximum hitpoints
+*/
+
 public class Health : MonoBehaviour
 {
     public Player player;
