@@ -1,7 +1,9 @@
 using UnityEngine;
 
 public class ProjectileMove : MonoBehaviour
-{
+{   
+
+    //Instantiate the prjectiles of Boss 2 in the given direction
     public Vector3 MoveDirection { get; set; }
     public float MoveSpeed { get; set; } = 10f;
     public float destroyDelay = 6f;

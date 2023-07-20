@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
+//Traps designs for Level 2 - 0 
 public class ImmediateDeath : Collidable
 {
     private Player player;

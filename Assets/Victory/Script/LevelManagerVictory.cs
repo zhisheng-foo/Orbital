@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//Handles the processes in the Victory Scene
 public class LevelManagerVictory : MonoBehaviour
 {
     public AudioClip BGM;

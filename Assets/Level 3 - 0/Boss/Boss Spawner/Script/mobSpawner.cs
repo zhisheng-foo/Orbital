@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this class handles objects that spawn mobs
 public class mobSpawner : MonoBehaviour
 {
     public GameObject[] mobPrefabs;

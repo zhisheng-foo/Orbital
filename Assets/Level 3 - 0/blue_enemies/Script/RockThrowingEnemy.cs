@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+//this class handles the logic for enemies that throw projectiles
 public class RockThrowingEnemy : Enemy
 {
     public GameObject rockPrefab;
@@ -20,6 +20,9 @@ public class RockThrowingEnemy : Enemy
         base.Start();
         StartCoroutine(ThrowRockRoutine());
     }
+
+    //this class reference to RockMovement
+    //Instantiate a projectile that is directted at the player's position
     private IEnumerator ThrowRockRoutine()
     {
         while (true)

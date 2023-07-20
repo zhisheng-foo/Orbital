@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This class handles the homing missile logic
 public class HomingMissile : MonoBehaviour
 {
     private Transform target;

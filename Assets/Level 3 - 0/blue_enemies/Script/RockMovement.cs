@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+//this class handles the projectiles of the rock throwing enemy
 public class RockMovement : MonoBehaviour
 {
     private Vector3 direction;

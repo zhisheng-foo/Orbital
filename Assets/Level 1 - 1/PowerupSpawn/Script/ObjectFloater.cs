@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+//help to float an object at a given position 
 public class ObjectFloater : MonoBehaviour
 {
     public float floatSpeed = 1f; 

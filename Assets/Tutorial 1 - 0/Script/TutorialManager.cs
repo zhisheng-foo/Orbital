@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//handles the sequences and music in the tutorial scene
 public class TutorialManager : MonoBehaviour
 {
     public AudioClip GoodMorningVietnam;

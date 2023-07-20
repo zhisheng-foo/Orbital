@@ -2,6 +2,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
+
+//Handle shaking of text
 public class TextTransitionBoss : MonoBehaviour
 {
     public TextMeshProUGUI text;

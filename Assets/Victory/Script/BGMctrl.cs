@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//handles the BGM of the Victory Scene
 public class BGMctrl : MonoBehaviour
 {
     public AudioClip BGM;

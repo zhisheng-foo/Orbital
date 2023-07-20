@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+//This class handles the pushing of enemies away in Level 3 - 0
 public class PushBurst : MonoBehaviour
 {
     public float pushForce = 100f; 
@@ -41,7 +41,8 @@ public class PushBurst : MonoBehaviour
             }
         }
     }
-
+    //push distance is implemented, similar to when player collides with
+    //basic enemy
     private void PerformPushBurst()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.transform.position,

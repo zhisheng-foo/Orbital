@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this class handles the logic for Boss2
 public class Boss2 : Enemy
 {
     public GameObject[] projectilePrefabs;
@@ -47,7 +48,8 @@ public class Boss2 : Enemy
         }
 
     }
-
+    //Teleports to a random position given in a public list of positions 
+    //Instantiate projectiles 
     private void Update()
     {
         GameObject player = GameObject.Find("Player");
@@ -181,6 +183,7 @@ public class Boss2 : Enemy
         base.FixedUpdate();
     }
 
+    //Instantiate the basic layer
     private void FireProjectiles()
     {
         float angleStep = 20f;
@@ -219,7 +222,7 @@ public class Boss2 : Enemy
             }
         }
     }
-
+    //Instantiate the four corners of the Square layer
     private void FireDirectionalProjectiles()
     {
         float angleStep = 90f;
@@ -251,7 +254,7 @@ public class Boss2 : Enemy
             }
         }
     }
-
+    //Instantiate the vertexes of a star layer
     private void FireOtherProjectiles()
     {
         float angleStep = 45f;
