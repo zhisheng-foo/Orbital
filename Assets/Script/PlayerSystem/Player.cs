@@ -232,32 +232,6 @@ public class Player : Mover
                         transform.position + new Vector3(1.5f, 0f, 0f), Vector3.up * 25, 0.3f);
                 }
             }
-            
-            /*
-            if (rnd.Next(2) == 0) 
-            {   
-                if (!isInvulnerable) 
-                {   
-                    hitpoint -= dmg.damageAmount;
-                    
-                    GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, 
-                    new Color(0.3f, 0f, 0.1f), transform.position + new Vector3(2f, 0f, 0f), 
-                    Vector3.up * 25, 0.3f);
-                }
-                else 
-                {
-                    GameManager.instance.ShowText("Plot Armour", 20, new Color(0.1f, 0.1f, 0.1f),
-                        transform.position + new Vector3(1.5f, 0f, 0f), Vector3.up * 25, 0.3f);
-                }     
-            }
-            else 
-            {
-                dodge = true;
-            
-                GameManager.instance.ShowText("DODGE", 20, new Color(0.3f, 0f, 0.1f),
-                    transform.position + new Vector3(2f, 0f, 0f), Vector3.up * 25, 0.3f);       
-            }
-            */
 
             if (hitpoint <= 0) 
             {
@@ -306,12 +280,13 @@ public class Player : Mover
     {   
         yield return new WaitForSeconds(duration);
         AttackSpeed AS = FindObjectOfType<AttackSpeed>();
-
-        if(ogCeleryDmgPt >= AS.ogHamDmgPt && AS.ogHamDmgPt != 0)
+        
+        if(AS != null && ogCeleryDmgPt >= AS.ogHamDmgPt && AS.ogHamDmgPt != 0)
         {
             ogCeleryDmgPt = AS.ogHamDmgPt; 
         }
-        weapon.damagePoint = ogCeleryDmgPt;
+        weapon.damagePoint = 2;
+        
         GameManager.instance.ShowText("  The curse has been lifted"
         , 20, new Color(0f, 0f, 0f), transform.position + Vector3.up * 0.30f, Vector3.up * 0.65f, 1.0f);
     }

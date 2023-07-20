@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_title Variant Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1420191645503433386, guid: 7f1636464d930a9458086c6fe25ef6c6, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1420191645503433396, guid: 7f1636464d930a9458086c6fe25ef6c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0

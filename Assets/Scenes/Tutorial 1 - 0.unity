@@ -1818,27 +1818,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoodMorningVietnam: {fileID: 8300000, guid: c76c8f4e218af184ab884393d7ff2a0b, type: 3}
   AnotherSong: {fileID: 8300000, guid: b87a388c1782d7d4b831050831e57c78, type: 3}
-  animatorsToSkip:
-  - {fileID: 1370450624}
-  - {fileID: 1368588636}
-  - {fileID: 2142384877}
-  - {fileID: 2027808180}
-  - {fileID: 1939472200}
-  - {fileID: 645500529}
-  - {fileID: 1041056501}
-  - {fileID: 725814408}
-  - {fileID: 128305110}
-  - {fileID: 1662709881}
-  - {fileID: 1374194135}
-  - {fileID: 92016718}
-  - {fileID: 543817273}
-  - {fileID: 2121556015}
-  - {fileID: 2018156965}
-  - {fileID: 1587031284}
-  - {fileID: 822819899}
-  - {fileID: 2040262130}
-  - {fileID: 2143047086}
-  - {fileID: 851718528}
 --- !u!4 &792321567
 Transform:
   m_ObjectHideFlags: 0
@@ -5060,7 +5039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
