@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this class manages the Boss3 object and the mobspawners that
+//are to be instantiated at different health intervals of Boss3
 public class Boss3_Manager : MonoBehaviour
 {
     public Boss3 boss;

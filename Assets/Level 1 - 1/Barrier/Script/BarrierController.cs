@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//prevent players from escape once they are in th boss arena
 public class BarrierController : MonoBehaviour
 {
     public GameObject barrierPrefab; 

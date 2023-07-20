@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//This class handles the object with the Boss1 
+//fireballs are instantiatedied which allow some defence mechanism 
+//for Boss1
 public class Boss1 : Enemy
 {
     public float[] fireballSpeed = { 2.5f, -2.5f };

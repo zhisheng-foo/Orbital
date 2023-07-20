@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
+// Use as a means of a Teleporter to transit people from one place 
+//to another without the abrupt and suddenteleport
 public class SameSceneFade : Collidable
 {
     public Vector3 targetPosition;

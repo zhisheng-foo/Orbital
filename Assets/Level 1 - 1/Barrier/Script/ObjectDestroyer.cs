@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Destroy gameObject after a given interval
 public class ObjectDestroyer : MonoBehaviour
 {
     public GameObject bossObject; 

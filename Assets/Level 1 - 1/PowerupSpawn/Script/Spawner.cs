@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script is mainly used to spawn power ups during boss battles
 public class Spawner : MonoBehaviour
 {
     public GameObject[] objectsToSpawn; 

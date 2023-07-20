@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//provide a temporary invulnerability to Players
 public class PlotArmour : Collidable
 {
     private float cooldown = 1.5f;

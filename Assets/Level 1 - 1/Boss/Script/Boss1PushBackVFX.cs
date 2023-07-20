@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Handles the push force logic of Boss1
 public class Boss1PushBackVFX : MonoBehaviour
 {
     private Animator VFX;

@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+//This class handles the Boss3_entity
 public class Boss3 : Enemy
 {
     public GameObject missilePrefab;
@@ -65,6 +66,7 @@ public class Boss3 : Enemy
         StartCoroutine(ShootMissiles());
     }
 
+    //This method instantiates the homing missiles
     private IEnumerator ShootMissiles()
     {
         while (true)
@@ -83,7 +85,7 @@ public class Boss3 : Enemy
         missile.GetComponent<HomingMissile>().Initialize(playerTransform, missileSpeed, missileLifetime);
         Destroy(missile, missileLifetime);
 
-        // Play the audio clip
+        
         audioSource.PlayOneShot(projectileAudioClip);
 
         StartCoroutine(ResetAnimation());
@@ -138,7 +140,7 @@ public class Boss3 : Enemy
         }
     }
 
-
+    //This method teleports the Boss 3 to the last updated player position
     private IEnumerator TeleportAndAOEDamage()
     {
         while (true)
@@ -194,7 +196,7 @@ public class Boss3 : Enemy
     }
 
 
-
+    //This method performs the leech effect when the Boss collides with the Player
     private void PerformAOEDamage()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(lastPlayerPosition, aoeDamageRadius);

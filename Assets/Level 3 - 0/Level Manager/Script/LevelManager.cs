@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//This class handles the sequence in the level
+//follows a destroy - then instantiate approach
 public class LevelManager : MonoBehaviour
 {
     public GameObject firstObjectPrefab;
@@ -57,7 +59,8 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        Boss3_Manager boss_manager = GameObject.Find("Boss_Manager Variant Variant(Clone)").GetComponent<Boss3_Manager>();
+        Boss3_Manager boss_manager 
+        = GameObject.Find("Boss_Manager Variant Variant(Clone)").GetComponent<Boss3_Manager>();
         if (boss_manager.isDestroyed == true)
         {
             StartCoroutine(LoadVictorySceneAfterDelay()); 

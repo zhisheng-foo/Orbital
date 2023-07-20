@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//handle the celery power up logic
 public class Trade : Collidable
 {
     private float cooldown = 1.5f;

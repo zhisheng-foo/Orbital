@@ -2,6 +2,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
+
+//Instantiate text after a said Boss is defeated
 public class TextTransitionBossDefeated : MonoBehaviour
 {
     public TextMeshProUGUI text;

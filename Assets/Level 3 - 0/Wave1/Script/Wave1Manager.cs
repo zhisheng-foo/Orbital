@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script handles the sequence for Wave 1 
+//it follows a destroy - than instantiate approach
 public class Wave1Manager : MonoBehaviour
 {
     public GameObject firstObjectPrefab;
