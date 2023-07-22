@@ -57,7 +57,7 @@ public class GameOverManager : MonoBehaviour
     {
 
         gameOverCanvas.SetActive(true);
-        
+        //Pauses the game
         Time.timeScale = 0;
 
         backgroundAudioSources = GameObject.Find("GameSound");
@@ -66,7 +66,7 @@ public class GameOverManager : MonoBehaviour
         StopBackgroundAudio();
     }
 
-    //Part of GameOver(), pauses the game immediately.
+    //Part of GameOver(). Used for canvas transitions.
     private IEnumerator FadeOverlay()
     {
         float elapsedTime = 0f;
