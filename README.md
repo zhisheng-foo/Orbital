@@ -4,10 +4,15 @@ Game Available at:
 https://soulblast9938.itch.io/home-invasion (Updated to 0.2.2)
 
 full README: https://docs.google.com/document/d/1oloLoza2m2RdELsq9iubo8QjeSkZD3TSmOUibgN45uY/edit?usp=sharing
+
 poster: https://drive.google.com/file/d/1-eJGsJZWSMbjmlrMOCTEzffy5uNo4WJ8/view?usp=sharing
+
 video: https://drive.google.com/file/d/1b-OOp2lw6WAmoc9jlSYT7LSNi7Ngj8_I/view?usp=sharing
 
+
+
 Changelog: 
+
 Update 0.2.2:
 Adjusted DeathScreen to be more accessible
 
