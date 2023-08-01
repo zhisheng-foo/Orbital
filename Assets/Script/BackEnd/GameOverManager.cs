@@ -113,7 +113,7 @@ public class GameOverManager : MonoBehaviour
 
         //reloading current scene
         Scene currentScn = SceneManager.GetActiveScene();
-        if (currentScn.name == "Level 1 - 0" || currentScn.name == "Level 1 - 1")
+        if (currentScn.name == "Level 1 - 0")
         {
             SceneManager.LoadScene("Level 1 - 0");
             weapon.damagePoint += 1;
@@ -121,6 +121,14 @@ public class GameOverManager : MonoBehaviour
             gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
                 player.transform.position, Vector3.up * 20, 1.5f);
 
+        }
+        else if (currentScn.name == "Level 1 - 1")
+        {
+            SceneManager.LoadScene("Level 1 - 1");
+            weapon.damagePoint += 1;
+            player.atkbuffed1 = true;
+            gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
+                player.transform.position, Vector3.up * 20, 1.5f);
         }
         else if (currentScn.name == "Level 2 - 0")
         {
@@ -131,7 +139,7 @@ public class GameOverManager : MonoBehaviour
         }
         else if(currentScn.name == "Level 2 - 1")
         {
-            SceneManager.LoadScene("Level 2 - 0");
+            SceneManager.LoadScene("Level 2 - 1");
             weapon.damagePoint += 1;
             player.atkbuffed2 = true;
             gamemanager.ShowText("+1 attack cuz u noob", 25, new Color(0f, 255f, 0f), 
