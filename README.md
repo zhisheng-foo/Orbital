@@ -18,8 +18,33 @@ You can play the latest version of Home Invasion at [soulblast9938.itch.io/home-
 
 - [Full README Document](https://docs.google.com/document/d/1oloLoza2m2RdELsq9iubo8QjeSkZD3TSmOUibgN45uY/edit?usp=sharing)
 
-## Contributing
-We welcome contributions to the game. If you have suggestions or bug reports, please open an issue in the repository. If you wish to contribute code, please submit a pull request.
+# Contributing to GrassToucher's Home Invasion
 
-GrassToucher's Home Invasion is developed and maintained by [Developer/Team Name]. For more information, please contact us [via email](#foozhisheng@gmail.com).
+We warmly welcome contributions to the GrassToucher's Home Invasion project. If you're looking to contribute, here's how you can help.
+
+## Reporting Issues
+
+If you encounter any bugs or have suggestions for improvements:
+
+1. Check if the issue has already been [reported](https://github.com/zhisheng-foo/Home-Invasion-Game/issues).
+2. If not, [create a new issue](https://github.com/zhisheng-foo/Home-Invasion-Game/issues/new), providing a clear description of the problem or enhancement. Include screenshots if applicable.
+
+## Submitting Pull Requests
+
+For submitting code changes, such as bug fixes or new features:
+
+1. **Fork the Repository**: Start by forking the [GrassToucher's Home Invasion repository](https://github.com/zhisheng-foo/Home-Invasion-Game) on GitHub.
+2. **Create a Branch**: Create a branch in your fork for your changes. Use a clear and descriptive name for your branch.
+3. **Make Your Changes**: Implement your changes or fixes in your branch. Ensure your code follows the existing coding standards and style.
+4. **Test Your Changes**: Before submitting, thoroughly test your changes.
+5. **Create a Pull Request**: Submit a pull request to the original repository. Provide a clear and detailed description of your changes and the benefits they bring.
+6. **Code Review**: Wait for a review from the maintainers. Be open to feedback and make any requested changes.
+
+## Contribution Guidelines
+
+- Ensure your code is well-documented and easy to understand.
+- Adhere to the coding conventions and style of the project.
+- Update the README.md or documentation if necessary.
+
+GrassToucher's Home Invasion is developed and maintained by [GrassToucher]. For more information, please contact us [via email](#foozhisheng@gmail.com).
 
