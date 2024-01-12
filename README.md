@@ -1,49 +1,56 @@
-# GrassToucher's Home Invasion
+#Home Invasion
 
-Game Available at:
-https://soulblast9938.itch.io/home-invasion (Updated to 0.2.2)
+Our home has been invaded by aliens and  MAMA JOE has been abducted. Joe Mama is a beloved member of our home, without her, there is no home, there is no delicious food! THE PROBLEM IS REAL AND THERE IS A NEED TO SOLVE IT. MAMA JOE NEEDS SAVING.
 
-full README: https://docs.google.com/document/d/1oloLoza2m2RdELsq9iubo8QjeSkZD3TSmOUibgN45uY/edit?usp=sharing
+![GrassToucher's Home Invasion Poster](https://drive.google.com/file/d/1lWMdb2LfJzGCH_OBlT1EpwRzkKLdphZE/view?usp=sharing)
 
-poster: https://drive.google.com/file/d/1-eJGsJZWSMbjmlrMOCTEzffy5uNo4WJ8/view?usp=sharing
+## Game Availability
 
-video: https://drive.google.com/file/d/1b-OOp2lw6WAmoc9jlSYT7LSNi7Ngj8_I/view?usp=sharing
+You can play the latest version of Home Invasion at [soulblast9938.itch.io/home-invasion](https://soulblast9938.itch.io/home-invasion) (Updated to 0.2.2)
 
+## Gameplay Video
 
+[![Watch the video](https://drive.google.com/file/d/1b-OOp2lw6WAmoc9jlSYT7LSNi7Ngj8_I/view?usp=sharing)
 
-Changelog: 
+## Resources
 
-Update 0.2.2:
-Adjusted DeathScreen to be more accessible
+- [Full README Document](https://docs.google.com/document/d/1oloLoza2m2RdELsq9iubo8QjeSkZD3TSmOUibgN45uY/edit?usp=sharing)
 
-Update 0.2.1:
-Lowered dodge chance(now adjustable)
-Reset wep dmg from 3-0 to 1-0
-shifted camera to pos of player
-adjusted powerups for 2-0
+## Changelog
 
-Update 0.2.0:
-Ready for user testing for milestone 3. Fixed small issue for pause screen --> Start game screen
+### Update 0.2.2
+- Adjusted DeathScreen to be more accessible
 
-Update 0.1.4:
-Level 3 loop fixed, powerup attack damage fixed
+### Update 0.2.1
+- Lowered dodge chance (now adjustable)
+- Reset weapon damage from 3-0 to 1-0
+- Shifted camera to position of player
+- Adjusted powerups for 2-0
 
-Update 0.1.3:
-Boss 1 fart timer,
-Deathscreen fixed. 
+### Update 0.2.0
+- Ready for user testing for milestone 3
+- Fixed small issue from pause screen to start game screen
 
-Update 0.1.2:
-Barrier text updated,
-On Death +1 attack except 2 - 0
+### Update 0.1.4
+- Fixed level 3 loop issue
+- Adjusted powerup attack damage
 
-Update 0.1.1:
-Level 3 done
+### Update 0.1.3
+- Implemented Boss 1 fart timer
+- Fixed Deathscreen
 
-Update 0.1.0:
-Levels 1 and 2 done
+### Update 0.1.2
+- Updated Barrier text
+- On Death +1 attack except for level 2 - 0
 
-Update 0.0.2:
-Main Lobby Created
+### Update 0.1.1
+- Completed Level 3
 
-Update 0.0.1:
-Beginning of game files
+### Update 0.1.0
+- Levels 1 and 2 completed
+
+## Contributing
+We welcome contributions to the game. If you have suggestions or bug reports, please open an issue in the repository. If you wish to contribute code, please submit a pull request.
+
+GrassToucher's Home Invasion is developed and maintained by [Developer/Team Name]. For more information, please contact us [via email](#foozhisheng@gmail.com).
+
