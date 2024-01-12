@@ -20,7 +20,7 @@ You can play the latest version of Home Invasion at [soulblast9938.itch.io/home-
 
 ---
 
-## Resources
+## Full README Document
 
 - [Full README Document](https://docs.google.com/document/d/1oloLoza2m2RdELsq9iubo8QjeSkZD3TSmOUibgN45uY/edit?usp=sharing)
 
