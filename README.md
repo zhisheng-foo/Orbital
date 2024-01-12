@@ -1,9 +1,8 @@
-##Home Invasion
+# Home Invasion
 
 Our home has been invaded by aliens and  MAMA JOE has been abducted. Joe Mama is a beloved member of our home, without her, there is no home, there is no delicious food! THE PROBLEM IS REAL AND THERE IS A NEED TO SOLVE IT. MAMA JOE NEEDS SAVING.
 
-![GrassToucher's Home Invasion Poster](![image](https://github.com/zhisheng-foo/Home-Invasion-Game/assets/105271950/e2952a25-466c-49e1-9dcf-879663fbfcbf)
-)
+(![image](https://github.com/zhisheng-foo/Home-Invasion-Game/assets/105271950/e2952a25-466c-49e1-9dcf-879663fbfcbf))
 
 ## Game Availability
 
