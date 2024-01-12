@@ -14,7 +14,7 @@ You can play the latest version of Home Invasion at [soulblast9938.itch.io/home-
 
 ---
 
-## Gameplay Video
+## Promotional Video
 
 - [Watch the video](https://drive.google.com/file/d/1b-OOp2lw6WAmoc9jlSYT7LSNi7Ngj8_I/view?usp=sharing)
 
